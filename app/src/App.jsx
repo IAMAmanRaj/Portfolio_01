@@ -36,26 +36,26 @@ const App = () => {
     return () => ctx.revert()
   }, [])
   return (
-    <div className="relative overflow-y-scroll overflow-x-hidden" ref={comp}>
+    <div className="relative  overflow-x-hidden overflow-y-hidden" ref={comp}>
       <div
         id="intro-slider"
-        className="h-screen p-10 bg-gray-50 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around py-24 sm:py-8 pt-12   tracking-tight"
+        className="h-screen p-10 bg-zinc-600 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around py-24 sm:py-8 pt-12   tracking-tight"
       >
-        <h1 className="text-3xl  md:text-5xl lg:text-9xl" id="title-1">
+        <h1 className="text-3xl text-slate-300  md:text-5xl lg:text-9xl" id="title-1">
           Hi there , I am Aman
         </h1>
-        <h1 className="text-3xl  md:text-5xl lg:text-8xl" id="title-2">
+        <h1 className="text-3xl text-slate-300  md:text-5xl lg:text-8xl" id="title-2">
         a Coding Enthusiast  
         </h1>
-        <h1 className="text-3xl  md:text-5xl lg:text-7xl" id="title-3">
+        <h1 className="text-3xl text-slate-300  md:text-5xl lg:text-7xl" id="title-3">
         Passionate about Web Development.
         </h1>
-        <h1 className="text-3xl  md:text-5xl lg:text-6xl" id="title-3">
+        <h1 className="text-3xl text-slate-300  md:text-5xl lg:text-6xl" id="title-3">
         and a Full stack Web Developer  :)
         </h1>
       </div>
-    
-  <HeroSection/>
+    <div className="overflow-y-hidden"><HeroSection/></div>
+  
       
     </div>
   )
