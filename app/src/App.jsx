@@ -50,6 +50,8 @@ const App = () => {
           duration: 2,
           
           onStart: () => setJourneyText('Now'),
+          onComplete: () => setJourneyText("Let's dive in"),
+          
           delay: 0.5,
         })
         
@@ -76,7 +78,7 @@ const App = () => {
         and a Full stack Web Developer  :)
         </h1>
       </div>
-      <div className=""><HeroSection journeyText={journeyText}  /></div>
+      <div className=""><HeroSection journeyText={journeyText} /></div>
   
       
     </div>

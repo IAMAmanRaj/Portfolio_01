@@ -1,21 +1,85 @@
 import React, { useLayoutEffect } from 'react'
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { gsap } from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import bulb from '/images/diego-ph-fIq0tET6llw-unsplash.jpg';
 import pages from '/images/brandi-redd-aJTiW00qqtI-unsplash.jpg'
 import comp from '/images/ben-kolde-bs2Ba7t69mM-unsplash.jpg';
+ import { useRef } from 'react';
+import { useEffect } from 'react';
+import bg from '/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg';
+
+
 gsap.registerPlugin(ScrollTrigger) 
-const HeroSection = ({ journeyText }) => {
+const HeroSection = ({ journeyText,setJourneyText }) => {
+    const textRef = useRef(null);
+  const bgRef = useRef(null);
+  const JourneyTextRef = useRef(null);
+  const imgOneRef = useRef(null);
+  const imgTwoRef = useRef(null);
+  const imgThreeRef = useRef(null);
+
+    
+  
+
+  useEffect(() => {
+
+
+    gsap.fromTo( JourneyTextRef.current, 
+        { x: 0 }, 
+        { x: 390,
+            
+          scrollTrigger: {
+            trigger:  JourneyTextRef.current,
+           markers:true,
+           start: 'top 42%',  // Change this line
+           end: 'top 40%',
+            scrub:true ,// Increase this value for a smoother effect
+           onStart: () => setJourneyText('Letz go '),
+           onLeaveBack: () => setJourneyText(jour),
+        }
+        }
+      );
+     
+
+    gsap.fromTo(textRef.current, 
+      { y: 0 }, 
+      { y: 100, 
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: 'top 50%',
+         
+          end: 'bottom 20%',
+          scrub:5 // Increase this value for a smoother effect
+        }
+      }
+    );
+  
+    gsap.fromTo(bgRef.current, 
+      { y: 0 }, 
+      { y: -100, 
+        scrollTrigger: {
+          trigger: bgRef.current,
+          start: 'top 50%',
+         
+          end: 'bottom bottom',
+          scrub: 5  // Increase this value for a smoother effect
+        }
+      }
+    );
+  }, []);
+
+
 
 useLayoutEffect(() => {
 
  gsap.to("#character", {
     opacity: 1,
+    
     stagger: 4.2,
     scrollTrigger: {
         trigger: "#character",
-        scrub:true,
-        markers:true,
+        scrub:1,
+      
         start: "top 88%",
         end: "top 20%",
     }
@@ -27,7 +91,7 @@ useLayoutEffect(() => {
     scrollTrigger: {
         trigger: "#charactertwo",
         scrub:true,
-        markers:true,
+       
         start: "top 90%",
         end: "top 20%",
     }
@@ -38,7 +102,7 @@ useLayoutEffect(() => {
     scrollTrigger: {
         trigger: "#characterthree",
         scrub:true,
-        markers:true,
+       
         start: "top 90%",
         end: "top 20%",
     }
@@ -49,28 +113,31 @@ useLayoutEffect(() => {
     scrollTrigger: {
         trigger: "#characterfour",
         scrub:true,
-        markers:true,
+       
         start: "top 90%",
         end: "top 40%",
     }
  })
+
+
+
 
 }, [])
 
 
 
   return (
-    <div className="flex bg-gray-950 flex-col overflow-auto">
+    <div  className="flex  bg-gray-950 flex-col ">
         <div   className="relative flex justify-center items-center h-screen">
           
             
 
-            <img id="imageone" className='absolute h-screen rounded-full p-4 md:p-12 lg:p-16 xl:p-20 mx-12 mt-12   border-2 border-white w-full object-cover' src={bulb} alt=''/>
-            <img id="imagetwo" className='absolute h-screen rounded-full p-4 md:p-12 lg:p-16 xl:p-20 mx-12 mt-12   border-2 border-white w-full object-cover' src={pages} alt=''/>
-            <img id="imagethree" className='absolute h-screen rounded-full p-4 md:p-12  lg:p-16 xl:p-20 mx-12 mt-12   border-2 border-white w-full object-cover' src={comp} alt=''/>
+            <img ref={imgOneRef} id="imageone" className='absolute h-screen rounded-full p-4 md:p-12 lg:p-16 xl:p-20 mx-12 mt-4   border-2 border-white w-full object-cover' src={bulb} alt=''/>
+            <img ref={imgTwoRef}  id="imagetwo" className='absolute h-screen rounded-full p-4 md:p-12 lg:p-16 xl:p-20 mx-12 mt-4   border-2 border-white w-full object-cover' src={pages} alt=''/>
+            <img ref={imgThreeRef}  id="imagethree" className='absolute h-screen rounded-full p-4 md:p-12  lg:p-16 xl:p-20 mx-12 mt-4   border-2 border-white w-full object-cover' src={comp} alt=''/>
             <div id="myjourney" className='w-full absolute flex justify-center items-center  text-center self-center '>
           <h1 
-          
+          ref={JourneyTextRef}
             className="text-3xl  absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 font-spaceGrotesk transition duration-300"
           >
             {journeyText}
@@ -78,8 +145,11 @@ useLayoutEffect(() => {
           </div>
         </div>
        
-        <div className='relative mx-auto text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-24'>
-         <p className='flex flex-wrap gap-x-3 px-8  '>
+        <div  className='relative h-screen  text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-32 flex justify-center text-center'>
+            
+           <img  ref={bgRef} src={bg} alt='bg-body' className='absolute h-[800px] w-screen object-cover border-t-slate-200 border-1   rounded-t-full  '></img>
+           <div className='relative z-10 w-full' ref={textRef}>
+         <p  className='flex absolute flex-wrap gap-x-3 mx-auto px-24 top-[15%] lg:top-[20%]  '>
             {"Few years back , I knew nothing about web. It got my attention in the second year of college when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d. I knew this would be an interesting thing to do rather than doing dsa after classes T_T"
             .split(" ").map((word,index)=>(
                 <span id="character" key={index} className='opacity-0'>
@@ -91,8 +161,9 @@ useLayoutEffect(() => {
                 </span>
             ))}
             </p> 
-            <p  className='absolute top-0 flex flex-wrap gap-x-3 opacity-5 px-8'>
-            {"Few years back , I knew nothing about web. It got my attention in the second year when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d. I knew this would be an interesting thing to do rather than doing dsa after classes."
+            
+            <p  className='absolute top-[15%]   lg:top-[20%] flex flex-wrap gap-x-3 opacity-40 mx-auto px-24 '>
+            {"Few years back , I knew nothing about web. It got my attention in the second year of college when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d. I knew this would be an interesting thing to do rather than doing dsa after classes T_T"
             .split(" ").map((word,index)=>(
                 <span  key={index} className=''>
                     {word.split("").map((character,index)=>(
@@ -103,6 +174,7 @@ useLayoutEffect(() => {
                 </span>
             ))}
             </p>
+            </div>
             </div>
             <div className='relative mx-auto text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-80'>
             <p className='flex flex-wrap gap-x-3 px-8 '>
