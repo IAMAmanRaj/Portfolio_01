@@ -7,12 +7,16 @@ import comp from '/images/ben-kolde-bs2Ba7t69mM-unsplash.jpg';
  import { useRef } from 'react';
 import { useEffect } from 'react';
 import bg from '/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg';
-
+import bg2 from '/images/ian-schneider-TamMbr4okv4-unsplash.jpg';
 
 gsap.registerPlugin(ScrollTrigger) 
-const HeroSection = ({ journeyText,setJourneyText }) => {
+const HeroSection = ({ journeyText }) => {
     const textRef = useRef(null);
   const bgRef = useRef(null);
+  const text2Ref = useRef(null);
+  const text3Ref = useRef(null);
+  const text4Ref = useRef(null);
+  const bg2Ref = useRef(null);
   const JourneyTextRef = useRef(null);
   const imgOneRef = useRef(null);
   const imgTwoRef = useRef(null);
@@ -30,12 +34,11 @@ const HeroSection = ({ journeyText,setJourneyText }) => {
             
           scrollTrigger: {
             trigger:  JourneyTextRef.current,
-           markers:true,
+          
            start: 'top 42%',  // Change this line
            end: 'top 40%',
             scrub:true ,// Increase this value for a smoother effect
-           onStart: () => setJourneyText('Letz go '),
-           onLeaveBack: () => setJourneyText(jour),
+          
         }
         }
       );
@@ -43,7 +46,7 @@ const HeroSection = ({ journeyText,setJourneyText }) => {
 
     gsap.fromTo(textRef.current, 
       { y: 0 }, 
-      { y: 100, 
+      { y: 70, 
         scrollTrigger: {
           trigger: textRef.current,
           start: 'top 50%',
@@ -66,6 +69,59 @@ const HeroSection = ({ journeyText,setJourneyText }) => {
         }
       }
     );
+
+
+    gsap.fromTo(text2Ref.current, 
+      { y: 0 }, 
+      { y: 100, 
+        scrollTrigger: {
+          trigger: text2Ref.current,
+          start: 'top 50%',
+         
+          end: 'bottom 20%',
+          scrub:5 
+        }
+      }
+    );
+  
+    gsap.fromTo(bg2Ref.current, 
+      { y: 0 }, 
+      { y: -100, 
+        scrollTrigger: {
+          trigger: bg2Ref.current,
+          start: 'top 50%',
+         
+          end: 'bottom bottom',
+          scrub: 5  
+        }
+      }
+    );
+    gsap.fromTo(text3Ref.current, 
+      { y: 0 }, 
+      { y: -200, 
+        scrollTrigger: {
+          trigger: text3Ref.current,
+          start: 'bottom bottom',
+          markers:true,
+          end: 'bottom 30%',
+          scrub:5 
+        }
+      }
+    );
+    gsap.fromTo(text4Ref.current, 
+      { y: 0 }, 
+      { y: -200, 
+        scrollTrigger: {
+          trigger: text4Ref.current,
+          start: 'bottom bottom',
+         
+          end: 'bottom 30%',
+          scrub:5 
+        }
+      }
+    );
+
+
   }, []);
 
 
@@ -176,8 +232,10 @@ useLayoutEffect(() => {
             </p>
             </div>
             </div>
-            <div className='relative mx-auto text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-80'>
-            <p className='flex flex-wrap gap-x-3 px-8 '>
+            <div className='relative h-screen  text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-32 flex justify-center text-center'>
+            <img  ref={bg2Ref}  src={bg2} alt='bg-body2' className='absolute opacity-20 h-[800px] w-screen object-cover border-t-slate-200 border-1 rounded-b-full   '></img>
+            <div  ref={text2Ref} className='relative z-10 w-full' >
+            <p className='flex absolute flex-wrap gap-x-3 mx-auto px-24 top-[2%] '>
             {"Then I started focusing on project based learning as much as I could. I've been making projects and learning things through this journey. As a developer, I feel there's no end to these cool stuffs which excites me even more :)"
             .split(" ").map((word,index)=>(
                 <span id="charactertwo" key={index} className='opacity-0'>
@@ -190,7 +248,7 @@ useLayoutEffect(() => {
             ))}
             </p> 
             
-            <p className='absolute top-0 flex flex-wrap gap-x-3 opacity-5 px-8'>
+            <p className='absolute  flex flex-wrap gap-x-3 top-[2%] opacity-40 mx-auto px-24'>
             {"Then I started focusing on project based learning as much as I could. I've been making projects and learning things through this journey. As a developer, I feel there's no end to these cool stuffs which excites me even more :)"
             .split(" ").map((word,index)=>(
                 <span  key={index} className=''>
@@ -203,8 +261,9 @@ useLayoutEffect(() => {
             ))}
             </p>
             </div>
+            </div>
 
-            <div className='relative mx-auto text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-80'>
+            <div ref={text3Ref} className='relative mx-auto text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-40'>
             <p className='flex flex-wrap gap-x-3 px-8 '>
             {"I've never stopped since then"
             .split(" ").map((word,index)=>(
@@ -231,7 +290,7 @@ useLayoutEffect(() => {
             ))}
             </p>
             </div>
-            <div className='relative mx-auto text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-80'>
+            <div ref={text4Ref} className='relative mx-auto text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-80'>
             <p className='flex flex-wrap gap-x-3 px-8 '>
             {"#Never stop learning."
             .split(" ").map((word,index)=>(
