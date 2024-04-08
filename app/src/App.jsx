@@ -3,7 +3,7 @@ import gsap from "gsap"
 import HeroSection from "./pages/HeroSection"
 import { useState } from "react"
  import BackgroundBeams from "./components/ui/BackgroundBeams"
-
+import Spotlight from "./components/ui/Spotlight"
 const App = () => {
   const [journeyText, setJourneyText] = useState('My journey');
   const comp = useRef(null)
@@ -41,36 +41,42 @@ const App = () => {
         duration: 2,
         ease: "power2.inOut"  // Add this line
       })
-      .from("#imageone", {
-        opacity: 0,
-        duration: 2,
-        ease: "power2.inOut",  // Add this line
-        onComplete: () => gsap.to("#imageone", {opacity: 0, ease: "power2.inOut"})  // Add ease here too
-      })
-      .from("#imagetwo", {
+      .from({}, {
         opacity: 0,
         duration: 3,
-        ease: "power2.inOut",  // Add this line
-        onStart: () => setJourneyText('Till'),
-        onComplete: () => {
-       
-          gsap.to("#imagetwo", {opacity: 0, ease: "power2.inOut"});
-        } // Add ease here too
-        
+        ease: "power2.inOut",  
+     
       })
-      .from("#imagethree", {
+      .from({}, {
         opacity: 0,
         duration: 3,
         ease: "power2.inOut",
-      onStart: () => setJourneyText('Now'),
+        onStart: () => {
+
+          setJourneyText('Till');
+        
+        },
+       
+      })
+      .from({}, {
+        opacity: 0,
+        duration: 3,
+        ease: "power2.inOut",
+        onStart: () => {
+          
+          setJourneyText('Now');
+          
+        },
      
         
         onComplete: () => {
           gsap.to({}, {
             duration: 5,  // Set the duration here
-            onStart: () => setJourneyText("Let's dive in")
+            onStart: () =>{ setJourneyText("Let's dive in");
+            
+          },
           });
-          gsap.to("#imagethree", {opacity: 0, ease: "power2.inOut"});
+         
         }
       })
         
@@ -80,11 +86,15 @@ const App = () => {
   }, [])
   return (
     <div className="relative  overflow-x-hidden" ref={comp}>
-      
+      <Spotlight
+        className=""
+        fill="white"
+      />
       <div
         id="intro-slider"
-        className="h-screen bg-teal-900 bg-opacity-30  p-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around py-24 sm:py-8 pt-12   tracking-tight"
+        className="h-screen bg-opacity-30  p-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around py-24 sm:py-8 pt-12 tracking-tight"
       >
+        
         
        
         <h1 className="text-3xl text-white  md:text-5xl lg:text-9xl" id="title-1">
