@@ -195,9 +195,9 @@ useLayoutEffect(() => {
           
             
 
-            <img ref={imgOneRef} id="imageone" className='absolute h-screen rounded-full p-4 md:p-12 lg:p-16 xl:p-20 mx-12 mt-4   border-2 border-white w-full object-cover' src={bulb} alt=''/>
-            <img ref={imgTwoRef}  id="imagetwo" className='absolute h-screen rounded-full p-4 md:p-12 lg:p-16 xl:p-20 mx-12 mt-4   border-2 border-white w-full object-cover' src={pages} alt=''/>
-            <img ref={imgThreeRef}  id="imagethree" className='absolute h-screen rounded-full p-4 md:p-12  lg:p-16 xl:p-20 mx-12 mt-4   border-2 border-white w-full object-cover' src={comp} alt=''/>
+            <img ref={imgOneRef} id="imageone" className='absolute opacity-20 h-screen rounded-full p-4 md:p-12 lg:p-16 xl:p-20 mx-12 mt-4   border-2 border-white w-full object-cover' src={bulb} alt=''/>
+            <img ref={imgTwoRef}  id="imagetwo" className='absolute opacity-20 h-screen rounded-full p-4 md:p-12 lg:p-16 xl:p-20 mx-12 mt-4   border-2 border-white w-full object-cover' src={pages} alt=''/>
+            <img ref={imgThreeRef}  id="imagethree" className='absolute opacity-20 h-screen rounded-full p-4 md:p-12  lg:p-16 xl:p-20 mx-12 mt-4   border-2 border-white w-full object-cover' src={comp} alt=''/>
             <div id="myjourney" className='w-full absolute flex justify-center items-center  text-center self-center '>
           <h1 
           ref={JourneyTextRef}
@@ -330,6 +330,7 @@ useLayoutEffect(() => {
             </div>
             </div>
         </div>
+       
         <div className="h-screen"/>  
         
     </div>
