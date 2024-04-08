@@ -2,6 +2,9 @@ import { useLayoutEffect, useRef } from "react"
 import gsap from "gsap"
 import HeroSection from "./pages/HeroSection"
 import { useState } from "react"
+
+
+
 const App = () => {
   const [journeyText, setJourneyText] = useState('My journey');
   const comp = useRef(null)
@@ -79,8 +82,7 @@ const App = () => {
         </h1>
       </div>
       <div className=""><HeroSection journeyText={journeyText} /></div>
-  
-      
+    
     </div>
   )
 }

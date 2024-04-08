@@ -9,6 +9,13 @@ import { useEffect } from 'react';
 import bg from '/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg';
 import bg2 from '/images/ian-schneider-TamMbr4okv4-unsplash.jpg';
 
+import { BackgroundGradientAnimation } from '../components/ui/BackgroundGradientAnimation';
+
+
+
+
+
+
 gsap.registerPlugin(ScrollTrigger) 
 const HeroSection = ({ journeyText }) => {
     const textRef = useRef(null);
@@ -101,21 +108,21 @@ const HeroSection = ({ journeyText }) => {
       { y: -200, 
         scrollTrigger: {
           trigger: text3Ref.current,
-          start: 'bottom bottom',
-          markers:true,
-          end: 'bottom 30%',
+          start: 'bottom 2%',
+          
+          end: 'top 50%',
           scrub:5 
         }
       }
     );
     gsap.fromTo(text4Ref.current, 
       { y: 0 }, 
-      { y: -200, 
+      { y: -100, 
         scrollTrigger: {
           trigger: text4Ref.current,
-          start: 'bottom bottom',
-         
-          end: 'bottom 30%',
+          start: 'top 50%',
+         markers:true,
+          end: 'top 30%',
           scrub:5 
         }
       }
@@ -290,8 +297,12 @@ useLayoutEffect(() => {
             ))}
             </p>
             </div>
-            <div ref={text4Ref} className='relative mx-auto text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-80'>
-            <p className='flex flex-wrap gap-x-3 px-8 '>
+         
+<div className='relative flex flex-col justify-center text-center items-center'>
+            <BackgroundGradientAnimation />
+            <div className=' absolute '>
+            <div ref={text4Ref} className='relative  text-xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-white '>
+            <p className='flex flex-wrap gap-x-3 px-8 w-full  '>
             {"#Never stop learning."
             .split(" ").map((word,index)=>(
                 <span id="characterfour" key={index} className='opacity-0'>
@@ -304,7 +315,7 @@ useLayoutEffect(() => {
             ))}
             </p> 
             
-            <p className='absolute top-0 flex flex-wrap gap-x-3 opacity-5 px-8'>
+            <p className='absolute top-0 flex flex-wrap gap-x-3 w-full  px-8 opacity-5'>
             {"#Never stop learning."
             .split(" ").map((word,index)=>(
                 <span  key={index} className=''>
@@ -317,8 +328,10 @@ useLayoutEffect(() => {
             ))}
             </p>
             </div>
+            </div>
+        </div>
+        <div className="h-screen"/>  
         
-        <div className='h-screen'/>
     </div>
   )
 }
