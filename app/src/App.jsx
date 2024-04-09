@@ -3,10 +3,10 @@ import gsap from "gsap"
 import HeroSection from "./pages/HeroSection"
 import { useState } from "react"
  import BackgroundBeams from "./components/ui/BackgroundBeams"
-import Spotlight from "./components/ui/Spotlight"
+
 
 import { ShiftingDropDown } from "./components/ui/ShiftingDropDown"
-
+ import Example from "./components/ui/HorizontalCarousel"
 
 const App = () => {
   const [journeyText, setJourneyText] = useState('My journey');
@@ -94,13 +94,10 @@ const App = () => {
 
     <div className="relative  overflow-x-hidden" ref={comp}>
    
-      <Spotlight
-        className=""
-        fill="white"
-      />
+      
       <div
         id="intro-slider"
-        className="h-screen  p-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around py-24 sm:py-8 pt-12 tracking-tight"
+        className="h-screen   px-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around py-24 sm:py-8  tracking-tight"
       >
         
         
@@ -112,6 +109,7 @@ const App = () => {
         a Coding Enthusiast  
         </h1>
        
+       
         <h1 className="text-3xl text-white  md:text-5xl lg:text-7xl" id="title-3">
         Passionate about Web Development.
         </h1>
@@ -121,10 +119,14 @@ const App = () => {
       </div>
       <div className="">
       <BackgroundBeams className="fixed"/>
+     
         <HeroSection journeyText={journeyText} /></div>
-      
+     
     
     </div>
+   
+    <Example />
+    <div className="h-screen bg-gray-950 "/>
     </>
   )
 }

@@ -11,7 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 export const ShiftingDropDown = () => {
   return (
     <div className="">
-    <div className="flex h-96 z-20  absolute w-full justify-center  top-0  p-8 text-neutral-200 ">
+    <div className="flex h-12 items-center z-20   absolute w-full justify-center  mt-0  text-neutral-200 ">
       <Tabs />
     </div>
     </div>
@@ -35,7 +35,7 @@ const Tabs = () => {
   return (
     <div
       onMouseLeave={() => handleSetSelected(null)}
-      className="fixed top-[desired value] flex h-fit gap-2"
+      className="fixed top-[desired value] opacity-95 bg-zinc-950 rounded-full border-2 p-2 mt-4 flex h-fit gap-2"
     >
       {TABS.map((t) => {
         return (
@@ -52,7 +52,7 @@ const Tabs = () => {
       })}
 
       <AnimatePresence>
-        {selected && <Content className="bg-red-700" dir={dir} selected={selected} />}
+        {selected && <Content className="" dir={dir} selected={selected} />}
       </AnimatePresence>
     </div>
   );
@@ -234,7 +234,7 @@ const More = () => {
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiPieChart className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Timeline</span>
+        <span className="text-xs">Timeline </span>
       </a>
     </div>
   );

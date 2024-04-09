@@ -119,7 +119,7 @@ const HeroSection = ({ journeyText }) => {
         scrollTrigger: {
           trigger: text4Ref.current,
           start: 'top 50%',
-         markers:true,
+         
           end: 'top 30%',
           scrub:5 
         }
@@ -191,10 +191,11 @@ useLayoutEffect(() => {
     <div  className="flex  bg-gray-950 flex-col ">
         <div   className="relative flex justify-center items-center h-screen">
           
-            
+       
 
         
             <div id="myjourney" className='w-full absolute flex justify-center items-center  text-center self-center '>
+          
           <h1 
           ref={JourneyTextRef}
             className="text-3xl  absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 font-spaceGrotesk transition duration-300"
@@ -326,8 +327,10 @@ useLayoutEffect(() => {
             </div>
             </div>
         </div>
+
+
        
-        <div className="h-screen"/>  
+         
         
     </div>
   )
