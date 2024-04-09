@@ -4,6 +4,10 @@ import HeroSection from "./pages/HeroSection"
 import { useState } from "react"
  import BackgroundBeams from "./components/ui/BackgroundBeams"
 import Spotlight from "./components/ui/Spotlight"
+
+import { ShiftingDropDown } from "./components/ui/ShiftingDropDown"
+
+
 const App = () => {
   const [journeyText, setJourneyText] = useState('My journey');
   const comp = useRef(null)
@@ -85,14 +89,18 @@ const App = () => {
     return () => ctx.revert()
   }, [])
   return (
+    <>
+    <ShiftingDropDown  />
+
     <div className="relative  overflow-x-hidden" ref={comp}>
+   
       <Spotlight
         className=""
         fill="white"
       />
       <div
         id="intro-slider"
-        className="h-screen bg-opacity-30  p-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around py-24 sm:py-8 pt-12 tracking-tight"
+        className="h-screen  p-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around py-24 sm:py-8 pt-12 tracking-tight"
       >
         
         
@@ -117,6 +125,7 @@ const App = () => {
       
     
     </div>
+    </>
   )
 }
 

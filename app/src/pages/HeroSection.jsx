@@ -25,9 +25,7 @@ const HeroSection = ({ journeyText }) => {
   const text4Ref = useRef(null);
   const bg2Ref = useRef(null);
   const JourneyTextRef = useRef(null);
-  const imgOneRef = useRef(null);
-  const imgTwoRef = useRef(null);
-  const imgThreeRef = useRef(null);
+  
 
     
   
@@ -117,7 +115,7 @@ const HeroSection = ({ journeyText }) => {
     );
     gsap.fromTo(text4Ref.current, 
       { y: 0 }, 
-      { y: -100, 
+      { y: -70, 
         scrollTrigger: {
           trigger: text4Ref.current,
           start: 'top 50%',
@@ -296,10 +294,10 @@ useLayoutEffect(() => {
             </p>
             </div>
          
-<div className='relative flex flex-col justify-center text-center items-center'>
+<div className='relative flex flex-col justify-end items-center '>
             <BackgroundGradientAnimation />
             <div className=' absolute '>
-            <div ref={text4Ref} className='relative  text-xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-white '>
+            <div ref={text4Ref} className='relative mb-4  text-xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 '>
             <p className='flex flex-wrap gap-x-3 px-8 w-full  '>
             {"#Never stop learning."
             .split(" ").map((word,index)=>(
