@@ -151,10 +151,10 @@ const App = () => {
     </div>
     <div className="h-screen bg-transparent  mt-64 flex flex-col justify-between">
     <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
+        <span className="font-semibold  text-neutral-500">
        
         <div className="h-[40rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white absolute opacity-40">
+      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-blue-300 hover:cursor-pointer absolute opacity-50 transition-all duration-500">
         Timeline
       </h1>
       <div className=" md:w-[40rem] rounded-full  h-40 relative">
@@ -187,6 +187,32 @@ const App = () => {
    
     <Example />
     
+    <div className="flex bg-gray-950 h-48 items-center justify-center">
+        <span className="font-semibold  text-neutral-500">
+       
+        <div className=" h-[40rem] flex flex-col items-center justify-center overflow-hidden ">
+      <h1 className="md:text-7xl z-[50] text-3xl lg:text-9xl font-bold text-center text-blue-500 hover:cursor-pointer absolute opacity-30 hover:opacity-70 transition-all duration-500">
+        Projects
+      </h1>
+      <div className=" md:w-[40rem] rounded-full  h-40 relative">
+        {/* Gradients */}
+        <div className="hidden md:block md:absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <div className="hidden md:block md:absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+        <div className="hidden md:block md:absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+        <div className="hidden md:block md:absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+ 
+        {/* Core component */}
+      
+ 
+        {/* Radial Gradient to prevent sharp edges */}
+        
+      </div>
+      
+    </div>
+    
+        </span>
+       
+      </div>
    
     
       <HoverImageLinks />

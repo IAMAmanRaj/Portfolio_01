@@ -11,7 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 export const ShiftingDropDown = () => {
   return (
     <div className="">
-    <div className="flex h-12 items-center z-20   absolute w-full justify-center  mt-0  text-neutral-200 ">
+    <div className="flex h-12 items-center z-50   absolute w-full justify-center  mt-0  text-neutral-200 ">
       <Tabs />
     </div>
     </div>

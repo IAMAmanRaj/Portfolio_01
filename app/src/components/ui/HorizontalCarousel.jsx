@@ -2,7 +2,117 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import React from "react";
 
+import { IoLogoReact } from "react-icons/io5";
 
+import { SiTailwindcss } from "react-icons/si";
+import { IoLogoVercel } from "react-icons/io5";
+import { FaFigma } from "react-icons/fa";
+import { SiVite } from "react-icons/si";
+import { SiRender } from "react-icons/si";
+import { TiHtml5 } from "react-icons/ti";
+import { SiJavascript } from "react-icons/si";
+import { FaGithub } from "react-icons/fa6";
+import { FaGitAlt } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { IoLogoCss3 } from "react-icons/io";
+import { SiNetlify } from "react-icons/si";
+import { SiVisualstudio } from "react-icons/si";
+import { SiGreensock } from "react-icons/si";
+import { SiRedux } from "react-icons/si";
+const cards = [
+  {
+    Icon: IoLogoReact,
+    
+    id: 1,
+  },
+  {
+    Icon: SiTailwindcss,
+   
+    id: 2,
+  },
+  {
+    Icon: SiVite,
+   
+    id: 3,
+  },
+  {
+    Icon: SiJavascript,
+  
+    id: 4,
+  },
+  {
+    Icon: FaGithub,
+   
+    id: 5,
+  },
+  {
+    Icon:FaGitAlt,
+ 
+    id: 6,
+  },
+  {
+    Icon:SiFirebase,
+   
+    id: 7,
+  },
+  {
+    Icon:SiMongodb,
+   
+    id: 8,
+  },
+  {
+    Icon:SiExpress,
+   
+    id: 9,
+  },
+  {
+    Icon:SiNetlify,
+   
+    id: 10,
+  },
+  {
+    Icon:IoLogoCss3,
+   
+    id: 11,
+  },
+  {
+    Icon:TiHtml5,
+   
+    id: 12,
+  },
+  {
+    Icon:SiRender,
+   
+    id: 13,
+  },
+  {
+    Icon:IoLogoVercel,
+   
+    id: 14,
+  },
+  {
+    Icon:SiVisualstudio,
+   
+    id: 15,
+  },
+  {
+    Icon:FaFigma,
+   
+    id: 16,
+  },
+  {
+    Icon:SiGreensock ,
+   
+    id: 17,
+  },
+  {
+    Icon:SiRedux ,
+   
+    id: 18,
+  },
+];
 
 
 
@@ -17,6 +127,7 @@ Technologies I am familiar with
 </span>
       
       <HorizontalScrollCarousel />
+      
      
       
       
@@ -37,11 +148,11 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] ">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+    <section ref={targetRef} className="relative  h-[300vh]   ">
+      <div className="sticky top-0  flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
+            return <Card className="" card={card} key={card.id} />;
           })}
         </motion.div>
       </div>
@@ -50,64 +161,16 @@ const HorizontalScrollCarousel = () => {
 };
 
 const Card = ({ card }) => {
+  const Icon = card.Icon;
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden "
+      className="group relative flex justify-center items-center h-[100px] w-[100px]   sm:h-[200px] sm:w-[200px]  lg:h-[300px] lg:w-[300px] overflow-hidden  "
     >
-      <div
-        style={{
-          backgroundImage: `url(${card.url})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
-          {card.title}
-        </p>
-      </div>
+      <Icon className="" size="50%" />
     </div>
   );
 };
 
 export default Example;
 
-const cards = [
-  {
-    url: "/imgs/abstract/1.jpg",
-    title: "Title 1",
-    id: 1,
-  },
-  {
-    url: "/imgs/abstract/2.jpg",
-    title: "Title 2",
-    id: 2,
-  },
-  {
-    url: "/imgs/abstract/3.jpg",
-    title: "Title 3",
-    id: 3,
-  },
-  {
-    url: "/imgs/abstract/4.jpg",
-    title: "Title 4",
-    id: 4,
-  },
-  {
-    url: "/imgs/abstract/5.jpg",
-    title: "Title 5",
-    id: 5,
-  },
-  {
-    url: "/imgs/abstract/6.jpg",
-    title: "Title 6",
-    id: 6,
-  },
-  {
-    url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
-    id: 7,
-  },
-];
