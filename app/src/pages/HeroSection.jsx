@@ -188,7 +188,7 @@ useLayoutEffect(() => {
 
 
   return (
-    <div  className="flex  bg-gray-950 flex-col ">
+    <div  className="flex flex-col ">
         <div   className="relative flex justify-center items-center h-screen">
           
        
@@ -267,7 +267,7 @@ useLayoutEffect(() => {
             </div>
             </div>
 
-            <div ref={text3Ref} className='relative mx-auto text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-40'>
+            <div ref={text3Ref} className='relative mx-auto text-md xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-40'>
             <p className='flex flex-wrap gap-x-3 px-8 '>
             {"I've never stopped since then"
             .split(" ").map((word,index)=>(
@@ -299,7 +299,7 @@ useLayoutEffect(() => {
 <div className='relative flex flex-col justify-end items-center '>
             <BackgroundGradientAnimation />
             <div className=' absolute '>
-            <div ref={text4Ref} className='relative mb-4  text-xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 '>
+            <div ref={text4Ref} className='relative mb-4  text-lg xs:text-xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 '>
             <p className='flex flex-wrap gap-x-3 px-8 w-full  '>
             {"#Never stop learning."
             .split(" ").map((word,index)=>(

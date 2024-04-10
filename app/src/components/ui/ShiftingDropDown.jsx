@@ -240,7 +240,7 @@ const More = () => {
   );
 };
 
-const Blog = () => {
+const Projects = () => {
   return (
     <div>
       <div className="grid grid-cols-2 gap-2">
@@ -299,7 +299,7 @@ const TABS = [
     Component: More,
   },
   {
-    title: "Blog",
-    Component: Blog,
+    title: "Projects",
+    Component: Projects,
   },
 ].map((n, idx) => ({ ...n, id: idx + 1 }));

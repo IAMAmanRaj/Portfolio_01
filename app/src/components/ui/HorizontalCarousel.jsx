@@ -1,87 +1,23 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import React from "react";
-import SparklesCore from "./ParticlesAnimation";
+
 
 
 
 
 const Example = () => {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
-    <div className="bg-gray-950">
+    <div className="bg-gray-950 z-[-2] relative flex flex-col justify-center">
+       <span className=" bg-gray-950 absolute left-1/2 flex justify-center transform -translate-x-1/2 text-[20px] sm:text-[30px] w-full md:text-4xl lg:text-5xl mt-24 xl:text-7xl font-bold  text-blue-200  ">
+Technologies I am familiar with 
+
+
+</span>
       
       <HorizontalScrollCarousel />
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-       
-        <div className="h-[40rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white absolute opacity-40">
-        Timeline
-      </h1>
-      <div className=" md:w-[40rem] rounded-full  h-40 relative">
-        {/* Gradients */}
-        <div className="hidden md:block md:absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-        <div className="hidden md:block md:absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-        <div className="hidden md:block md:absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-        <div className="hidden md:block md:absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
- 
-        {/* Core component */}
-        <SparklesCore
-          background="transparent"
-          minSize={0.4}
-          maxSize={1}
-          particleDensity={1200}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
- 
-        {/* Radial Gradient to prevent sharp edges */}
-        <div className="absolute inset-0 w-full h-full [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
-      </div>
-      
-    </div>
-    
-        </span>
-        <span className="font-semibold uppercase text-neutral-500">
-
-    
-
-
-        </span>
-      </div>
+     
       
       
     </div>
