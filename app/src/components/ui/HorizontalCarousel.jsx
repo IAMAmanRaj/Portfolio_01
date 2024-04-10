@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 const Example = () => {
   return (
-    <div className="bg-neutral-800">
+    <div className="bg-gray-950">
       
       <HorizontalScrollCarousel />
       
@@ -20,7 +20,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+    <section ref={targetRef} className="relative h-[300vh] ">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
@@ -36,7 +36,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+      className="group relative h-[450px] w-[450px] overflow-hidden "
     >
       <div
         style={{

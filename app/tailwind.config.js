@@ -84,7 +84,7 @@ export default {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors, require("daisyui")],
 };
 
 function addVariablesForColors() {
