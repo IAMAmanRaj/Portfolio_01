@@ -4,7 +4,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 export const HoverImageLinks = () => {
   return (
-    <section className=" bg-black z-[40] bg-opacity-70 p-4 md:p-8">
+    <section className=" bg-gray-950 z-[50] bg-opacity-70 p-4 md:p-8">
       <div className="mx-auto max-w-5xl">
         <Link
           heading="About"
@@ -22,7 +22,7 @@ export const HoverImageLinks = () => {
           heading="Portfolio"
           subheading="Our work speaks for itself"
           imgSrc="/imgs/random/4.jpg"
-          href="#"
+          href="/projects"
         />
         <Link
           heading="Careers"

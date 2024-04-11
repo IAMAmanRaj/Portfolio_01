@@ -7,11 +7,25 @@ import {
   FiPieChart,
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const ShiftingDropDown = () => {
   return (
     <div className="">
-    <div className="flex h-12 items-center z-50   absolute w-full justify-center  mt-0  text-neutral-200 ">
+    <div className="flex h-12 items-center z-[60]   absolute w-full justify-center  mt-0  text-neutral-200 ">
       <Tabs />
     </div>
     </div>
@@ -215,13 +229,13 @@ const Products = () => {
 const More = () => {
   return (
     <div className="grid left-1/2 grid-cols-3 gap-4">
-      <a
-        href="#"
+      <Link
+        to="/"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiHome className="mb-2 text-xl text-indigo-300" />
         <span className="text-xs">Home</span>
-      </a>
+      </Link>
       <a
         href="#"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
@@ -281,8 +295,10 @@ const Projects = () => {
           </p>
         </a>
       </div>
+
       <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
-        <span>View more</span>
+        <Link to="/projects"><span>View more</span></Link>
+        
         <FiArrowRight />
       </button>
     </div>
