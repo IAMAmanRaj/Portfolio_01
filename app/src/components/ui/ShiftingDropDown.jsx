@@ -8,7 +8,7 @@ import {
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
+import { Link as ScrollLink } from 'react-scroll';
 
 
 
@@ -243,13 +243,17 @@ const More = () => {
         <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
         <span className="text-xs">Stats</span>
       </a>
-      <a
-        href="#"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiPieChart className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Timeline </span>
-      </a>
+      <ScrollLink
+  to="timeline"
+  spy={true}
+  smooth={true}
+  offset={-70}
+  duration={1}
+  className="flex hover:cursor-pointer w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+>
+  <FiPieChart className="mb-2 text-xl text-indigo-300" />
+  <span className="text-xs">Timeline </span>
+</ScrollLink>
     </div>
   );
 };

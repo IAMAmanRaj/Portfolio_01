@@ -159,7 +159,7 @@ const App = () => {
      <span className="font-semibold uppercase text-neutral-500">
     
      <div className="h-[40rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
-   <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white absolute opacity-40">
+   <h1 id="timeline" className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white absolute opacity-40">
      Timeline
    </h1>
    <div className=" md:w-[40rem] rounded-full  h-40 relative">

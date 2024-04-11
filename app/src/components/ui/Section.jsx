@@ -7,34 +7,41 @@ export const HoverImageLinks = () => {
     <section className=" bg-gray-950 z-[50] bg-opacity-70 p-4 md:p-8">
       <div className="mx-auto max-w-5xl">
         <Link
-          heading="About"
-          subheading="Learn what we do here"
-          imgSrc="/imgs/random/11.jpg"
-          href="#"
+          heading="Event   Management   Website"
+          subheading="Full-Stack Event Management Website"
+          imgSrc="/images/EventManagement.png"
+          href="https://innodev-24-3.onrender.com"
         />
         <Link
-          heading="Clients"
-          subheading="We work with great people"
-          imgSrc="/imgs/random/6.jpg"
-          href="#"
+          heading="Blog Application"
+          subheading="Full-Stack Blog App"
+          imgSrc="/images/BlogApp.png"
+          href="https://blog-app-irma.onrender.com"
+        />
+          <Link
+          heading="Mess Management Portal"
+          subheading="Full-Stack Mess Management portal to ease hostel life"
+          imgSrc="/images/MessManagementPortal.png"
+          href="https://github.com/IAMAmanRaj/WebSter-23-Forked"
         />
         <Link
-          heading="Portfolio"
-          subheading="Our work speaks for itself"
-          imgSrc="/imgs/random/4.jpg"
-          href="/projects"
+          heading="MERN Auth App"
+          subheading="Full Stack Authentication App , MERN"
+          imgSrc="/images/MernAuth.png"
+          href="https://mern-auth-nlyn.onrender.com"
+        />
+      
+        <Link
+          heading="Dice Game"
+          subheading="Incase you're bored , I got you covered with a Dice Game"
+          imgSrc="/images/DiceGame.png"
+          href="https://brilliant-bonbon-5d2ce1.netlify.app/"
         />
         <Link
-          heading="Careers"
-          subheading="We want cool people"
-          imgSrc="/imgs/random/5.jpg"
-          href="#"
-        />
-        <Link
-          heading="Fun"
-          subheading="Incase you're bored"
-          imgSrc="/imgs/random/10.jpg"
-          href="#"
+          heading="More Projects"
+          subheading="Head over to the repository section of my Github. I am always working :)"
+          imgSrc="/images/GithubProfile.png"
+          href="https://github.com/IAMAmanRaj?tab=repositories"
         />
       </div>
     </section>
@@ -91,7 +98,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
           }}
           className="relative z-10 block text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl"
         >
-          {heading.split("").map((l, i) => (
+          {heading.split(" ").map((l, i) => (
             <motion.span
               variants={{
                 initial: { x: 0 },
