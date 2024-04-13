@@ -31,7 +31,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 const App = () => {
-  const [journeyText, setJourneyText] = useState('My journey');
+
   const comp = useRef(null)
 
 
@@ -64,49 +64,7 @@ const App = () => {
         duration: 1.3,
         ease: "power2.inOut"  // Add this line
       })
-      .from("#myjourney", {
-        opacity: 0,
-        duration: 2,
-        ease: "power2.inOut"  // Add this line
-      })
-      .from({}, {
-        opacity: 0,
-        duration: 3,
-        ease: "power2.inOut",  
      
-      })
-      .from({}, {
-        opacity: 0,
-        duration: 3,
-        ease: "power2.inOut",
-        onStart: () => {
-
-          setJourneyText('Till');
-        
-        },
-       
-      })
-      .from({}, {
-        opacity: 0,
-        duration: 3,
-        ease: "power2.inOut",
-        onStart: () => {
-          
-          setJourneyText('Now');
-          
-        },
-     
-        
-        onComplete: () => {
-          gsap.to({}, {
-            duration: 5,  
-            onStart: () =>{ setJourneyText("Let's dive in");
-            
-          },
-          });
-         
-        }
-      })
         
     }, comp)
 
@@ -150,7 +108,7 @@ const App = () => {
    <div className="bg-transparent">
    <BackgroundBeams className="fixed bg-transparent z-[20]"/>
   
-     <HeroSection journeyText={journeyText} /></div>
+     <HeroSection /></div>
   
  
  </div>
@@ -195,7 +153,7 @@ const App = () => {
      <span className="font-semibold  text-neutral-500">
 
      <div className=" h-[40rem] flex flex-col items-center justify-center overflow-hidden ">
-   <h1 className="md:text-7xl z-[50] text-3xl lg:text-9xl font-bold text-center text-blue-500 hover:cursor-pointer absolute opacity-30 hover:opacity-70 transition-all duration-500">
+   <h1 id="projects" className="md:text-7xl z-[50] text-3xl lg:text-9xl font-bold text-center text-blue-500 hover:cursor-pointer absolute opacity-30 hover:opacity-70 transition-all duration-500">
      Projects
    </h1>
    <div className=" md:w-[40rem] rounded-full  h-40 relative">

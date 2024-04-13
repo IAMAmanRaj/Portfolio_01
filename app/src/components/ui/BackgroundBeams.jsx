@@ -63,7 +63,7 @@ const BackgroundBeams = React.memo( // Defining a React functional component nam
     return (
       <div
         className={cn( // Applying classNames using the cn function
-          "absolute h-[450px] bg-gray-950 bg-transparent mt-[10%] w-full inset-0 mask-size:40px mask-repeat:no-repeat flex items-center justify-center", // Class names for styling
+          "absolute h-[400px] bg-gray-950 bg-transparent mt-[13%] w-screen overflow-hidden inset-0 mask-size:40px mask-repeat:no-repeat flex items-center justify-center", // Class names for styling
           className // Additional className passed as prop
         )}
       >

@@ -119,11 +119,9 @@ const cards = [
 const Example = () => {
 
   return (
-    <div className="bg-gray-950 z-[20] relative flex flex-col justify-center">
+    <div id="skills" className="bg-gray-950 z-[20] relative flex flex-col justify-center">
        <span className=" bg-gray-950 absolute left-1/2 flex justify-center  px-2 vxs:px-0 transform -translate-x-1/2 text-[15px] sm:text-[30px] w-full md:text-4xl lg:text-5xl mt-24 xl:text-7xl font-bold  text-blue-200  ">
 Technologies I am familiar with 
-
-
 </span>
       
       <HorizontalScrollCarousel />
@@ -167,7 +165,7 @@ const Card = ({ card }) => {
       key={card.id}
       className="group relative flex justify-center items-center h-[100px] w-[100px]   sm:h-[200px] sm:w-[200px]  lg:h-[300px] lg:w-[300px] overflow-hidden  "
     >
-      <Icon className="hover:cursor-pointer text-slate-100 hover:text-blue-300 transition-all duration-300" size="50%" />
+      <Icon className="hover:cursor-pointer text-slate-100 hover:text-blue-300 hover:scale-125 transition-all duration-300" size="50%" />
     </div>
   );
 };

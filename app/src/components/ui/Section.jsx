@@ -4,8 +4,8 @@ import { FiArrowRight } from "react-icons/fi";
 
 export const HoverImageLinks = () => {
   return (
-    <section className=" bg-gray-950 z-[50] bg-opacity-70 p-4 md:p-8">
-      <div className="mx-auto max-w-5xl">
+    <section className=" bg-gray-950   z-[50] bg-opacity-70 w-full  p-4 md:p-8">
+      <div className="mx-auto w-[250px] vxs:w-full overflow-hidden vxs:max-w-5xl">
         <Link
           heading="Event   Management   Website"
           subheading="Full-Stack Event Management Website"
@@ -14,13 +14,13 @@ export const HoverImageLinks = () => {
         />
         <Link
           heading="Blog Application"
-          subheading="Full-Stack Blog App"
+          subheading="Full-Stack Blog App Website"
           imgSrc="/images/BlogApp.png"
           href="https://blog-app-irma.onrender.com"
         />
           <Link
           heading="Mess Management Portal"
-          subheading="Full-Stack Mess Management portal to ease hostel life"
+          subheading="Github link to my First Hackathon Project "
           imgSrc="/images/MessManagementPortal.png"
           href="https://github.com/IAMAmanRaj/WebSter-23-Forked"
         />

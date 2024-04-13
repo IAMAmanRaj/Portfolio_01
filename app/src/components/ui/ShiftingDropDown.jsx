@@ -12,16 +12,6 @@ import { Link as ScrollLink } from 'react-scroll';
 
 
 
-
-
-
-
-
-
-
-
-
-
 export const ShiftingDropDown = () => {
   return (
     <div className="">
@@ -49,7 +39,7 @@ const Tabs = () => {
   return (
     <div
       onMouseLeave={() => handleSetSelected(null)}
-      className="fixed top-[desired value] opacity-95 bg-zinc-950 rounded-full border-2 p-2 mt-4 flex h-fit gap-2"
+      className="fixed top-[desired value] opacity-95 bg-zinc-950 rounded-full border-2 p-1 vxs:p-2 mt-4 flex h-fit gap-0 vxs:gap-2"
     >
       {TABS.map((t) => {
         return (
@@ -176,50 +166,36 @@ const Nub = ({ selected }) => {
   );
 };
 
-const Products = () => {
+const About = () => {
   return (
     <div>
-      <div className="flex gap-4 flex-col sm:flex-row">
+      <div className="flex gap-8 sm:gap-16 flex-col sm:flex-row">
         <div>
-          <h3 className="mb-2 text-sm font-medium">Startup</h3>
+          <h3 className="mb-2 text-sm font-medium">Interests</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Bookkeeping
+            Full Stack Web Developement
           </a>
           <a href="#" className="block text-sm text-neutral-400">
-            Invoicing
+            Animation and web designing
           </a>
         </div>
         <div>
-          <h3 className="mb-2 text-sm font-medium">Scaleup</h3>
+          <h3 className="mb-2 text-sm font-medium">Hobbies</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Live Coaching
+            Singing
           </a>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Reviews
+            Chess
           </a>
           <a href="#" className="block text-sm text-neutral-400">
-            Tax/VAT
+            Volleyball
           </a>
         </div>
-        <div>
-          <h3 className="mb-2 text-sm font-medium">Enterprise</h3>
-          <a href="#" className="mb-1 block text-sm text-neutral-400">
-            White glove
-          </a>
-          <a href="#" className="mb-1 block text-sm text-neutral-400">
-            SOX Compliance
-          </a>
-          <a href="#" className="block text-sm text-neutral-400">
-            Staffing
-          </a>
-          <a href="#" className="block text-sm text-neutral-400">
-            More
-          </a>
-        </div>
+      
       </div>
 
       <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
-        <span>View more</span>
+        <span>About me</span>
         <FiArrowRight />
       </button>
     </div>
@@ -236,13 +212,17 @@ const More = () => {
         <FiHome className="mb-2 text-xl text-indigo-300" />
         <span className="text-xs">Home</span>
       </Link>
-      <a
-        href="#"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      <ScrollLink
+      to="skills"
+  spy={true}
+  smooth={true}
+  offset={-70}
+  duration={1}
+        className="flex w-full flex-col items-center justify-center hover:cursor-pointer py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Stats</span>
-      </a>
+        <span className="text-xs">Skills</span>
+      </ScrollLink>
       <ScrollLink
   to="timeline"
   spy={true}
@@ -262,46 +242,48 @@ const Projects = () => {
   return (
     <div>
       <div className="grid grid-cols-2 gap-2">
-        <a href="#">
+        <a href="https://innodev-24-3.onrender.com">
           <img
             className="mb-2 h-14 w-full rounded object-cover"
-            src="/imgs/blog/4.png"
-            alt="Placeholder image"
+            src="/images/EventManagement.png"
+            alt="EventManagementWebsiteImage"
           />
-          <h4 className="mb-0.5 text-sm font-medium">Lorem ipsum dolor</h4>
+          <h4 className="mb-0.5 text-sm font-medium">Event Management Website[Live link]</h4>
           <p className="text-xs text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
-            quidem eos.
+           An End-to-End Event Management Website with plethora of features.
           </p>
         </a>
-        <a href="#">
+        <a href="https://blog-app-irma.onrender.com">
           <img
             className="mb-2 h-14 w-full rounded object-cover"
-            src="/imgs/blog/5.png"
-            alt="Placeholder image"
+            src="/images/BlogApp.png"
+            alt="mern blog website image"
           />
-          <h4 className="mb-0.5 text-sm font-medium">Lorem ipsum dolor</h4>
+          <h4 className="mb-0.5 text-sm font-medium">My own Personal Blog App[Live link]</h4>
           <p className="text-xs text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
-            quidem eos.
+            A MERN stack blog application to share my thoughts and experiences along with this journey
           </p>
         </a>
-        <a href="#">
+        <a href="https://github.com/IAMAmanRaj/WebSter-23-Forked">
           <img
             className="mb-2 h-14 w-full rounded object-cover"
-            src="/imgs/blog/5.png"
-            alt="Placeholder image"
+            src="/images/MessManagementPortal.png"
+            alt="mess management portal website image"
           />
-          <h4 className="mb-0.5 text-sm font-medium">Lorem ipsum dolor</h4>
+          <h4 className="mb-0.5 text-sm font-medium">Mess Management Website</h4>
           <p className="text-xs text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
-            quidem eos.
+            A hackathon Project. A full stack Mess management portal for college students.
           </p>
         </a>
       </div>
 
       <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
-        <Link to="/projects"><span>View more</span></Link>
+        <ScrollLink to="projects"
+  spy={true}
+  smooth={true}
+  offset={-100}
+  duration={1}
+        ><span>View more</span></ScrollLink>
         
         <FiArrowRight />
       </button>
@@ -311,8 +293,8 @@ const Projects = () => {
 
 const TABS = [
   {
-    title: "Products",
-    Component: Products,
+    title: "About me",
+    Component: About,
   },
   {
     title: "More",
