@@ -56,20 +56,19 @@ useLayoutEffect(() => {
   useEffect(() => {
 
 
-    gsap.fromTo( JourneyTextRef.current, 
-        { x: 0 }, 
-        { x: 390,
-            
-          scrollTrigger: {
-            trigger:  JourneyTextRef.current,
-          
-           start: 'top 42%',  // Change this line
-           end: 'top 40%',
-            scrub:1 ,// Increase this value for a smoother effect
-          
+    gsap.fromTo(JourneyTextRef.current, 
+      { x: 0 }, 
+      { x: 390,
+        duration: 5, // Increase the duration
+        ease: "power1.out", // Add an easing function
+        scrollTrigger: {
+          trigger: JourneyTextRef.current,
+          start: 'top 42%',
+          end: 'top 42%',
+          scrub: 1,
         }
-        }
-      );
+      }
+    );
      
 
     gsap.fromTo(textRef.current, 
@@ -248,9 +247,9 @@ useLayoutEffect(() => {
         </div>
        
         <div  className='relative h-screen text-md  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-0 xs:mt-32 flex justify-center text-center'>
-        <img  ref={bgRef} src={bg} alt='bg-body' className='absolute h-[800px] w-screen object-cover border-t-slate-200 border-1   rounded-t-full  '></img>
+        
 
-           <div className='relative z-10 w-full' ref={textRef}>
+           <div id="about" className='relative z-10 w-full' ref={textRef}>
          <p  className='flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[15%] lg:top-[20%]  '>
             {"Few years back , I knew nothing about web. It got my attention in the second year of college when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d. I knew this would be an interesting thing to do rather than doing dsa after classes T_T"
             .split(" ").map((word,index)=>(
@@ -279,7 +278,7 @@ useLayoutEffect(() => {
             </div>
             </div>
             <div className='relative h-screen  text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-32 flex justify-center text-center'>
-            <img  ref={bg2Ref}  src={bg2} alt='bg-body2' className='absolute opacity-20 h-[800px] w-screen object-cover border-t-slate-200 border-1 rounded-b-full   '></img>
+           
             <div  ref={text2Ref} className='relative z-10 w-full' >
             <p className='flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[2%] '>
             {"Then I started focusing on project based learning as much as I could. I've been making projects and learning things through this journey. As a developer, I feel there's no end to these cool stuffs which excites me even more :)"

@@ -195,7 +195,11 @@ const About = () => {
       </div>
 
       <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
-        <span>About me</span>
+      <ScrollLink to="about"
+  spy={true}
+  smooth={true}
+  offset={-100}
+  duration={1}><span>More about me</span></ScrollLink>
         <FiArrowRight />
       </button>
     </div>
@@ -216,8 +220,8 @@ const More = () => {
       to="skills"
   spy={true}
   smooth={true}
-  offset={-70}
-  duration={1}
+  offset={10}
+  duration={6000}
         className="flex w-full flex-col items-center justify-center hover:cursor-pointer py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
@@ -228,7 +232,7 @@ const More = () => {
   spy={true}
   smooth={true}
   offset={-70}
-  duration={1}
+  duration={6000}
   className="flex hover:cursor-pointer w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
 >
   <FiPieChart className="mb-2 text-xl text-indigo-300" />
@@ -282,7 +286,7 @@ const Projects = () => {
   spy={true}
   smooth={true}
   offset={-100}
-  duration={1}
+  duration={6000}
         ><span>View more</span></ScrollLink>
         
         <FiArrowRight />
@@ -293,7 +297,7 @@ const Projects = () => {
 
 const TABS = [
   {
-    title: "About me",
+    title: "About",
     Component: About,
   },
   {
