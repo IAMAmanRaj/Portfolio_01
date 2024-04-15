@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 import bg from '/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg';
 import bg2 from '/images/ian-schneider-TamMbr4okv4-unsplash.jpg';
 
-import { BackgroundGradientAnimation } from '../components/ui/BackgroundGradientAnimation';
+import { BackgroundGradientAnimation } from './BackgroundGradientAnimation';
 
 
 
@@ -210,10 +210,10 @@ useLayoutEffect(() => {
 
 
   return (
-    <div  className="flex flex-col ">
-        <div className="relative flex justify-center items-center h-screen">
+    <div  className="flex flex-col bg-gray-950">
+        <div className="relative  flex justify-center items-center h-screen">
           
-        <div id="intro" ref={JourneyTextRef} className='w-full absolute flex justify-center items-center  text-center self-center '>
+        <div id="intro" ref={JourneyTextRef} className='w-full  absolute flex justify-center items-center  text-center self-center '>
           
           <h1 
           id="intro1"
