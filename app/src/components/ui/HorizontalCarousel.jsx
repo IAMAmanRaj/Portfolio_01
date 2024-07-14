@@ -24,118 +24,110 @@ import { SiRedux } from "react-icons/si";
 const cards = [
   {
     Icon: IoLogoReact,
-    
+
     id: 1,
   },
   {
     Icon: SiTailwindcss,
-   
+
     id: 2,
   },
   {
     Icon: SiVite,
-   
+
     id: 3,
   },
   {
     Icon: SiJavascript,
-  
+
     id: 4,
   },
   {
     Icon: FaGithub,
-   
+
     id: 5,
   },
   {
-    Icon:FaGitAlt,
- 
+    Icon: FaGitAlt,
+
     id: 6,
   },
   {
-    Icon:SiFirebase,
-   
+    Icon: SiFirebase,
+
     id: 7,
   },
   {
-    Icon:SiMongodb,
-   
+    Icon: SiMongodb,
+
     id: 8,
   },
   {
-    Icon:SiExpress,
-   
+    Icon: SiExpress,
+
     id: 9,
   },
   {
-    Icon:SiNetlify,
-   
+    Icon: SiNetlify,
+
     id: 10,
   },
   {
-    Icon:IoLogoCss3,
-   
+    Icon: IoLogoCss3,
+
     id: 11,
   },
   {
-    Icon:TiHtml5,
-   
+    Icon: TiHtml5,
+
     id: 12,
   },
   {
-    Icon:SiRender,
-   
+    Icon: SiRender,
+
     id: 13,
   },
   {
-    Icon:IoLogoVercel,
-   
+    Icon: IoLogoVercel,
+
     id: 14,
   },
   {
-    Icon:SiVisualstudio,
-   
+    Icon: SiVisualstudio,
+
     id: 15,
   },
   {
-    Icon:FaFigma,
-   
+    Icon: FaFigma,
+
     id: 16,
   },
   {
-    Icon:SiGreensock ,
-   
+    Icon: SiGreensock,
+
     id: 17,
   },
   {
-    Icon:SiRedux ,
-   
+    Icon: SiRedux,
+
     id: 18,
   },
 ];
 
-
-
 const Example = () => {
-
   return (
-    <div id="skills" className="bg-transparent z-[20] relative flex flex-col justify-center">
-       <span className=" bg-transparent absolute left-1/2 flex justify-center  px-2 vxs:px-0 transform -translate-x-1/2 text-[15px] sm:text-[30px] w-full md:text-4xl lg:text-5xl mt-24 xl:text-7xl font-bold  text-blue-200  ">
-Technologies I am familiar with 
-</span>
-      
+    <div
+      id="skills"
+      className="bg-transparent z-[20] relative flex flex-col justify-center"
+    >
+      <span className=" bg-transparent absolute left-1/2 flex justify-center  px-2 vxs:px-0 transform -translate-x-1/2 text-[15px] sm:text-[30px] w-full md:text-4xl lg:text-5xl mt-24 xl:text-7xl font-bold  text-blue-200  ">
+        Technologies I am familiar with
+      </span>
+
       <HorizontalScrollCarousel />
-      
-     
-      
-      
     </div>
   );
 };
-
-
-
-
 
 const HorizontalScrollCarousel = () => {
   const targetRef = useRef(null);
@@ -165,10 +157,12 @@ const Card = ({ card }) => {
       key={card.id}
       className="group relative flex justify-center items-center h-[100px] w-[100px]   sm:h-[200px] sm:w-[200px]  lg:h-[300px] lg:w-[300px] overflow-hidden  "
     >
-      <Icon className="hover:cursor-pointer text-slate-100 hover:text-blue-300 hover:scale-125 transition-all duration-300" size="50%" />
+      <Icon
+        className="hover:cursor-pointer text-slate-100 hover:text-blue-300 hover:scale-125 transition-all duration-300"
+        size="50%"
+      />
     </div>
   );
 };
 
 export default Example;
-

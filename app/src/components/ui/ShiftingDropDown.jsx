@@ -8,16 +8,14 @@ import {
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from 'react-scroll';
-
-
+import { Link as ScrollLink } from "react-scroll";
 
 export const ShiftingDropDown = () => {
   return (
     <div className="">
-    <div className="flex h-12 items-center z-[60]   absolute w-full justify-center  mt-0  text-neutral-200 ">
-      <Tabs />
-    </div>
+      <div className="flex h-12 items-center z-[60]   absolute w-full justify-center  mt-0  text-neutral-200 ">
+        <Tabs />
+      </div>
     </div>
   );
 };
@@ -48,7 +46,6 @@ const Tabs = () => {
             selected={selected}
             handleSetSelected={handleSetSelected}
             tab={t.id}
-            
           >
             {t.title}
           </Tab>
@@ -191,15 +188,18 @@ const About = () => {
             Volleyball
           </a>
         </div>
-      
       </div>
 
       <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
-      <ScrollLink to="about"
-  spy={true}
-  smooth={true}
-  offset={-100}
-  duration={2000}><span>More about me</span></ScrollLink>
+        <ScrollLink
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={2000}
+        >
+          <span>More about me</span>
+        </ScrollLink>
         <FiArrowRight />
       </button>
     </div>
@@ -217,27 +217,27 @@ const More = () => {
         <span className="text-xs">Home</span>
       </Link>
       <ScrollLink
-      to="skills"
-  spy={true}
-  smooth={true}
-  offset={-30}
-  duration={2000}
+        to="skills"
+        spy={true}
+        smooth={true}
+        offset={-30}
+        duration={2000}
         className="flex w-full flex-col items-center justify-center hover:cursor-pointer py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
         <span className="text-xs">Skills</span>
       </ScrollLink>
       <ScrollLink
-  to="timeline"
-  spy={true}
-  smooth={true}
-  offset={-70}
-  duration={2000}
-  className="flex hover:cursor-pointer w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
->
-  <FiPieChart className="mb-2 text-xl text-indigo-300" />
-  <span className="text-xs">Timeline </span>
-</ScrollLink>
+        to="timeline"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={2000}
+        className="flex hover:cursor-pointer w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <FiPieChart className="mb-2 text-xl text-indigo-300" />
+        <span className="text-xs">Timeline </span>
+      </ScrollLink>
     </div>
   );
 };
@@ -252,9 +252,11 @@ const Projects = () => {
             src="/images/EventManagement.png"
             alt="EventManagementWebsiteImage"
           />
-          <h4 className="mb-0.5 text-sm font-medium">Event Management Website[Live link]</h4>
+          <h4 className="mb-0.5 text-sm font-medium">
+            Event Management Website[Live link]
+          </h4>
           <p className="text-xs text-neutral-400">
-           An End-to-End Event Management Website with plethora of features.
+            An End-to-End Event Management Website with plethora of features.
           </p>
         </a>
         <a href="https://blog-app-irma.onrender.com">
@@ -263,9 +265,12 @@ const Projects = () => {
             src="/images/BlogApp.png"
             alt="mern blog website image"
           />
-          <h4 className="mb-0.5 text-sm font-medium">My own Personal Blog App[Live link]</h4>
+          <h4 className="mb-0.5 text-sm font-medium">
+            My own Personal Blog App[Live link]
+          </h4>
           <p className="text-xs text-neutral-400">
-            A MERN stack blog application to share my thoughts and experiences along with this journey
+            A MERN stack blog application to share my thoughts and experiences
+            along with this journey
           </p>
         </a>
         <a href="https://github.com/IAMAmanRaj/WebSter-23-Forked">
@@ -274,21 +279,27 @@ const Projects = () => {
             src="/images/MessManagementPortal.png"
             alt="mess management portal website image"
           />
-          <h4 className="mb-0.5 text-sm font-medium">Mess Management Website</h4>
+          <h4 className="mb-0.5 text-sm font-medium">
+            Mess Management Website
+          </h4>
           <p className="text-xs text-neutral-400">
-            A hackathon Project. A full stack Mess management portal for college students.
+            A hackathon Project. A full stack Mess management portal for college
+            students.
           </p>
         </a>
       </div>
 
       <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
-        <ScrollLink to="projects"
-  spy={true}
-  smooth={true}
-  offset={-100}
-  duration={2000}
-        ><span>View more</span></ScrollLink>
-        
+        <ScrollLink
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={2000}
+        >
+          <span>View more</span>
+        </ScrollLink>
+
         <FiArrowRight />
       </button>
     </div>

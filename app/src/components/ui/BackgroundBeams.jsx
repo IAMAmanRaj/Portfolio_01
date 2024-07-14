@@ -4,9 +4,12 @@ import React from "react"; // Importing React library
 import { motion } from "framer-motion"; // Importing motion from framer-motion library
 import { cn } from "../../utils/cn"; // Importing the cn function from the custom utility library
 
-const BackgroundBeams = React.memo( // Defining a React functional component named BackgroundBeams
-  ({ className }) => { // Destructuring props and extracting className
-    const paths = [ // Defining an array of SVG paths
+const BackgroundBeams = React.memo(
+  // Defining a React functional component named BackgroundBeams
+  ({ className }) => {
+    // Destructuring props and extracting className
+    const paths = [
+      // Defining an array of SVG paths
       "M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875",
       "M-373 -197C-373 -197 -305 208 159 335C623 462 691 867 691 867",
       "M-366 -205C-366 -205 -298 200 166 327C630 454 698 859 698 859",
@@ -62,7 +65,8 @@ const BackgroundBeams = React.memo( // Defining a React functional component nam
 
     return (
       <div
-        className={cn( // Applying classNames using the cn function
+        className={cn(
+          // Applying classNames using the cn function
           "absolute h-[400px]  bg-gray-950 bg-transparent mt-[13%] w-screen overflow-hidden inset-0 mask-size:40px mask-repeat:no-repeat flex items-center justify-center", // Class names for styling
           className // Additional className passed as prop
         )}
@@ -82,46 +86,65 @@ const BackgroundBeams = React.memo( // Defining a React functional component nam
             strokeWidth="0.5"
           ></path>
 
-          {paths.map((path, index) => ( // Mapping over paths to create motion paths
-            <motion.path
-              key={`path-${index}`} // Unique key for each motion path
-              d={path} // Path data
-              stroke={`url(#linearGradient-${index})`} // Stroke properties
-              strokeOpacity="0.4"
-              strokeWidth="0.5"
-            ></motion.path>
-          ))}
-          <defs> // Defining gradients and other SVG definitions
-            {paths.map((path, index) => ( // Mapping over paths to create gradients
-              <motion.linearGradient
-                id={`linearGradient-${index}`} // Unique ID for each linear gradient
-                key={`gradient-${index}`} // Unique key for each gradient
-                initial={{ // Initial animation properties
-                  x1: "0%",
-                  x2: "0%",
-                  y1: "0%",
-                  y2: "0%",
-                }}
-                animate={{ // Animation properties
-                  x1: ["0%", "100%"],
-                  x2: ["0%", "95%"],
-                  y1: ["0%", "100%"],
-                  y2: ["0%", `${93 + Math.random() * 8}%`],
-                }}
-                transition={{ // Transition properties
-                  duration: Math.random() * 10 + 10,
-                  ease: "easeInOut",
-                  repeat: Infinity,
-                  delay: Math.random() * 10,
-                }}
-              >
-                <stop stopColor="#18CCFC" stopOpacity="0"></stop> // Gradient stops
-                <stop stopColor="#18CCFC"></stop>
-                <stop offset="32.5%" stopColor="#6344F5"></stop>
-                <stop offset="100%" stopColor="#AE48FF" stopOpacity="0"></stop>
-              </motion.linearGradient>
-            ))}
-
+          {paths.map(
+            (
+              path,
+              index // Mapping over paths to create motion paths
+            ) => (
+              <motion.path
+                key={`path-${index}`} // Unique key for each motion path
+                d={path} // Path data
+                stroke={`url(#linearGradient-${index})`} // Stroke properties
+                strokeOpacity="0.4"
+                strokeWidth="0.5"
+              ></motion.path>
+            )
+          )}
+          <defs>
+            {" "}
+            // Defining gradients and other SVG definitions
+            {paths.map(
+              (
+                path,
+                index // Mapping over paths to create gradients
+              ) => (
+                <motion.linearGradient
+                  id={`linearGradient-${index}`} // Unique ID for each linear gradient
+                  key={`gradient-${index}`} // Unique key for each gradient
+                  initial={{
+                    // Initial animation properties
+                    x1: "0%",
+                    x2: "0%",
+                    y1: "0%",
+                    y2: "0%",
+                  }}
+                  animate={{
+                    // Animation properties
+                    x1: ["0%", "100%"],
+                    x2: ["0%", "95%"],
+                    y1: ["0%", "100%"],
+                    y2: ["0%", `${93 + Math.random() * 8}%`],
+                  }}
+                  transition={{
+                    // Transition properties
+                    duration: Math.random() * 10 + 10,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                    delay: Math.random() * 10,
+                  }}
+                >
+                  <stop stopColor="#18CCFC" stopOpacity="0"></stop> // Gradient
+                  stops
+                  <stop stopColor="#18CCFC"></stop>
+                  <stop offset="32.5%" stopColor="#6344F5"></stop>
+                  <stop
+                    offset="100%"
+                    stopColor="#AE48FF"
+                    stopOpacity="0"
+                  ></stop>
+                </motion.linearGradient>
+              )
+            )}
             <radialGradient
               id="paint0_radial_242_278"
               cx="0"

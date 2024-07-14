@@ -18,7 +18,7 @@ export const HoverImageLinks = () => {
           imgSrc="/images/BlogApp.png"
           href="https://blog-app-irma.onrender.com"
         />
-          <Link
+        <Link
           heading="Mess Management Portal"
           subheading="Github link to my First Hackathon Project "
           imgSrc="/images/MessManagementPortal.png"
@@ -30,7 +30,7 @@ export const HoverImageLinks = () => {
           imgSrc="/images/MernAuth.png"
           href="https://mern-auth-nlyn.onrender.com"
         />
-      
+
         <Link
           heading="Dice Game"
           subheading="Incase you're bored , I got you covered with a Dice Game"

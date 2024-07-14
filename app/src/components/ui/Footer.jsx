@@ -6,7 +6,7 @@ import { Link, json } from "react-router-dom";
 import logo from "../../../public/images/razorpay-icon.png";
 const Footer = () => {
   const paymentHandler = async (event) => {
-    const amount = 10000;
+    const amount = 100;
     const currency = "INR";
     const receiptId = "12345678";
 
@@ -23,14 +23,14 @@ const Footer = () => {
     });
 
     const order = await response.json();
+    console.log(order.id);
 
     var option = {
       key: "",
       amount,
       currency,
-      name: "Portfolio | Aman Raj",
-      description: "Test Transaction",
-      image: { logo },
+      name: "Payment Gateway",
+      description: "Transaction",
       order_id: order.id,
       handler: async function (response) {
         const body = { ...response };
@@ -44,13 +44,15 @@ const Footer = () => {
             body: JSON.stringify(body),
           }
         );
+        console.log(option.order_id);
+
         const jsonResponse = await validateResponse.json();
         console.log(jsonResponse);
       },
       prefill: {
-        name: "Aman Raj",
-        email: "imamanraj87@gmail.com",
-        contact: "7061410096",
+        name: "Name of the User",
+        email: "Email id of the user",
+        contact: "Phone number of the user",
       },
       notes: {
         address: "Razorpay Corporate Office",
@@ -59,6 +61,7 @@ const Footer = () => {
         color: "#3399cc",
       },
     };
+
     var rzp1 = new Razorpay(option);
     rzp1.on("payment.failed", function (response) {
       alert(response);
@@ -100,7 +103,7 @@ const Footer = () => {
         </div>
       </nav>
       <aside>
-        <p>Copyright © 2024 - All right reserved</p>
+        <p>Copyright © 2024 - All rights reserved</p>
         <p>{`Made with <3 `}</p>
         <p>{`Feel free to reach out :)  `}</p>
       </aside>
