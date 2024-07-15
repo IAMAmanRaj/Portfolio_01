@@ -84,7 +84,7 @@ export default {
       },
     },
   },
-  plugins: [addVariablesForColors, require("daisyui")],
+  plugins: [addVariablesForColors, require("daisyui"),require("flowbite/plugin"),],
 };
 
 function addVariablesForColors() {
