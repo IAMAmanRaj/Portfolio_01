@@ -14,11 +14,73 @@ const Footer = () => {
   };
 
   const paymentHandler = async (event) => {
-    // Your paymentHandler logic
+    const amount = 10000;
+    const currency = "INR";
+    const receiptId = "12345678";
+
+    const response = await fetch("http://localhost:3000/api/payment", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        amount,
+        currency,
+        receipt: receiptId,
+      }),
+    });
+
+    const order = await response.json();
+    console.log(order.id);
+
+    var option = {
+      key: "",
+      amount,
+      currency,
+      name: "Payment Gateway",
+      description: "Transaction",
+      order_id: order.id,
+      handler: async function (response) {
+        const body = { ...response };
+        const validateResponse = await fetch(
+          "http://localhost:3000/api/validatePayment",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
+          }
+        );
+        console.log(option.order_id);
+
+        const jsonResponse = await validateResponse.json();
+        console.log(jsonResponse);
+      },
+      prefill: {
+        name: "Name of the User",
+        email: "Email id of the user",
+        contact: "Phone number of the user",
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+
+    var rzp1 = new Razorpay(option);
+    rzp1.on("payment.failed", function (response) {
+      alert(response);
+    });
+
+    rzp1.open();
+    event.preventDefault();
   };
 
   return (
-    <footer className="footer pt-16 sm:pt-8 relative z-[20] border-white footer-center p-10 pb-2 text-base-content rounded">
+    <footer className="footer gap-6 pt-16 sm:pt-8 relative z-[20] border-white footer-center p-10 pb-8 text-base-content rounded">
       <nav className="grid grid-flow-col gap-4">
         <a onClick={paymentHandler} className="link link-hover">
           Support Me
@@ -47,39 +109,62 @@ const Footer = () => {
           </Link>
         </div>
       </nav>
-      <div className="text-center flex flex-row">
-        <a href="/terms&conditions" className="link link-hover">
+      <div className="text-center  text-[10px] sm:text-[15px] lg:text-md flex flex-row">
+        <a
+          href="/terms&conditions"
+          className="link link-hover pr-2 border-r-2 border-white "
+        >
           Terms & Conditions
         </a>
-        |
-        <a href="/privacypolicy" className="link link-hover">
+
+        <a href="/privacypolicy" className="link link-hover pr-2 ">
           Privacy Policy
         </a>
-        |
+      </div>
+      <div className="text-center  text-[10px] sm:text-[15px] lg:text-md flex flex-row">
         <a
           onClick={() =>
-            modalContentHandler("Shipping is not applicable for business")
+            modalContentHandler(
+              "There is no pricing/product policy available for this business"
+            )
           }
-          className="link link-hover"
+          className="link link-hover pr-2 border-r-2 border-white"
         >
-          Shipping Policy
-        </a>{" "}
-        <a
-          onClick={() => modalContentHandler("Mobile Number : 7061410096")}
-          className="link link-hover"
-        >
-          Cancellation and Refund Policy
+          Pricing & Products
         </a>
-        |
         <a
-          onClick={() => modalContentHandler("Mobile Number : 7061410096")}
-          className="link link-hover"
+          onClick={() =>
+            modalContentHandler(
+              "There is no shipping policy available for this business"
+            )
+          }
+          className="link link-hover pr-2 border-r-2 border-white"
+        >
+          Shipping and Delivery Policy
+        </a>
+
+        <a
+          onClick={() =>
+            modalContentHandler("No Cancellations & Refunds are entertained")
+          }
+          className="link link-hover pr-2 border-r-2 border-white"
+        >
+          Cancellation and Refund
+        </a>
+
+        <a
+          onClick={() =>
+            modalContentHandler(`[ Mobile Number : +917061410096 ] 
+            [ Address : patna , Bihar ] 
+            [ Pincode : 800023 ] `)
+          }
+          className="link link-hover "
         >
           Contact Us
         </a>
       </div>
       <div>
-        <p>Copyright © 2024 - All rights reserved</p>
+        <p>Portfolio @ Aman Raj | Copyright © 2024 - All rights reserved</p>
         <p>{`Made with <3 `}</p>
         <p>{`Feel free to reach out :)  `}</p>
       </div>
@@ -95,9 +180,8 @@ const Footer = () => {
           <div className="text-center mt-24">
             <h3 className="mb-5 text-lg text-white">{modalContent}</h3>
             <div className="flex  justify-center gap-4">
-              <Button color="failure">Yes, I'm sure</Button>
               <Button color="gray" onClick={() => setShowModal(false)}>
-                No, cancel
+                OK
               </Button>
             </div>
           </div>
