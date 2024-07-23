@@ -18,7 +18,7 @@ const Footer = () => {
     const currency = "INR";
     const receiptId = "12345678";
 
-    const response = await fetch("http://localhost:3000/api/payment", {
+    const response = await fetch("/api/payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ const Footer = () => {
       handler: async function (response) {
         const body = { ...response };
         const validateResponse = await fetch(
-          "http://localhost:3000/api/validatePayment",
+          "/api/validatePayment",
           {
             method: "POST",
             headers: {
