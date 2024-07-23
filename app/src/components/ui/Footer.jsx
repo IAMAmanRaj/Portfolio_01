@@ -14,7 +14,7 @@ const Footer = () => {
   };
 
   const paymentHandler = async (event) => {
-    const amount = 10000;
+    const amount = 100;
     const currency = "INR";
     const receiptId = "12345678";
 
