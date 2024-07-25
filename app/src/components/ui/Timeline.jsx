@@ -2,7 +2,6 @@ import React from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { useEffect } from "react";
-import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -263,7 +262,7 @@ const Timeline = () => {
           </div>
           <div
             ref={textRef1}
-            className="timeline-start  md:text-end mb-10 text-current pl-8 md:pl-0 md:mr-3"
+            className="timeline-start  md:text-end pb-12 text-current pl-8 md:pl-0 md:mr-3"
           >
             <time className="font-mono italic ">Early 2023</time>
             <div className="text-lg font-black">The Initial Phase</div>
@@ -292,7 +291,7 @@ const Timeline = () => {
           </div>
           <div
             ref={textRef2}
-            className="timeline-end mb-10 text-current pl-8 md:pl-0 md:ml-3 "
+            className="timeline-end pb-12 text-current pl-8 md:pl-0 md:ml-3 "
           >
             <time className="font-mono italic ">Summers , 2023</time>
             <div className="text-lg font-black">The build up</div>I soon
@@ -320,7 +319,7 @@ const Timeline = () => {
           </div>
           <div
             ref={textRef3}
-            className="timeline-start pl-8  md:pl-0 text-current md:text-end mb-10 md:mr-3"
+            className="timeline-start pl-8  md:pl-0 text-current md:text-end pb-12 md:mr-3"
           >
             <time className="font-mono italic ">Winters , 2023</time>
             <div className="text-lg font-black">Diving into Projects</div>I
@@ -351,15 +350,16 @@ const Timeline = () => {
           >
             <time className="font-mono italic ">2024</time>
             <div className="text-lg font-black">The year of my life</div>I am
-            still learning and growing every single day. I took up full stack
-            projects on my own as a new year challenge and this is where the
-            things have started to become interesting. I learned a lot about
-            backend in roughly a month. I worked in the Web Team of
-            Culrav-Avishkar'24. Learnt a lot about scalability related stuffs
-            and about approaches to Web Designing..the audience judges on looks
-            for sure :o Fast forward in March Got #2 in Innodev '24, a hackathon
-            that happens every year. I don't really know about what lies ahead
-            but I am going all in for this !
+            still learning and growing every single day. This year, I challenged
+            myself to take on full stack projects, turning each day into an
+            adventure. In just a month, I dove deep into backend development.
+            Working with the Web Team of Culrav-Avishkar'24, I uncovered the
+            secrets of scalability and the art of web design. March brought an
+            exciting victory as I clinched #2 at Innodev '24, an annual
+            hackathon. April marked a new chapter with an internship at Crew,
+            where I continue to thrive. Along the way, I’ve embraced new
+            technologies like NestJS and ORMs like Prisma. The future is a
+            mystery, but I'm diving in headfirst, eager for whatever comes next!
           </div>
           <hr ref={hrRef4} className="z-[-4]" />
         </li>

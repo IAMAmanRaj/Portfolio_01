@@ -1,16 +1,9 @@
 import React, { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import bulb from "/images/diego-ph-fIq0tET6llw-unsplash.jpg";
-import pages from "/images/brandi-redd-aJTiW00qqtI-unsplash.jpg";
-import comp from "/images/ben-kolde-bs2Ba7t69mM-unsplash.jpg";
 import { useRef } from "react";
 import { useEffect } from "react";
-import bg from "/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg";
-import bg2 from "/images/ian-schneider-TamMbr4okv4-unsplash.jpg";
-
 import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
-
 gsap.registerPlugin(ScrollTrigger);
 const HeroSection = () => {
   const textRef = useRef(null);
@@ -334,7 +327,7 @@ const HeroSection = () => {
         <div className=" absolute ">
           <div
             ref={text4Ref}
-            className="relative mb-4  text-lg xs:text-xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 "
+            className="relative mb-4 text-md sm:text-lg xs:text-xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 "
           >
             <p className="flex flex-wrap gap-x-3 px-8 w-full  ">
               {"#Never stop learning.".split(" ").map((word, index) => (

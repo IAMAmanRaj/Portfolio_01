@@ -7,14 +7,19 @@ import { Button, Modal } from "flowbite-react";
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState("");
-
+  const [amount, setAmount] = useState();
+  const [supportSectionModal, showSupportSectionModal] = useState(false);
+  const [paymentInProcess, setPaymentInProcess] = useState(false);
   const modalContentHandler = (content) => {
     setModalContent(content);
     setShowModal(true);
   };
 
+  const handleAmountChange = (event) => {
+    setAmount(event.target.value);
+  };
+
   const paymentHandler = async (event) => {
-    const amount = 100;
     const currency = "INR";
     const receiptId = "12345678";
 
@@ -24,7 +29,7 @@ const Footer = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        amount,
+        amount: amount * 100,
         currency,
         receipt: receiptId,
       }),
@@ -32,6 +37,7 @@ const Footer = () => {
 
     const order = await response.json();
     console.log(order.id);
+    setPaymentInProcess(false);
 
     var option = {
       key: "",
@@ -42,16 +48,13 @@ const Footer = () => {
       order_id: order.id,
       handler: async function (response) {
         const body = { ...response };
-        const validateResponse = await fetch(
-          "/api/validatePayment",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(body),
-          }
-        );
+        const validateResponse = await fetch("/api/validatePayment", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body),
+        });
         console.log(option.order_id);
 
         const jsonResponse = await validateResponse.json();
@@ -82,10 +85,14 @@ const Footer = () => {
   return (
     <footer className="footer gap-6 pt-16 sm:pt-8 relative z-[20] border-white footer-center p-10 pb-8 text-base-content rounded">
       <nav className="grid grid-flow-col gap-4">
-        <a onClick={paymentHandler} className="link link-hover">
-          Support Me
+        <a
+          onClick={() => {
+            showSupportSectionModal(true);
+          }}
+          className="link link-hover font-bold text-blue-600 text-xl"
+        >
+          {paymentInProcess ? "Proceeding to pay.." : "Support Me"}
         </a>
-        <a className="link link-hover">My Resume</a>
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
@@ -103,25 +110,25 @@ const Footer = () => {
           </Link>
           <Link to="https://www.instagram.com/i_m_amanraj87/">
             <FaInstagram
-              className="hover:text-red-900 transition-all duration-800"
+              className="hover:text-pink-700 transition-all duration-800"
               size={30}
             />
           </Link>
         </div>
       </nav>
-      <div className="text-center  text-[10px] sm:text-[15px] lg:text-md flex flex-row">
+      <div className="text-center font-bold text-blue-100  text-[10px] sm:text-[15px] lg:text-md flex flex-row">
         <a
           href="/terms&conditions"
-          className="link link-hover pr-2 border-r-2 border-white "
+          className="link link-hover pr-2 border-r-2  border-white "
         >
           Terms & Conditions
         </a>
 
-        <a href="/privacypolicy" className="link link-hover pr-2 ">
+        <a href="/privacypolicy" className="link  link-hover pr-2 ">
           Privacy Policy
         </a>
       </div>
-      <div className="text-center  text-[10px] sm:text-[15px] lg:text-md flex flex-row">
+      <div className="text-center text-white font-bold  text-[10px] sm:text-[15px] lg:text-md flex flex-row">
         <a
           onClick={() =>
             modalContentHandler(
@@ -163,11 +170,79 @@ const Footer = () => {
           Contact Us
         </a>
       </div>
-      <div>
+      <div className="text-blue-100">
         <p>Portfolio @ Aman Raj | Copyright © 2024 - All rights reserved</p>
-        <p>{`Made with <3 `}</p>
-        <p>{`Feel free to reach out :)  `}</p>
+        <div className="flex flex-row gap-1">
+          {" "}
+          <p className="font-bold "></p>
+          {`Made with`}
+          <p className="text-pink-700 font-extrabold">{`<3`}</p>
+        </div>
+
+        <p className="font-normal">{`Feel free to reach out :)  `}</p>
       </div>
+      <Modal
+        show={supportSectionModal}
+        onClose={() => {
+          setShowModal(false);
+          showSupportSectionModal(false);
+        }}
+        popup
+        size="md"
+        style={{
+          zIndex: 60,
+          backgroundImage: `url('/images/nasa-Q1p7bh3SHj8-unsplash.jpg')`,
+          backgroundSize: "cover",
+          width: screen,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Modal.Body>
+          <div className="text-center py-8 px-8 w-[350px] rounded-xl absolute mt-[50%] lg:mt-[14%] left-1/2 -translate-x-1/2 border-2 border-white bg-zinc-950 bg-opacity-70">
+            <h3 className="mb-10 text-lg text-white font-bold">
+              Support Me Section
+            </h3>
+
+            <input
+              type="number"
+              value={amount}
+              onChange={handleAmountChange}
+              className="input opacity-90 input-bordered"
+              placeholder="Enter amount (₹)"
+              required
+              min="1"
+            />
+            <div className="flex flex-row justify-center gap-4 mt-10">
+              <Button
+                className="bg-red-700 border-none"
+                color="red"
+                onClick={() => {
+                  showSupportSectionModal(false);
+                }}
+              >
+                <span className="text-white font-bold">Cancel</span>
+              </Button>
+              <Button
+                className="bg-blue-800 border-none"
+                color="gray"
+                onClick={() => {
+                  if (amount > 0) {
+                    setPaymentInProcess(true);
+                    paymentHandler();
+                    setAmount(); // Reset amount after payment
+                    showSupportSectionModal(false);
+                  } else {
+                    alert("Please enter a valid amount.");
+                  }
+                }}
+              >
+                <span className="text-white font-bold">Proceed To Pay</span>
+              </Button>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
       <Modal
         show={showModal}
         onClose={() => setShowModal(false)}
@@ -175,7 +250,6 @@ const Footer = () => {
         size="md"
         className="absolute z-[30] bg-black h-screen w-screen"
       >
-        <Modal.Header />
         <Modal.Body>
           <div className="text-center mt-24">
             <h3 className="mb-5 text-lg text-white">{modalContent}</h3>

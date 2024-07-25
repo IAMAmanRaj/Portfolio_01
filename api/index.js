@@ -1,39 +1,20 @@
 import express from "express";
-
-import mongoose from "mongoose";
-
 import dotenv from "dotenv";
-
 import cookieParser from "cookie-parser";
-
 import path from "path";
-
 import Razorpay from "razorpay";
-
 import crypto from "crypto";
-
 import cors from "cors";
 
 dotenv.config();
 
 const __dirname = path.resolve();
-mongoose
-  .connect(process.env.MONGO)
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
 
 const app = express();
 
 app.use(express.json());
-
 app.use(express.urlencoded({ extended: false }));
-
 app.use(cookieParser());
-
 app.use(cors());
 
 app.post("/api/payment", async (req, res) => {
@@ -73,7 +54,7 @@ app.post("/api/validate", async (req, res) => {
     return res.status(400).json({ msg: "Transaction is not legit!" });
   }
   res.json({
-    msg: " Transaction is legit !",
+    msg: "Transaction is legit!",
     orderId: razorpay_order_id,
     paymentId: razorpay_payment_id,
   });
@@ -84,7 +65,6 @@ app.listen(3000, () => {
 });
 
 app.use((err, req, res, next) => {
-  //middleware for handling errors
   const statusCode = err.statusCode || 500;
   const message = err.message || "Internal Server Error";
   return res.status(statusCode).json({
