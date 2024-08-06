@@ -14,21 +14,21 @@ export const HoverImageLinks = () => {
         />
         <Link
           heading="Blog Application"
-          subheading="Full-Stack Blog App Website"
+          subheading="Full-Stack Blog Web App"
           imgSrc="/images/BlogApp.png"
           href="https://blog-app-irma.onrender.com"
         />
         <Link
           heading="Mess Management Portal"
-          subheading="Github link to my First Hackathon Project "
+          subheading="This was my First Hackathon Project "
           imgSrc="/images/MessManagementPortal.png"
           href="https://github.com/IAMAmanRaj/WebSter-23-Forked"
         />
         <Link
-          heading="MERN Auth App"
-          subheading="Full Stack Authentication App , MERN"
-          imgSrc="/images/MernAuth.png"
-          href="https://mern-auth-nlyn.onrender.com"
+          heading="Next Auth App"
+          subheading="Full Stack Authentication App , Next JS"
+          imgSrc="/images/NextAuth.png"
+          href="https://github.com/IAMAmanRaj/NextAuth-v5.0"
         />
 
         <Link

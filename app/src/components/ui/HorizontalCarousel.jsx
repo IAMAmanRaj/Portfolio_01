@@ -21,97 +21,31 @@ import { SiNetlify } from "react-icons/si";
 import { SiVisualstudio } from "react-icons/si";
 import { SiGreensock } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
+import { SiNestjs } from "react-icons/si";
+import { SiPrisma } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
 const cards = [
-  {
-    Icon: IoLogoReact,
-
-    id: 1,
-  },
-  {
-    Icon: SiTailwindcss,
-
-    id: 2,
-  },
-  {
-    Icon: SiVite,
-
-    id: 3,
-  },
-  {
-    Icon: SiJavascript,
-
-    id: 4,
-  },
-  {
-    Icon: FaGithub,
-
-    id: 5,
-  },
-  {
-    Icon: FaGitAlt,
-
-    id: 6,
-  },
-  {
-    Icon: SiFirebase,
-
-    id: 7,
-  },
-  {
-    Icon: SiMongodb,
-
-    id: 8,
-  },
-  {
-    Icon: SiExpress,
-
-    id: 9,
-  },
-  {
-    Icon: SiNetlify,
-
-    id: 10,
-  },
-  {
-    Icon: IoLogoCss3,
-
-    id: 11,
-  },
-  {
-    Icon: TiHtml5,
-
-    id: 12,
-  },
-  {
-    Icon: SiRender,
-
-    id: 13,
-  },
-  {
-    Icon: IoLogoVercel,
-
-    id: 14,
-  },
-  {
-    Icon: SiVisualstudio,
-
-    id: 15,
-  },
-  {
-    Icon: FaFigma,
-
-    id: 16,
-  },
-  {
-    Icon: SiGreensock,
-
-    id: 17,
-  },
-  {
-    Icon: SiRedux,
-
-    id: 18,
-  },
+  { Icon: TiHtml5, id: 1 },
+  { Icon: IoLogoCss3, id: 2 },
+  { Icon: SiJavascript, id: 3 },
+  { Icon: IoLogoReact, id: 4 },
+  { Icon: SiTailwindcss, id: 5 },
+  { Icon: SiVite, id: 6 },
+  { Icon: FaGithub, id: 7 },
+  { Icon: FaGitAlt, id: 8 },
+  { Icon: SiFirebase, id: 9 },
+  { Icon: SiMongodb, id: 10 },
+  { Icon: SiExpress, id: 11 },
+  { Icon: SiNetlify, id: 12 },
+  { Icon: SiRender, id: 13 },
+  { Icon: IoLogoVercel, id: 14 },
+  { Icon: SiVisualstudio, id: 15 },
+  { Icon: FaFigma, id: 16 },
+  { Icon: SiGreensock, id: 17 },
+  { Icon: SiRedux, id: 18 },
+  { Icon: SiNestjs, id: 19 },
+  { Icon: SiPrisma, id: 20 },
+  { Icon: SiNextdotjs, id: 21 },
 ];
 
 const Example = () => {

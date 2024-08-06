@@ -191,7 +191,7 @@ const Footer = () => {
         size="md"
         style={{
           zIndex: 60,
-          backgroundImage: `url('/images/nasa-Q1p7bh3SHj8-unsplash.jpg')`,
+          backgroundImage: `url('/images/thankyou.jpg')`,
           backgroundSize: "cover",
           width: screen,
           backgroundPosition: "center",
