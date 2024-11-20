@@ -60,8 +60,10 @@ app.post("/api/validate", async (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is listening on port 3000");
+app.use(express.static(path.join(__dirname, "/app/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "app", "dist", "index.html"));
 });
 
 app.use((err, req, res, next) => {
@@ -74,8 +76,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.use(express.static(path.join(__dirname, "/app/dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "app", "dist", "index.html"));
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
 });
