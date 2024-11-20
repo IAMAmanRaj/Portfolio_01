@@ -8,8 +8,6 @@ import cors from "cors";
 
 dotenv.config();
 
-const __dirname = path.resolve();
-
 const app = express();
 
 app.use(express.json());
@@ -60,10 +58,18 @@ app.post("/api/validate", async (req, res) => {
   });
 });
 
-app.use(express.static(path.join(__dirname, "/app/dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "app", "dist", "index.html"));
+app.get("/", (req, res) => {
+  const htmlResponse = `
+    <html>
+      <head>
+        <title>Node Js and Express</title>
+      </head>
+      <body>
+        <h1>Portfolio backend hosted on Vercel</h1>
+      </body>
+    </html>
+  `;
+  res.send(htmlResponse);
 });
 
 app.use((err, req, res, next) => {
