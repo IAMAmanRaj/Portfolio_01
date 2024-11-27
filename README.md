@@ -32,7 +32,7 @@ https://github.com/user-attachments/assets/394ac3c4-4b18-42f9-9d82-534c3003e4c1
 ![Logo](https://images.prismic.io/toyfight/65e1e07d27237c2bb829b9dc_GSAP-Meta-image.jpg?auto=format%2Ccompress&rect=0%2C0%2C2400%2C1260&w=10800&h=1260)
 
 ## Aceternity UI
-![Logo](https://pbs.twimg.com/profile_images/1748413098740920320/2RGyMp9c_200x200.png)
+![Logo](https://framerusercontent.com/images/gPxoXjsHQH3pGW3B7RqJjiUPcw.webp?scale-down-to=1024)
 
 ## Flowbite CSS
 ![Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxEWGFf_icx6QxWJgpNAHN5hvHQKho_RO1KA&s)

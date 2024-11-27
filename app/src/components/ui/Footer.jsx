@@ -116,6 +116,7 @@ const Footer = () => {
           </Link>
         </div>
       </nav>
+      {/*}
       <div className="text-center font-bold text-blue-100  text-[10px] sm:text-[15px] lg:text-md flex flex-row">
         <a
           href="/terms&conditions"
@@ -170,6 +171,7 @@ const Footer = () => {
           Contact Us
         </a>
       </div>
+      */}
       <div className="text-blue-100">
         <p>Portfolio @ Aman Raj | Copyright © 2024 - All rights reserved</p>
         <div className="flex flex-row gap-1">
