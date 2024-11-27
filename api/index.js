@@ -60,6 +60,11 @@ app.post("/api/validate", async (req, res) => {
   });
 });
 
+// Add a simple GET route for testing
+app.get("/api", (req, res) => {
+  res.json({ message: "API is working!" });
+});
+
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");
 });
@@ -72,10 +77,4 @@ app.use((err, req, res, next) => {
     message,
     statusCode,
   });
-});
-
-app.use(express.static(path.join(__dirname, "/app/dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "app", "dist", "index.html"));
 });
