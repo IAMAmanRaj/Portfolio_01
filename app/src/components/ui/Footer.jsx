@@ -173,7 +173,7 @@ const Footer = () => {
       </div>
       */}
       <div className="text-blue-100">
-        <p>Portfolio @ Aman Raj | Copyright © 2024 - All rights reserved</p>
+        <p>Portfolio @ Aman Raj | Copyright © {new Date().getFullYear()} - All rights reserved</p>
         <div className="flex flex-row gap-1">
           {" "}
           <p className="font-bold "></p>
