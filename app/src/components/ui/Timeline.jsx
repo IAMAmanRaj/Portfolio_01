@@ -685,7 +685,7 @@ const Timeline = () => {
   ref={textRef8}
   className="timeline-end pl-8 text-current md:pl-0 mb-10 md:ml-3"
 >
-  <time className="font-mono italic ">Mid, 2024</time>
+  <time className="font-mono italic ">Later, 2024</time>
   <div className="text-lg font-black">Launched Websites and a Client Project</div>
   In September, we successfully launched two major projects at <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">CREW </span>, the first major version of the website  
   <a href="http://www.crewtm.com" className="text-blue-500"> www.crewtm.com </a> 
