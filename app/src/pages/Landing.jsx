@@ -72,13 +72,13 @@ const Landing = () => {
             className="text-3xl text-white  md:text-5xl lg:text-7xl"
             id="title-3"
           >
-            Passionate about Web Development.
+            Interested in UI/UX.
           </h1>
           <h1
             className="text-3xl text-white  md:text-5xl lg:text-6xl"
             id="title-4"
           >
-            and a Full stack Web Developer :)
+            and a Frontend Engineer :)
           </h1>
         </div>
         <div className="">

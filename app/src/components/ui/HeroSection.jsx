@@ -233,7 +233,7 @@ const HeroSection = () => {
       <div className="relative h-screen text-md  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
         <div id="about" className="relative z-10 w-full" ref={textRef}>
           <p className="flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[15%] lg:top-[20%]  ">
-            {"Few years back , I knew nothing about web. It got my attention in the second year of college when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d. I knew this would be an interesting thing to do rather than doing dsa after classes T_T"
+            {"Few years back , I knew nothing about web. It got my attention in the 2nd Academic year of college when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d."
               .split(" ")
               .map((word, index) => (
                 <span id="character" key={index} className="opacity-0">
@@ -247,7 +247,7 @@ const HeroSection = () => {
           </p>
 
           <p className="absolute top-[15%]   lg:top-[20%] flex flex-wrap gap-x-3 opacity-40 mx-auto px-4 xs:px-12  md:px-24 ">
-            {"Few years back , I knew nothing about web. It got my attention in the second year of college when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d. I knew this would be an interesting thing to do rather than doing dsa after classes T_T"
+            {"Few years back , I knew nothing about web. It got my attention in the 2nd Academic year of college when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d."
               .split(" ")
               .map((word, index) => (
                 <span key={index} className="">

@@ -170,10 +170,13 @@ const About = () => {
         <div>
           <h3 className="mb-2 text-sm font-medium">Interests</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Full Stack Web Developement
+            UI Developement and API Integrations
           </a>
           <a href="#" className="block text-sm text-neutral-400">
-            Animation and web designing
+            Frontend And Backend System Design
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+            Automating Deployments and CI/CD
           </a>
         </div>
         <div>
