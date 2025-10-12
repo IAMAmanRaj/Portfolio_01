@@ -23,7 +23,7 @@ const Footer = () => {
     const currency = "INR";
     const receiptId = "12345678";
 
-    const response = await fetch("https://portfolio-01-omega-three.vercel.app/api/payment", {
+    const response = await fetch("https://portfolio-payment-service-dev.vercel.app/api/payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
