@@ -614,10 +614,9 @@ const Timeline = () => {
             className="timeline-start pl-8  md:pl-0 text-current md:text-end pb-12 md:mr-3"
           >
             <time className="font-mono italic ">Winters , 2023</time>
-            <div className="text-lg font-black">Diving into Projects</div>I
-            started involving myself in Team Projects and Hackathons. Probably the best thing that you can do in your initial academic years in college. I got
-            to see there's no limit to design and creativity. You can just
-            create anything and everything. Later on in November, my team took part in <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">Webster</span>, an annual hackathon that had <span className="hover:cursor-pointer text-blue-500 font-extrabold text-xl">100+ </span> participating teams and only few make it to the final evaluation. We gave it all but unfortunately, we couldn't make it to the end. I realized, still there's a lot to improve upon. This, motivated me to become better at my skills and comeback stronger next time !
+            <div className="text-lg font-black">Diving into Projects</div>
+I started working on team projects and hackathons early in college — one of the best decisions I made. It opened my eyes to the limitless scope of design and creativity. In November, my team participated in <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">Webster</span>, an annual hackathon with <span className="hover:cursor-pointer text-blue-500 font-extrabold text-xl">100+ </span> teams. Though we didn’t reach the finals, the experience pushed me to sharpen my skills and come back stronger.
+
           </div>
           <hr ref={hrRef3} className="z-[-4]" />
         </li>
@@ -640,9 +639,9 @@ const Timeline = () => {
             className="timeline-end pl-8 text-current md:pl-0 mb-10 md:ml-3"
           >
             <time className="font-mono italic ">2024</time>
-            <div className="text-lg font-black">The year of my life</div>I am
-            still learning and growing every single day. This year, I challenged
-            myself to take on full stack projects. After clearing the basics by working with vanilla JS, I built an authentication application and a blogging platform using the MERN stack and also implemented Google Login from scratch using Firebase. During this phase, I explored component UI libraries like Flowbite and Material UI. I also deepened my understanding of CRUD operations and regular expressions using MongoDB, Mongoose while writing the backend of this application. I also learned to host web applications on cloud platforms like Render and Vercel.
+           <div className="text-lg font-black">The Year of My Life</div>
+This year, I pushed myself to build full stack projects after mastering the basics with vanilla JS. I developed an authentication app and a blogging platform using the MERN stack, implementing Google Login with Firebase. Along the way, I explored UI libraries like Flowbite and Material UI, strengthened my backend skills with MongoDB and Mongoose, and learned to deploy apps on Render and Vercel.
+
           </div>
           <hr ref={hrRef4} className="z-[-4]" />
         </li>
@@ -665,7 +664,9 @@ const Timeline = () => {
             className="timeline-start pl-8  md:pl-0 text-current md:text-end pb-12 md:mr-3"
           >
             <time className="font-mono italic ">March, 2024</time>
-            <div className="text-lg font-black">Things started getting serious !</div>In March, I contributed to the annual Fest Website which had thousands of registrations within week which taught me the importance of writing scalable backend code and handling edge cases properly. The UI also matters a lot. Later, I took part in Innodev '24 under the Annual Technical Fest Avishkar, where my team secured 2nd place for building an event management Web application. Shortly after this event, my Team was also shortlisted among 200+ teams for the offline rounds of Hack 36, a 36-hour annual hackathon. This experience exposed me to diverse tech stacks and advanced web technologies, significantly broadening my knowledge about this domain.
+           <div className="text-lg font-black">Things Started Getting Serious!</div>
+In March, I worked on our college’s Fest Website, which saw thousands of registrations and taught me the value of scalable backend code and polished UI. Later, my team won 2nd place at Innodev '24 for an event management app and was shortlisted among 200+ teams for Hack 36, a 36-hour hackathon. These experiences deepened my exposure to diverse tech stacks and advanced web technologies.
+
           </div>
           <hr ref={hrRef5} className="z-[-4]" />
         </li>
@@ -688,7 +689,7 @@ const Timeline = () => {
     className="timeline-end pl-8 text-current md:pl-0 mb-10 md:ml-3"
   >
     <time className="font-mono italic ">April, 2024</time>
-    <div className="text-lg font-black">Internship at <span className="hover:cursor-pointer bg-gradient-to-r from-[#007AFF] via-[100%] via-[#EBFE54] to-[#EBFE54] bg-clip-text text-transparent font-bold text-3xl">CREW™ </span>  </div>On <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">April 13th</span>, I received an off-campus internship offer from CREW™, https://crewtm.com. I was ready to apply my knowledge and experience along with the qualities that I developed while participating as a team in various Hackathons. I got to work on implementing animations via animation libraries like GSAP/Framer Motion and <span className="hover:cursor-pointer text-blue-500 font-bold text-md">FIGMA</span>. I started interacting more and more with other talented designers and developers along the way and started enjoying the things even more !</div>
+    <div className="text-lg font-black">Internship at <span className="hover:cursor-pointer bg-gradient-to-r from-[#007AFF] via-[100%] via-[#EBFE54] to-[#EBFE54] bg-clip-text text-transparent font-bold text-3xl">CREW™ </span>  </div>On <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">April 13th</span>, I received an off-campus internship offer from CREW™, https://crewtm.com. Got familiar with animation libraries like Framer Motion and <span className="hover:cursor-pointer text-500 font-bold text-md text-[#0ebe4c]">GSAP</span>. Started Networking more and more!</div>
   <hr ref={hrRef6} className="z-[-4]" />
 </li>
 <li>
@@ -710,7 +711,7 @@ const Timeline = () => {
     className="timeline-start pl-8 md:pl-0 text-current md:text-end pb-12 md:mr-3"
   >
     <time className="font-mono italic ">Summers, 2024</time>
-    <div className="text-lg font-black">Worked on Industry level Projects</div>In Summers, I worked on <span className="bg-gradient-to-r from-[#812e2e] via-[20%] via-[#971313] to-[#e43535] bg-clip-text text-transparent font-bold text-3xl">Medino's</span>, https://www.medinos.in. I worked on making the Frontend of this Quick Commerce Medicine Delivery Application, that was involving a complex database schema with dashboard sections for pharmacy, retailer, admin, and a general user interface and app layout. This project introduced me to NestJS as a dedicated Backend Framework, Next.js for frontend, and tools like Prisma, Supabase, and eventually PostgreSQL. I learnt how to write optimized code and got comfortable with Typescript.I was focusing on writing readable & reusable code with the optimized usage of components. Here was the point when I started improving as a software developer.</div>
+    <div className="text-lg font-black">Worked on Industry level Projects</div>In Summers, I got an opportunity from <span className="bg-gradient-to-r from-[#812e2e] via-[20%] via-[#971313] to-[#e43535] bg-clip-text text-transparent font-bold text-3xl">Medino's</span> ( https://www.medinos.in ) for the Full Stack Developer role. Along with CREW™, I worked here on making the Frontend of this Quick Commerce Medicine Delivery Application, that was involving a complex database schema with dashboard sections for pharmacy, retailer, admin, and a general user interface and app layout. This project introduced me to NestJS as a dedicated Backend Framework, Next.js for frontend, and tools like Prisma, Supabase, and eventually PostgreSQL. I learnt how to write optimized code and got comfortable with Typescript.I was focusing on writing readable & reusable code with the optimized usage of components. Here was the point when I started improving as a software developer.</div>
   <hr ref={hrRef7} className="z-[-4]" />
 </li>
 <li>
@@ -762,12 +763,14 @@ const Timeline = () => {
     className="timeline-start pl-8 md:pl-0 text-current md:text-end pb-12 md:mr-3"
   >
     <time className="font-mono italic ">Winters, 2024</time>
-    <div className="text-lg font-black">Web Lead, Culrav-Avishkar </div> In October, I became the Web Lead of Culrav-Avishkar, annual Techno-Cultural Fest of MNNIT. Leading the team was a valuable learning experience in leadership, teamwork, and project management. I interacted with a lot of talented juniors who were eager to learn and grow together in the process. It was a month long project and we encountered several challenges but we managed to successfully host the website within the deadline, achieving <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">5.3K+</span>  Google search appearances during the Fest within first week of its launch. These experiences in 2024 have helped me grow significantly, both technically and professionally, preparing me to take on even greater challenges in the upcoming times.</div>
+   <div className="text-lg font-black">Web Lead, Culrav-Avishkar</div>
+In October, I got the opportunity for leading the Web Team for Culrav-Avishkar, MNNIT’s annual Techno-Cultural Fest. Guiding the juniors and collaborating with them taught me valuable lessons in leadership, teamwork, along with project delivery and management. Despite challenges, we successfully launched the website on time, achieving <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">5.3K+</span> Google search appearances within the first week. These experiences in 2024 greatly enhanced my technical and professional growth.
+</div>
   <hr ref={hrRef9} className="z-[-4]" />
 </li>
 
 <li>
-  <div className="timeline-middle pl-8 text-current md:pl-0 mb-10 md:ml-3" ref={tickRef10}>
+  <div className="timeline-middle text-current md:pl-0 mb-10 md:ml-3" ref={tickRef10}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -785,7 +788,7 @@ const Timeline = () => {
     className="timeline-end pl-8 text-current md:pl-0 mb-10 md:ml-3"
   >
     <time className="font-mono italic font-bold">2025, Chapter ONE</time>
-    <div className="text-lg font-black">Company and Personal Projects </div> In February, I started working on<span className="hover:cursor-pointer bg-gradient-to-r from-[#6200f6] via-[100%] via-[#cdbeda] to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> IRYS™</span>a smart AI-driven productivity tool that offers numerous features to organize your tasks, schedules and also has interactive pomodoro sessions for focused work. Completed this project in July, 2025. This helped me to enhance my Frontend skills. After this, I took up the idea of building <span className="hover:cursor-pointer bg-gradient-to-r from-emerald-700 via-[100%] via-emerald-300 to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> Comegle</span>, omegle but for colleges that allows students to connect through video chat, join interest communities, and network with verified students across India. Many more to come !! </div>
+    <div className="text-lg font-black">Company and Personal Projects </div> In February, I started working on<span className="hover:cursor-pointer bg-gradient-to-r from-[#4d01bf] via-[100%] via-[#4c018e] to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> IRYS™</span>a smart AI-driven productivity tool that offers numerous features to organize your tasks, schedules and also has interactive pomodoro sessions for focused work. After this, I took up the idea of building my own idea of<span className="hover:cursor-pointer bg-gradient-to-r from-emerald-900 via-[100%] via-emerald-500 to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> Comegle</span>, omegle but for colleges that allows students to connect through video chat, join interest communities, and network with verified students across India.</div>
  
 </li>
       </ul>
