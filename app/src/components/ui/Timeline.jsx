@@ -498,7 +498,7 @@ const Timeline = () => {
         fill: "#A5D8FF",
         scale: 2,
         scrollTrigger: {
-          trigger: tickRef8.current,
+          trigger: tickRef10.current,
           start: "top 55%",
           end: "top 50%",
           scrub: 2,
@@ -515,7 +515,8 @@ const Timeline = () => {
         color: "#A5D8FF",
         opacity: 1,
         scrollTrigger: {
-          trigger: textRef8.current,
+          trigger: textRef10.current,
+          markers : true ,
           start: "top 55%",
           end: "top 50%",
           scrub: 2,
