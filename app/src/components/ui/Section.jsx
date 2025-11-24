@@ -16,20 +16,20 @@ export const HoverImageLinks = () => {
           heading="True Cut Barber Studio"
           subheading="Client Project | SKDIV® "
           imgSrc="/images/tcbs.png"
-          href="https://github.com/IAMAmanRaj/WebSter-23-Forked"
+          href="https://truecutbarberstudio.com.au/"
         />
         <Link
           heading="CREW™"
           subheading="Flagship Product Website | SKDIV®"
           imgSrc="/images/crew.png"
-          href="https://github.com/IAMAmanRaj/NextAuth-v5.0"
+          href="https://crewtm.com/"
         />
 
         <Link
           heading="IRYS™"
           subheading="Smart Productivity Tool | SKDIV®"
           imgSrc="/images/irys.png"
-          href="https://github.com/IAMAmanRaj/NextAuth-v5.0"
+          href="https://irys.skdiv.com/"
         />
 
         <Link
