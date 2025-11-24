@@ -591,7 +591,7 @@ const Timeline = () => {
             className="timeline-end pb-12 text-current pl-8 md:pl-0 md:ml-3 "
           >
             <time className="font-mono italic ">Summers , 2023</time>
-            <div className="text-lg font-black">The build up</div>I started deep diving into fundamentals.
+            <div className="text-lg font-black">The build up</div>started deep diving into fundamentals.
           </div>
           <hr ref={hrRef2} className="z-[-4]" />
         </li>
@@ -615,7 +615,7 @@ const Timeline = () => {
           >
             <time className="font-mono italic ">Winters , 2023</time>
             <div className="text-lg font-black">Diving into Projects</div>
-I started working on team projects and hackathons early in college — one of the best decisions I made. It opened my eyes to the limitless scope of design and creativity. In November, my team participated in <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">Webster</span>, an annual hackathon with <span className="hover:cursor-pointer text-blue-500 font-extrabold text-xl">100+ </span> teams. Though we didn’t reach the finals, the experience pushed me to sharpen my skills and come back stronger.
+started working on team projects and hackathons early in college — one of the best decisions I made. It opened my eyes to the limitless scope of design and creativity. In November, my team participated in <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">Webster</span>, an annual hackathon with <span className="hover:cursor-pointer text-blue-500 font-extrabold text-xl">100+ </span> teams. Though we didn’t reach the finals, the experience pushed me to sharpen my skills and come back stronger.
 
           </div>
           <hr ref={hrRef3} className="z-[-4]" />
@@ -733,13 +733,13 @@ In March, I worked on our college’s Fest Website, which saw thousands of regis
   className="timeline-end pl-8 text-current md:pl-0 mb-10 md:ml-3"
 >
   <time className="font-mono italic ">Later, 2024</time>
-  <div className="text-lg font-black">Launched Websites and a Client Project</div>
+  <div className="text-lg font-black"></div>
   In September, we successfully launched two major projects at <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">CREW™</span>, the first major version of the website  
-  <a href="http://www.crewtm.com" className="text-blue-500"> www.crewtm.com </a> 
+  <a href="https://www.crewtm.com" className="text-blue-500"> www.crewtm.com </a> 
   and another one for its parent company <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">SKDIV®</span>, 
-  <a href="http://www.skdiv.com" className="text-blue-500 "> www.skdiv.com </a>. 
+  <a href="https://skdiv.com" className="text-blue-500 "> www.skdiv.com </a>. 
   Additionally, we completed a client project for an Australian business, delivering the <span className="bg-gradient-to-r from-[#8f5b27] via-[100%] via-[#bc8b04] to-[#f4a507] bg-clip-text text-transparent font-bold text-xl">True Cut Barber Studio</span>  website 
-  <a href="http://truecutbarberstudio.com.au" className="text-blue-500 hover:cursor-pointerx"> truecutbarberstudio.com.au </a> 
+  <a href="https://truecutbarberstudio.com.au" className="text-blue-500 hover:cursor-pointerx"> truecutbarberstudio.com.au </a> 
   in less than a month. This project introduced me to SEO optimization, including tools like Google Search Console, and taught me the importance of sitemaps, robots.txt files, and monitoring impressions and clicks for better visibility in search results.
 </div>
 <hr ref={hrRef8} className="z-[-4]" />
@@ -764,7 +764,7 @@ In March, I worked on our college’s Fest Website, which saw thousands of regis
   >
     <time className="font-mono italic ">Winters, 2024</time>
    <div className="text-lg font-black">Web Lead, Culrav-Avishkar</div>
-In October, I got the opportunity for leading the Web Team for Culrav-Avishkar, MNNIT’s annual Techno-Cultural Fest. Guiding the juniors and collaborating with them taught me valuable lessons in leadership, teamwork, along with project delivery and management. Despite challenges, we successfully launched the website on time, achieving <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">5.3K+</span> Google search appearances within the first week. These experiences in 2024 greatly enhanced my technical and professional growth.
+October'24, I got the opportunity of leading the Web Team for Culrav-Avishkar, MNNIT’s annual Techno-Cultural Fest. Guiding the juniors and collaborating with them taught me valuable lessons in leadership, teamwork, along with project delivery and management. Despite all the challenges you can think of, we successfully launched the website on time, achieving <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">5.3K+</span> Google search appearances within the first week. These experiences in 2024 greatly enhanced my technical and professional growth.
 </div>
   <hr ref={hrRef9} className="z-[-4]" />
 </li>
@@ -788,7 +788,7 @@ In October, I got the opportunity for leading the Web Team for Culrav-Avishkar, 
     className="timeline-end pl-8 text-current md:pl-0 mb-10 md:ml-3"
   >
     <time className="font-mono italic font-bold">2025, Chapter ONE</time>
-    <div className="text-lg font-black">Company and Personal Projects </div> In February, I started working on<span className="hover:cursor-pointer bg-gradient-to-r from-[#4d01bf] via-[100%] via-[#4c018e] to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> IRYS™</span>a smart AI-driven productivity tool that offers numerous features to organize your tasks, schedules and also has interactive pomodoro sessions for focused work. After this, I took up the idea of building my own idea of<span className="hover:cursor-pointer bg-gradient-to-r from-emerald-900 via-[100%] via-emerald-500 to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> Comegle</span>, omegle but for colleges that allows students to connect through video chat, join interest communities, and network with verified students across India.</div>
+            <div className="text-lg font-black">Where's the idea? </div> In February, I started working on<span className="hover:cursor-pointer bg-gradient-to-r from-[#4d01bf] via-[100%] via-[#4c018e] to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> IRYS™</span>a smart AI-driven productivity tool that offers numerous features to schedule and organize your tasks, has interactive pomodoro sessions for focused work along with detail user insights for tracking your productivity. After this, I started working with my brother on <span className="hover:cursor-pointer bg-gradient-to-r from-emerald-900 via-[100%] via-emerald-500 to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> Comegle</span>. {` Something's big coming up soon <3`} </div>
  
 </li>
       </ul>

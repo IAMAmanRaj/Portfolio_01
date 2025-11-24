@@ -6,28 +6,29 @@ export const HoverImageLinks = () => {
   return (
     <section className="bg-transparent relative z-[20]   w-full  p-4 md:p-8">
       <div className="mx-auto w-[250px] vxs:w-full overflow-hidden vxs:max-w-5xl">
-        <Link
-          heading="Event   Management   Website"
-          subheading="Full-Stack Event Management Website"
-          imgSrc="/images/EventManagement.png"
-          href="https://innodev-24-3.onrender.com"
+         <Link
+          heading="Sewna"
+          subheading="Website Revamp | Vercel | Nov, 2025"
+          imgSrc="/images/sewna.png"
+          href="https://sewna-revamp.vercel.app/"
         />
         <Link
-          heading="Blog Application"
-          subheading="Full-Stack Blog Web App"
-          imgSrc="/images/BlogApp.png"
-          href="https://blog-app-irma.onrender.com"
-        />
-        <Link
-          heading="Mess Management Portal"
-          subheading="This was my First Hackathon Project "
-          imgSrc="/images/MessManagementPortal.png"
+          heading="True Cut Barber Studio"
+          subheading="Client Project | SKDIV® "
+          imgSrc="/images/tcbs.png"
           href="https://github.com/IAMAmanRaj/WebSter-23-Forked"
         />
         <Link
-          heading="Next Auth App"
-          subheading="Full Stack Authentication App , Next JS"
-          imgSrc="/images/NextAuth.png"
+          heading="CREW™"
+          subheading="Flagship Product Website | SKDIV®"
+          imgSrc="/images/crew.png"
+          href="https://github.com/IAMAmanRaj/NextAuth-v5.0"
+        />
+
+        <Link
+          heading="IRYS™"
+          subheading="Smart Productivity Tool | SKDIV®"
+          imgSrc="/images/irys.png"
           href="https://github.com/IAMAmanRaj/NextAuth-v5.0"
         />
 

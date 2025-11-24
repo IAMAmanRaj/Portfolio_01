@@ -230,7 +230,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="relative h-screen text-md  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
+      <div className="relative h-screen text-[22px]  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
         <div id="about" className="relative z-10 w-full" ref={textRef}>
           <p className="flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[15%] lg:top-[20%]  ">
             {"Few years back , I knew nothing about web. It got my attention in the 2nd Academic year of college when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d."
@@ -261,7 +261,7 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-      <div className="relative h-screen  text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-32 flex justify-center text-center">
+      <div className="relative h-screen  text-[22px]  md:text-3xl lg:text-5xl  font-bold text-white mt-32 flex justify-center text-center">
         <div ref={text2Ref} className="relative z-10 w-full">
           <p className="flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[2%] ">
             {"Then I started focusing on project based learning as much as I could. I've been making projects and learning things through this journey. As a developer, I feel there's no end to these cool stuffs which excites me even more :)"
@@ -295,9 +295,9 @@ const HeroSection = () => {
 
       <div
         ref={text3Ref}
-        className="relative mx-auto text-md xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-40"
+        className="relative mx-auto text-[22px]  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-40"
       >
-        <p className="flex flex-wrap gap-x-3 px-8 ">
+        <p className="flex text-center gap-x-3 px-4 ">
           {"I've never stopped since then".split(" ").map((word, index) => (
             <span id="characterthree" key={index} className="opacity-0">
               {word.split("").map((character, index) => (
@@ -309,7 +309,7 @@ const HeroSection = () => {
           ))}
         </p>
 
-        <p className="absolute top-0 flex flex-wrap gap-x-3 opacity-5 px-8">
+        <p className="absolute top-0 flex text-center gap-x-3 opacity-5 px-4">
           {"I've never stopped since then".split(" ").map((word, index) => (
             <span key={index} className="">
               {word.split("").map((character, index) => (

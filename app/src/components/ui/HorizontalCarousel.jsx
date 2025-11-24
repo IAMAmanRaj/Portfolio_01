@@ -1,7 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import React from "react";
-
 import { IoLogoReact } from "react-icons/io5";
 
 import { SiTailwindcss } from "react-icons/si";
