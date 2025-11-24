@@ -516,7 +516,6 @@ const Timeline = () => {
         opacity: 1,
         scrollTrigger: {
           trigger: textRef10.current,
-          markers : true ,
           start: "top 55%",
           end: "top 50%",
           scrub: 2,
