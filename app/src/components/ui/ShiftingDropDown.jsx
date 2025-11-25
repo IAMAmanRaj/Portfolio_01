@@ -9,6 +9,7 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { IoIosLink } from "react-icons/io";
 
 export const ShiftingDropDown = () => {
   return (
@@ -249,45 +250,43 @@ const Projects = () => {
   return (
     <div>
       <div className="grid grid-cols-2 gap-2">
-        <a href="https://innodev-24-3.onrender.com">
+        <a href="https://sewna-revamp.vercel.app/">
           <img
             className="mb-2 h-14 w-full rounded object-cover"
-            src="/images/EventManagement.png"
-            alt="EventManagementWebsiteImage"
+            src="/images/sewna.png"
+            alt="sewna"
           />
-          <h4 className="mb-0.5 text-sm font-medium">
-            Event Management Website[Live link]
+          <h4 className="mb-0.5 flex flex-row items-center gap-1 text-sm font-medium">
+            Sewna <IoIosLink />
           </h4>
           <p className="text-xs text-neutral-400">
-            An End-to-End Event Management Website with plethora of features.
+            Revamp of the original version. Used GSAP to create animations. Designed and Developed by me :) 
           </p>
         </a>
-        <a href="https://blog-app-irma.onrender.com">
+        <a href="https://truecutbarberstudio.com.au/">
           <img
             className="mb-2 h-14 w-full rounded object-cover"
-            src="/images/BlogApp.png"
-            alt="mern blog website image"
+            src="/images/tcbs.png"
+            alt="true cut barber studio website"
           />
-          <h4 className="mb-0.5 text-sm font-medium">
-            My own Personal Blog App[Live link]
+          <h4 className="mb-0.5 flex flex-row items-center gap-1 text-sm font-medium">
+            True Cut Barber Studio <IoIosLink />
           </h4>
           <p className="text-xs text-neutral-400">
-            A MERN stack blog application to share my thoughts and experiences
-            along with this journey
+           My first foreign client interaction. Developed the UI, monitored SEO insights and core web vitals.
           </p>
         </a>
-        <a href="https://github.com/IAMAmanRaj/WebSter-23-Forked">
+        <a href="https://crewtm.com/">
           <img
             className="mb-2 h-14 w-full rounded object-cover"
-            src="/images/MessManagementPortal.png"
-            alt="mess management portal website image"
+            src="/images/crew.png"
+            alt="crew website"
           />
-          <h4 className="mb-0.5 text-sm font-medium">
-            Mess Management Website
+          <h4 className="mb-0.5 flex flex-row items-center gap-1  text-sm font-medium">
+            CREW™ | SKDIV® <IoIosLink />
           </h4>
           <p className="text-xs text-neutral-400">
-            A hackathon Project. A full stack Mess management portal for college
-            students.
+            I worked as a Frontend Engineer and a Team Lead at SKDIV®. I personally enjoyed being part of this major project from the beginning.
           </p>
         </a>
       </div>
