@@ -10,7 +10,7 @@ This Portfolio Website is a dynamic and interactive platform designed to showcas
 
 ## Demo
 
-https://github.com/user-attachments/assets/394ac3c4-4b18-42f9-9d82-534c3003e4c1
+https://github.com/user-attachments/assets/d4ca2fc1-a928-4be5-b461-d24a74559857
 ## 🔗 Live Link
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://portfolio-amanraj.onrender.com/)
 
