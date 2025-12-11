@@ -564,7 +564,7 @@ const Timeline = () => {
             <time className="font-mono italic ">Early 2023</time>
             <div className="text-lg font-black">The Initial Phase</div>
             After learning the basics of HTML, CSS, JS and Bootstrap from a
-            Udemy Course, I started with React through youtube. Has a decent amount of initial learning curve yet doable within a span of weeks.
+            Udemy Course, I started with React through random youtube videos in no order or fashion whatsoever. Didn't know who to approach at that time. It has a decent initial learning curve. Major chunks can be covered within a span of weeks.
           </div>
           <hr ref={hrRef1} className="z-[-4]" />
         </li>
@@ -611,7 +611,7 @@ const Timeline = () => {
           >
             <time className="font-mono italic ">Winters , 2023</time>
             <div className="text-lg font-black">Diving into Projects</div>
-started working on team projects and hackathons early in college — one of the best decisions I made. It opened my vision to the limitless scope of ideas and creativity. In November, my team participated in <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">Webster</span>, an annual hackathon with <span className="hover:cursor-pointer text-blue-500 font-extrabold text-xl">100+ </span> teams. Though we didn’t reach the finals, we learnt a lot as a Team.
+started working on team projects and hackathons early in college — one of the best decisions I made. It opened my vision to the limitless scope of ideas and creativity. Made a team, and took part in <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">Webster</span>, an annual hackathon with <span className="hover:cursor-pointer text-blue-500 font-extrabold text-xl">100+ </span> teams from 1st and 2nd year. Failed badly. Couldn't even qualify for the final evaluation round. Realised, that I needed to improve a l...o...t.
 
           </div>
           <hr ref={hrRef3} className="z-[-4]" />
@@ -636,7 +636,7 @@ started working on team projects and hackathons early in college — one of the 
           >
             <time className="font-mono italic ">2024</time>
            <div className="text-lg font-black">The Year of My Life</div>
-This year, I challenged myself to build full stack projects after mastering the basics of FE/BE. I made an authentication app and a blogging platform using the MERN stack, implementing Google Login with Firebase. Along the way, I explored UI component libraries like Flowbite and Material UI. I took this as an opportunity to strengthen my backend skills with MongoDB and Mongoose, and learned to deploy apps on Render and Vercel.
+This year, I challenged myself to build full stack projects after getting familiar with basics of FE and a bit of BE. Picked up some good MERN projects through youtube. Along the way, I also explored UI component libraries like shadCN, Flowbite, Material UI and others. Learned to deploy apps on Netlify, Render and Vercel.
 
           </div>
           <hr ref={hrRef4} className="z-[-4]" />
@@ -660,7 +660,7 @@ This year, I challenged myself to build full stack projects after mastering the 
             className="timeline-start pl-8  md:pl-0 text-current md:text-end pb-12 md:mr-3"
           >
             <time className="font-mono italic ">March, 2024</time>
-           <div className="text-lg font-black">Things Started Getting Serious!</div>
+           <div className="text-lg font-black">All the way in !</div>
 In March, I worked on our college’s Fest Website, which saw thousands of registrations. Later, my team won 2nd place at Innodev '24 for an event management app and was shortlisted among 200+ teams for Hack 36, a 36-hour hackathon. These experiences exposed me to more libraries and frameworks and I started enjoying it more than ever !
 
           </div>
@@ -685,7 +685,7 @@ In March, I worked on our college’s Fest Website, which saw thousands of regis
     className="timeline-end pl-8 text-current md:pl-0 mb-10 md:ml-3"
   >
     <time className="font-mono italic ">April, 2024</time>
-    <div className="text-lg font-black">Internship at <span className="hover:cursor-pointer bg-gradient-to-r from-[#007AFF] via-[100%] via-[#EBFE54] to-[#EBFE54] bg-clip-text text-transparent font-bold text-3xl">CREW™ </span>  </div>On <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">April 13th</span>, I received an off-campus Internship Offer from CREW™, https://crewtm.com. Got familiar with animation libraries like Framer Motion and <span className="hover:cursor-pointer text-500 font-bold text-md text-[#0ebe4c]">GSAP</span>. Started Networking more and more!</div>
+    <div className="text-lg font-black">Internship at <span className="hover:cursor-pointer bg-gradient-to-r from-[#007AFF] via-[100%] via-[#EBFE54] to-[#EBFE54] bg-clip-text text-transparent font-bold text-3xl">CREW™ </span>  </div>On <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">April 13th</span>, I received an off-campus Internship Offer from CREW™ https://crewtm.com. Explored animation libraries like Framer Motion and <span className="hover:cursor-pointer text-500 font-bold text-md text-[#0ebe4c]">GSAP</span> in the initial set of months. Started Networking more and more!</div>
   <hr ref={hrRef6} className="z-[-4]" />
 </li>
 <li>
@@ -707,7 +707,7 @@ In March, I worked on our college’s Fest Website, which saw thousands of regis
     className="timeline-start pl-8 md:pl-0 text-current md:text-end pb-12 md:mr-3"
   >
     <time className="font-mono italic ">Summers, 2024</time>
-    <div className="text-lg font-black">Worked on Industry level Projects</div>In Summers, I got an opportunity from <span className="bg-gradient-to-r from-[#812e2e] via-[20%] via-[#971313] to-[#e43535] bg-clip-text text-transparent font-bold text-3xl">Medino's</span> ( https://www.medinos.in ) for the Full Stack Developer role. Along with CREW™, I worked here on making the Frontend of this Quick Commerce Medicine Delivery Application, that was involving a complex database schema with dashboard sections for pharmacy, retailer, admin, and a general user interface and app layout. This project introduced me to NestJS as a dedicated Backend Framework, Next.js for frontend, and tools like Prisma, Supabase, and eventually PostgreSQL. Here was the point when I started improving as a software developer. By making mistakes in production, and learning from them.</div>
+    <div className="text-lg font-black">Juggling, two interships and academics</div>In Summers, I was grateful to get an opportunity from <span className="bg-gradient-to-r from-[#812e2e] via-[20%] via-[#971313] to-[#e43535] bg-clip-text text-transparent font-bold text-3xl">Medino's</span> https://www.medinos.in , for the Full Stack Developer role. Worked on FE and BE of the MVP, that was involving a complex database schema. Got introduced to NestJS, Next.js, and tools like Prisma, Supabase to deal with SQL dbs. Here was the point when I started improving as a software developer. By making mistakes in production, and learning from them after panicking.</div>
   <hr ref={hrRef7} className="z-[-4]" />
 </li>
 <li>
@@ -730,13 +730,11 @@ In March, I worked on our college’s Fest Website, which saw thousands of regis
 >
   <time className="font-mono italic ">Later, 2024</time>
   <div className="text-lg font-black"></div>
-  In September, I lead the launch of <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">CREW™</span>, the first major version of the product website  
-  <a href="https://www.crewtm.com" className="text-blue-500"> www.crewtm.com </a> 
+  In Sept, I lead the launch of <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">CREW™</span>, the first major build of<a href="https://www.crewtm.com" className="text-blue-500"> www.crewtm.com </a> 
   and another one for its parent company <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">SKDIV®</span>, 
   <a href="https://skdiv.com" className="text-blue-500 "> www.skdiv.com </a>. 
   Additionally, we completed a client project for an Australian business, delivering the <span className="bg-gradient-to-r from-[#8f5b27] via-[100%] via-[#bc8b04] to-[#f4a507] bg-clip-text text-transparent font-bold text-xl">True Cut Barber Studio</span>  website 
-  <a href="https://truecutbarberstudio.com.au" className="text-blue-500 hover:cursor-pointerx"> truecutbarberstudio.com.au </a> 
-  in less than a month. This project introduced me to SEO optimization, including tools like Google Search Console, and taught me the importance of sitemaps, robots.txt files, and monitoring impressions and clicks for better visibility in search results.
+  <a href="https://truecutbarberstudio.com.au" className="text-blue-500 hover:cursor-pointerx"> truecutbarberstudio.com.au </a>. Got introduced to the laws of UI/UX, metrics affecting page loading time, core web vitals and SEO. Before this, I used to think that UI mostly has to be visually appealing, but I was way too wrong. Complete mindset shift.
 </div>
 <hr ref={hrRef8} className="z-[-4]" />
 </li>
@@ -760,7 +758,7 @@ In March, I worked on our college’s Fest Website, which saw thousands of regis
   >
     <time className="font-mono italic ">Winters, 2024</time>
    <div className="text-lg font-black">Web Lead, Culrav-Avishkar</div>
-October'24, I got the opportunity of leading the Web Team for Culrav-Avishkar, MNNIT’s annual Techno-Cultural Fest. Guiding the juniors and collaborating with them taught me valuable lessons in leadership, teamwork, along with project delivery and management. Despite all the challenges you can think of, we successfully launched the website on time, achieving <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">5.3K+</span> Google search appearances within the first week. These experiences in 2024 greatly enhanced my technical and professional growth.
+October'24, I got the opportunity of leading the Web Team for Culrav-Avishkar, MNNIT’s annual Techno-Cultural Fest. Guiding the juniors and collaborating with them taught me valuable lessons in leadership, teamwork, along with project delivery and management. Despite all the challenges you can think of, we successfully launched the website on time, achieving <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">5.3K+</span> Google search appearances within the first week. Best time.
 </div>
   <hr ref={hrRef9} className="z-[-4]" />
 </li>
@@ -783,8 +781,8 @@ October'24, I got the opportunity of leading the Web Team for Culrav-Avishkar, M
     ref={textRef10}
     className="timeline-end pl-8 text-current md:pl-0 mb-10 md:ml-3"
   >
-    <time className="font-mono italic font-bold">2025, Chapter ONE</time>
-            <div className="text-lg font-black">Where's the idea? </div> In February, I started working on<span className="hover:cursor-pointer bg-gradient-to-r from-[#4d01bf] via-[100%] via-[#4c018e] to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> IRYS™</span>a smart AI-driven productivity tool that offers numerous features to schedule and organize your tasks, has interactive pomodoro sessions for focused work along with detail user insights for tracking your productivity. After this, I started working with my brother on <span className="hover:cursor-pointer bg-gradient-to-r from-emerald-900 via-[100%] via-emerald-500 to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> Comegle</span>. {` Something's big coming up soon <3`} </div>
+    <time className="font-mono italic font-bold">Frontend Journey, to the ONE</time>
+            <div className="text-lg font-black"> </div> In Feb, I started working on<span className="hover:cursor-pointer bg-gradient-to-r from-[#4d01bf] via-[100%] via-[#4c018e] to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> IRYS™</span> and worked on some challenging Frontend Tickets for the MVP. Lately been trying to be good at React.js and CORE JS. Started working on some of my personal ideas and would love to execute them as my side projects now and then. By this year end, my only goal is to become a better Frontend Engineer. Period. </div>
  
 </li>
       </ul>
