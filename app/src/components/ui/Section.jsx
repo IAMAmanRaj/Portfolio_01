@@ -34,7 +34,7 @@ export const HoverImageLinks = () => {
 
         <Link
           heading="Dice Game"
-          subheading="Incase you're bored , I got you covered with a Dice Game"
+          subheading="Incase you're bored, I got you covered with a Dice Game which I made long back !"
           imgSrc="/images/DiceGame.png"
           href="https://brilliant-bonbon-5d2ce1.netlify.app/"
         />
