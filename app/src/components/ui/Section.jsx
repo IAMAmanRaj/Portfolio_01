@@ -26,10 +26,10 @@ export const HoverImageLinks = () => {
         />
 
         <Link
-          heading="IRYS™"
-          subheading="Smart Productivity Tool | SKDIV®"
-          imgSrc="/images/irys.png"
-          href="https://irys.skdiv.com/"
+          heading="Pipeline Editor"
+          subheading="React Flow | Vercel | Dec, 2025"
+          imgSrc="/images/pipeLineEditor.png"
+          href="https://reactflow-pipeline-editor.vercel.app"
         />
 
         <Link
