@@ -782,7 +782,7 @@ October'24, I got the opportunity of leading the Web Team for Culrav-Avishkar, M
     className="timeline-end pl-8 text-current md:pl-0 mb-10 md:ml-3"
   >
     <time className="font-mono italic font-bold">Frontend Journey, to the ONE</time>
-            <div className="text-lg font-black"> </div> In Feb, I started working on<span className="hover:cursor-pointer bg-gradient-to-r from-[#4d01bf] via-[100%] via-[#4c018e] to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> IRYS™</span> and worked on some challenging Frontend Tickets for the MVP. Lately been trying to be good at React.js and CORE JS. Started working on some of my personal ideas and would love to execute them as my side projects now and then. By this year end, my only goal is to become a better Frontend Engineer. Period. </div>
+            <div className="text-lg font-black"> </div> In Feb, I started working on<span className="hover:cursor-pointer bg-gradient-to-r from-[#4d01bf] via-[100%] via-[#4c018e] to-[#fefefe] bg-clip-text text-transparent font-bold text-3xl"> IRYS™</span> and worked on some challenging Frontend Tickets for the MVP. Lately been trying to become better at React.js and Javascript. Started working on some of my personal ideas. By this year end, my only goal is to become a better Frontend Engineer. Graduated in August with an offer in hand. Felt pretty good but i'm surely not there yet. Exploring the vastness of Frontend Engineering and trying to excel at what I do best. Period. </div>
  
 </li>
       </ul>
