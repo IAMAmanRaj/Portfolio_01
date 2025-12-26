@@ -130,7 +130,7 @@ const HeroSection = () => {
       text4Ref.current,
       { y: 0 },
       {
-        y: -70,
+        y: -50,
         scrollTrigger: {
           trigger: text4Ref.current,
           start: "top 50%",
@@ -233,7 +233,7 @@ const HeroSection = () => {
       <div className="relative h-screen text-[22px]  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
         <div id="about" className="relative z-10 w-full" ref={textRef}>
           <p className="flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[15%] lg:top-[20%]  ">
-            {"Few years back , I knew nothing about web. It got my attention in the 2nd Academic year of college when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d."
+            {"The world of frontend development has always fascinated me. It is not only about visual appeal. There is so much engineering behind web and how browsers work. I got hooked when I realized how powerful frontend technologies can be."
               .split(" ")
               .map((word, index) => (
                 <span id="character" key={index} className="opacity-0">
@@ -247,7 +247,7 @@ const HeroSection = () => {
           </p>
 
           <p className="absolute top-[15%]   lg:top-[20%] flex flex-wrap gap-x-3 opacity-40 mx-auto px-4 xs:px-12  md:px-24 ">
-            {"Few years back , I knew nothing about web. It got my attention in the 2nd Academic year of college when I started learning about languages and frameworks used to build websites like this and I was a-m-a-z-e-d."
+            {"The world of frontend development has always fascinated me. It is not only about visual appeal. There is so much engineering behind web and how browsers work. I got hooked when I realized how powerful frontend technologies can be."
               .split(" ")
               .map((word, index) => (
                 <span key={index} className="">
@@ -261,10 +261,10 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-      <div className="relative h-screen  text-[22px]  md:text-3xl lg:text-5xl  font-bold text-white mt-32 flex justify-center text-center">
+      <div className="relative h-screen  text-[22px]  md:text-3xl lg:text-5xl  font-bold text-white mt-22 flex justify-center text-center">
         <div ref={text2Ref} className="relative z-10 w-full">
           <p className="flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[2%] ">
-            {"Then I started focusing on project based learning as much as I could. I've been making projects and learning things through this journey. As a developer, I feel there's no end to these cool stuffs which excites me even more :)"
+            {"I am in my 0 to 1 Frontend Journey right now. I truly aspire to become a creative developer someday. I know, i'm not there yet, but the journey has been incredible so far."
               .split(" ")
               .map((word, index) => (
                 <span id="charactertwo" key={index} className="opacity-0">
@@ -278,7 +278,7 @@ const HeroSection = () => {
           </p>
 
           <p className="absolute  flex flex-wrap gap-x-3 top-[2%] opacity-40 mx-auto px-4 xs:px-12  md:px-24">
-            {"Then I started focusing on project based learning as much as I could. I've been making projects and learning things through this journey. As a developer, I feel there's no end to these cool stuffs which excites me even more :)"
+            {"I am in my 0 to 1 Frontend Journey right now. I truly aspire to become a creative developer someday. I know, i'm not there yet, but the journey has been incredible so far."
               .split(" ")
               .map((word, index) => (
                 <span key={index} className="">
@@ -295,7 +295,7 @@ const HeroSection = () => {
 
       <div
         ref={text3Ref}
-        className="relative mx-auto text-[22px]  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-40"
+        className="relative mx-auto text-[22px]  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-40 mb-12"
       >
         <p className="flex text-center gap-x-3 px-4 ">
           {"I've never stopped since then".split(" ").map((word, index) => (
@@ -323,35 +323,83 @@ const HeroSection = () => {
       </div>
 
       <div className="relative flex flex-col justify-end items-center ">
-        <BackgroundGradientAnimation />
-        <div className=" absolute ">
-          <div
-            ref={text4Ref}
-            className="relative mb-4 text-md sm:text-lg xs:text-xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 "
-          >
-            <p className="flex flex-wrap gap-x-3 px-8 w-full  ">
-              {"#Never stop learning.".split(" ").map((word, index) => (
-                <span id="characterfour" key={index} className="opacity-0">
-                  {word.split("").map((character, index) => (
-                    <span id="characterfour" key={index} className="opacity-0">
-                      {character}
-                    </span>
-                  ))}
-                </span>
-              ))}
-            </p>
+        {/* Electric Border Effect */}
+        <svg className="svg-container">
+          <defs>
+            <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
+              <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+                <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+              </feOffset>
 
-            <p className="absolute top-0 flex flex-wrap gap-x-3 w-full  px-8 opacity-5">
-              {"#Never stop learning.".split(" ").map((word, index) => (
-                <span key={index} className="">
-                  {word.split("").map((character, index) => (
-                    <span key={index} className="">
-                      {character}
+              <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="1" />
+              <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+                <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
+              </feOffset>
+
+              <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="2" />
+              <feOffset in="noise1" dx="0" dy="0" result="offsetNoise3">
+                <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+              </feOffset>
+
+              <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="2" />
+              <feOffset in="noise2" dx="0" dy="0" result="offsetNoise4">
+                <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
+              </feOffset>
+
+              <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+              <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+              <feBlend in="part1" in2="part2" mode="color-dodge" result="combinedNoise" />
+
+              <feDisplacementMap in="SourceGraphic" in2="combinedNoise" scale="30" xChannelSelector="R" yChannelSelector="B" />
+            </filter>
+          </defs>
+        </svg>
+
+        <div className="card-container">
+          <div className="inner-container">
+            <div className="border-outer">
+              <div className="main-card"></div>
+            </div>
+            <div className="glow-layer-1"></div>
+            <div className="glow-layer-2"></div>
+          </div>
+
+          <div className="overlay-1"></div>
+          <div className="overlay-2"></div>
+          <div className="background-glow"></div>
+
+          <div className="content-container">
+            <div className=" absolute ">
+              <div
+                ref={text4Ref}
+                className="relative mb-4 text-md sm:text-lg xs:text-xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 "
+              >
+                <p className="flex flex-wrap gap-x-3 px-8 w-full  ">
+                  {"#Never stop learning.".split(" ").map((word, index) => (
+                    <span id="characterfour" key={index} className="opacity-0">
+                      {word.split("").map((character, index) => (
+                        <span id="characterfour" key={index} className="opacity-0">
+                          {character}
+                        </span>
+                      ))}
                     </span>
                   ))}
-                </span>
-              ))}
-            </p>
+                </p>
+
+                <p className="absolute top-0 flex flex-wrap gap-x-3 w-full  px-8 opacity-5">
+                  {"#Never stop learning.".split(" ").map((word, index) => (
+                    <span key={index} className="">
+                      {word.split("").map((character, index) => (
+                        <span key={index} className="">
+                          {character}
+                        </span>
+                      ))}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
