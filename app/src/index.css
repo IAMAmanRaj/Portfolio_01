@@ -19,6 +19,9 @@
 /* SVG positioning */
 .svg-container {
   position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 /* Card container */
@@ -42,6 +45,7 @@
   padding-right: 4px;
   padding-bottom: 4px;
 }
+
 
 
 .main-card {

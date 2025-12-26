@@ -7,6 +7,7 @@ import BackgroundBeams from "../components/ui/BackgroundBeams";
 import Example from "../components/ui/HorizontalCarousel";
 
 import Timeline from "../components/ui/Timeline";
+  import SnowEffect from "../components/ui/SnowEffect";
 import { HoverImageLinks } from "../components/ui/Section";
 
 import Footer from "../components/ui/Footer";
@@ -50,6 +51,7 @@ const Landing = () => {
 
   return (
     <>
+      <SnowEffect maxSnow={50} maxSnowSize={4} maxSnowSpeed={0.5} />
       <div className="relative bg-gray-950 overflow-x-hidden" ref={comp}>
         <div
           id="intro-slider"
@@ -87,10 +89,10 @@ const Landing = () => {
           <HeroSection />
         </div>
       </div>
-      <div className="h-screen relative bg-gray-950 pt-64 flex flex-col justify-between">
+      <div className="h-screen relative bg-gray-950 pt-12 md:pt-64 flex flex-col justify-between">
         <div className="flex h-48 items-center justify-center">
           <span className="font-semibold uppercase text-neutral-500">
-            <div className="h-[40rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
+            <div className="h-[40rem]  w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
               <h1
                 id="timeline"
                 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white absolute opacity-40"

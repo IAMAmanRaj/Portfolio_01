@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { useEffect } from "react";
-import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
+
 gsap.registerPlugin(ScrollTrigger);
 const HeroSection = () => {
   const textRef = useRef(null);
@@ -295,10 +295,10 @@ const HeroSection = () => {
 
       <div
         ref={text3Ref}
-        className="relative mx-auto text-[30px]  md:text-3xl lg:text-5xl  font-bold text-white -mt-12 md:mt-22 mb-12"
+        className="relative mx-auto text-[30px]  md:text-3xl lg:text-5xl  font-bold text-white -mt-60 md:mt-22 mb-12"
       >
         <p className="flex text-center gap-x-3 px-4 ">
-          {"Journey from 0 to 1.".split(" ").map((word, index) => (
+          {"Slow and steady.".split(" ").map((word, index) => (
             <span id="characterthree" key={index} className="opacity-0">
               {word.split("").map((character, index) => (
                 <span id="characterthree" key={index} className="opacity-0">
@@ -310,7 +310,7 @@ const HeroSection = () => {
         </p>
 
         <p className="absolute top-0 flex text-center gap-x-3 opacity-5 px-4">
-          {"Journey from 0 to 1.".split(" ").map((word, index) => (
+          {"Slow and steady.".split(" ").map((word, index) => (
             <span key={index} className="">
               {word.split("").map((character, index) => (
                 <span key={index} className="">
@@ -322,7 +322,7 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div className="relative flex flex-col justify-end items-center">
+      <div className="relative flex flex-col justify-center items-center overflow-hidden h-[400px] md:h-[500px]">
         {/* Electric Border Effect */}
         <svg className="svg-container">
           <defs>
@@ -376,7 +376,7 @@ const HeroSection = () => {
                 className="relative mb-4 text-2xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 "
               >
                 <p className="flex flex-wrap gap-x-3 px-6 w-full  ">
-                  {"Slow and steady.".split(" ").map((word, index) => (
+                  {"Journey from 0 to 1.".split(" ").map((word, index) => (
                     <span id="characterfour" key={index} className="opacity-0">
                       {word.split("").map((character, index) => (
                         <span id="characterfour" key={index} className="opacity-0">
@@ -388,7 +388,7 @@ const HeroSection = () => {
                 </p>
 
                 <p className="absolute top-0 flex flex-wrap gap-x-3 w-full  px-6 opacity-5">
-                  {"Slow and steady.".split(" ").map((word, index) => (
+                  {"Journey from 0 to 1.".split(" ").map((word, index) => (
                     <span key={index} className="">
                       {word.split("").map((character, index) => (
                         <span key={index} className="">
