@@ -171,25 +171,22 @@ const About = () => {
         <div>
           <h3 className="mb-2 text-sm font-medium">Interests</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            UI Developement and API Integrations
+         Frontend Engineering
           </a>
-          <a href="#" className="block text-sm text-neutral-400">
-            Frontend And Backend System Design
+           <a href="#" className="mb-1 block text-sm text-neutral-400">
+         Web Optimization
           </a>
-          <a href="#" className="block text-sm text-neutral-400">
-            Automating Deployments and CI/CD
+          <a href="#" className="mb-1 block text-sm text-neutral-400">
+         UI/UX & Animations
           </a>
         </div>
         <div>
           <h3 className="mb-2 text-sm font-medium">Hobbies</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Singing
+            Music & Singing
           </a>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
             Chess
-          </a>
-          <a href="#" className="block text-sm text-neutral-400">
-            Volleyball
           </a>
         </div>
       </div>
