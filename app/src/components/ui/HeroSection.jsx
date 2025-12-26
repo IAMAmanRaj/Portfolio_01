@@ -233,7 +233,7 @@ const HeroSection = () => {
       <div className="relative h-screen text-[22px]  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
         <div id="about" className="relative z-10 w-full" ref={textRef}>
           <p className="flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[15%] lg:top-[20%]  ">
-            {"The world of frontend development has always fascinated me. It is not only about visual appeal. There is so much engineering behind web and how browsers work. I got hooked when I realized how powerful frontend technologies can be."
+            {"The world of frontend development has always fascinated me. It is not only about visual appeal. There is so much engineering behind web and how browsers work. I got hooked when I realized how powerful these technologies can be."
               .split(" ")
               .map((word, index) => (
                 <span id="character" key={index} className="opacity-0">
