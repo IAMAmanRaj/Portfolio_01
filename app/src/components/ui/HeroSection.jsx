@@ -247,7 +247,7 @@ const HeroSection = () => {
           </p>
 
           <p className="absolute top-[15%]   lg:top-[20%] flex flex-wrap gap-x-3 opacity-40 mx-auto px-4 xs:px-12  md:px-24 ">
-            {"The world of frontend development has always fascinated me. It is not only about visual appeal. There is so much engineering behind web and how browsers work. I got hooked when I realized how powerful frontend technologies can be."
+            {"The world of frontend development has always fascinated me. It is not only about visual appeal. There is so much engineering behind web and how browsers work. I got hooked when I realized how powerful these technologies can be."
               .split(" ")
               .map((word, index) => (
                 <span key={index} className="">
@@ -264,7 +264,7 @@ const HeroSection = () => {
       <div className="relative h-screen  text-[22px]  md:text-3xl lg:text-5xl  font-bold text-white mt-22 flex justify-center text-center">
         <div ref={text2Ref} className="relative z-10 w-full">
           <p className="flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[2%] ">
-            {"I am in my 0 to 1 Frontend Journey right now. I truly aspire to become a creative developer someday. I know, i'm not there yet, but the journey has been incredible so far."
+            {"I like to understand scalable frontend systems and the architecture behind them."
               .split(" ")
               .map((word, index) => (
                 <span id="charactertwo" key={index} className="opacity-0">
@@ -278,7 +278,7 @@ const HeroSection = () => {
           </p>
 
           <p className="absolute  flex flex-wrap gap-x-3 top-[2%] opacity-40 mx-auto px-4 xs:px-12  md:px-24">
-            {"I am in my 0 to 1 Frontend Journey right now. I truly aspire to become a creative developer someday. I know, i'm not there yet, but the journey has been incredible so far."
+            {"I like to understand scalable frontend systems and the architecture behind them."
               .split(" ")
               .map((word, index) => (
                 <span key={index} className="">
@@ -295,10 +295,10 @@ const HeroSection = () => {
 
       <div
         ref={text3Ref}
-        className="relative mx-auto text-[22px]  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-40 mb-12"
+        className="relative mx-auto text-[30px]  md:text-3xl lg:text-5xl  font-bold text-white -mt-12 md:mt-22 mb-12"
       >
         <p className="flex text-center gap-x-3 px-4 ">
-          {"I've never stopped since then".split(" ").map((word, index) => (
+          {"Journey from 0 to 1.".split(" ").map((word, index) => (
             <span id="characterthree" key={index} className="opacity-0">
               {word.split("").map((character, index) => (
                 <span id="characterthree" key={index} className="opacity-0">
@@ -310,7 +310,7 @@ const HeroSection = () => {
         </p>
 
         <p className="absolute top-0 flex text-center gap-x-3 opacity-5 px-4">
-          {"I've never stopped since then".split(" ").map((word, index) => (
+          {"Journey from 0 to 1.".split(" ").map((word, index) => (
             <span key={index} className="">
               {word.split("").map((character, index) => (
                 <span key={index} className="">
@@ -322,7 +322,7 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div className="relative flex flex-col justify-end items-center ">
+      <div className="relative flex flex-col justify-end items-center">
         {/* Electric Border Effect */}
         <svg className="svg-container">
           <defs>
@@ -373,10 +373,10 @@ const HeroSection = () => {
             <div className=" absolute ">
               <div
                 ref={text4Ref}
-                className="relative mb-4 text-md sm:text-lg xs:text-xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 "
+                className="relative mb-4 text-2xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 "
               >
-                <p className="flex flex-wrap gap-x-3 px-8 w-full  ">
-                  {"#Never stop learning.".split(" ").map((word, index) => (
+                <p className="flex flex-wrap gap-x-3 px-6 w-full  ">
+                  {"Slow and steady.".split(" ").map((word, index) => (
                     <span id="characterfour" key={index} className="opacity-0">
                       {word.split("").map((character, index) => (
                         <span id="characterfour" key={index} className="opacity-0">
@@ -387,8 +387,8 @@ const HeroSection = () => {
                   ))}
                 </p>
 
-                <p className="absolute top-0 flex flex-wrap gap-x-3 w-full  px-8 opacity-5">
-                  {"#Never stop learning.".split(" ").map((word, index) => (
+                <p className="absolute top-0 flex flex-wrap gap-x-3 w-full  px-6 opacity-5">
+                  {"Slow and steady.".split(" ").map((word, index) => (
                     <span key={index} className="">
                       {word.split("").map((character, index) => (
                         <span key={index} className="">
