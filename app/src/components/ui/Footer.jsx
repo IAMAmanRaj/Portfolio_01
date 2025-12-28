@@ -48,7 +48,7 @@ const Footer = () => {
       order_id: order.id,
       handler: async function (response) {
         const body = { ...response };
-        const validateResponse = await fetch("https://portfolio-01-omega-three.vercel.app/api/validatePayment", {
+        const validateResponse = await fetch("https://portfolio-payment-service-dev.vercel.app/api/validatePayment", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

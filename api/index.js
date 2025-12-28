@@ -10,6 +10,8 @@ dotenv.config();
 
 const __dirname = path.resolve();
 
+const port = process.env.PORT || 5000;
+
 const app = express();
 
 app.use(express.json());
@@ -65,8 +67,8 @@ app.get("/api", (req, res) => {
   res.json({ message: "API is working!" });
 });
 
-app.listen(3000, () => {
-  console.log("Server is listening on port 3000");
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
 });
 
 app.use((err, req, res, next) => {
