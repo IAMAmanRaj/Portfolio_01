@@ -4,17 +4,14 @@ import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Button, Modal } from "flowbite-react";
 
+const URL = import.meta.env.VITE_SERVER_URL;
+
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState("");
   const [amount, setAmount] = useState();
   const [supportSectionModal, showSupportSectionModal] = useState(false);
   const [paymentInProcess, setPaymentInProcess] = useState(false);
-  const modalContentHandler = (content) => {
-    setModalContent(content);
-    setShowModal(true);
-  };
-
   const handleAmountChange = (event) => {
     setAmount(event.target.value);
   };
@@ -23,7 +20,7 @@ const Footer = () => {
     const currency = "INR";
     const receiptId = "12345678";
 
-    const response = await fetch("https://portfolio-payment-service-dev.vercel.app/api/payment", {
+    const response = await fetch(`${URL}/payment`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +45,7 @@ const Footer = () => {
       order_id: order.id,
       handler: async function (response) {
         const body = { ...response };
-        const validateResponse = await fetch("https://portfolio-payment-service-dev.vercel.app/api/validatePayment", {
+        const validateResponse = await fetch(`${URL}/validatePayment`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
