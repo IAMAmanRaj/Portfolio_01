@@ -51,7 +51,6 @@ const Landing = () => {
 
   return (
     <>
-      <SnowEffect maxSnow={50} maxSnowSize={4} maxSnowSpeed={0.5} />
       <div className="relative bg-gray-950 overflow-x-hidden" ref={comp}>
         <div
           id="intro-slider"
