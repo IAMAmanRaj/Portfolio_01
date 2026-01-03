@@ -3,7 +3,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { gsap } from "gsap";
-import { Link } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger);
 
 const Timeline = () => {
@@ -764,7 +763,7 @@ October'24, I got the opportunity of leading the Web Team for Culrav-Avishkar, M
 </li>
 
 <li>
-  <div className="timeline-middle text-current md:pl-0 mb-10 md:ml-3" ref={tickRef10}>
+  <div className="timeline-middle" ref={tickRef10}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
