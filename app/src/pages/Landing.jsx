@@ -6,10 +6,10 @@ import BackgroundBeams from "../components/effects/BackgroundBeams";
 
 import Example from "../components/ui/HorizontalCarousel";
 
-import Timeline from "../components/ui/Timeline";
+import Timeline from "../components/Timeline/Timeline.jsx";
 import { HoverImageLinks } from "../components/ui/Section";
 
-import Footer from "../components/ui/Footer";
+import Footer from "../components/layout/Footer/Footer.jsx";
 import SparklesCore from "../components/effects/ParticlesAnimation";
 
 const Landing = () => {
