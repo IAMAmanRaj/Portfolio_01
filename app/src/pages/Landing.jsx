@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import HeroSection from "../components/ui/HeroSection";
 
-import BackgroundBeams from "../components/ui/BackgroundBeams";
+import BackgroundBeams from "../components/effects/BackgroundBeams";
 
 import Example from "../components/ui/HorizontalCarousel";
 
@@ -10,7 +10,7 @@ import Timeline from "../components/ui/Timeline";
 import { HoverImageLinks } from "../components/ui/Section";
 
 import Footer from "../components/ui/Footer";
-import SparklesCore from "../components/ui/ParticlesAnimation";
+import SparklesCore from "../components/effects/ParticlesAnimation";
 
 const Landing = () => {
   const comp = useRef(null);

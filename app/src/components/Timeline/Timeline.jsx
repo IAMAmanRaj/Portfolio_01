@@ -1,9 +1,9 @@
 import React, { useRef, useMemo } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
-import { timelineItems } from "../../constants/timelineData.jsx";
-import TimelineItem from "./TimelineItem";
-import { useTimelineAnimations } from "../../hooks/useTimelineAnimations";
+import { timelineItems } from "../../constants/Timeline/timelineData.jsx";
+import TimelineItem from "./TimelineItem.jsx";
+import { useTimelineAnimations } from "../../hooks/useTimelineAnimations.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
