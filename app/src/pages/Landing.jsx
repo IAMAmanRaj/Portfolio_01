@@ -7,7 +7,6 @@ import BackgroundBeams from "../components/ui/BackgroundBeams";
 import Example from "../components/ui/HorizontalCarousel";
 
 import Timeline from "../components/ui/Timeline";
-  import SnowEffect from "../components/ui/SnowEffect";
 import { HoverImageLinks } from "../components/ui/Section";
 
 import Footer from "../components/ui/Footer";
