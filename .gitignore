@@ -1,1 +1,4 @@
 .env
+
+# GitHub Copilot agent configurations
+.github/agents/
