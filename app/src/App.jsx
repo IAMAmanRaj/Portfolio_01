@@ -2,7 +2,7 @@ import Landing from "./pages/Landing";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { ShiftingDropDown } from "./components/ui/ShiftingDropDown";
+import { ShiftingDropDown } from "./components/layout/Navigation/ShiftingDropDown";
 
 const App = () => {
   return (
