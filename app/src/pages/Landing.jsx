@@ -1,16 +1,12 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import HeroSection from "../components/ui/HeroSection";
-
+import HeroSection from "../components/sections/Hero/HeroSection";
 import BackgroundBeams from "../components/effects/BackgroundBeams";
-
-import Example from "../components/ui/HorizontalCarousel";
-
-import Timeline from "../components/Timeline/Timeline.jsx";
-import { HoverImageLinks } from "../components/ui/Section";
-
-import Footer from "../components/layout/Footer/Footer.jsx";
 import SparklesCore from "../components/effects/ParticlesAnimation";
+import SkillsCarousel from "../components/sections/Skills/SkillsCarousel";
+import Timeline from "../components/sections/Timeline/Timeline";
+import { HoverImageLinks as ProjectsSection } from "../components/sections/Projects/ProjectsSection";
+import Footer from "../components/layout/Footer/Footer";
 
 const Landing = () => {
   const comp = useRef(null);
@@ -122,7 +118,7 @@ const Landing = () => {
         </div>
         <Timeline />
         <div className="bg-gray-950">
-          <Example />
+          <SkillsCarousel />
         </div>
 
         <div className="flex bg-gray-950 h-48 items-center justify-center">
@@ -151,7 +147,7 @@ const Landing = () => {
 
         <div className="bg-gray-950">
           <div className="">
-            <HoverImageLinks style={{ zIndex: 10 }} />
+            <ProjectsSection style={{ zIndex: 10 }} />
           </div>
         </div>
 
