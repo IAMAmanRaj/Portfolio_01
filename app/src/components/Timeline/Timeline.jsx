@@ -1,20 +1,22 @@
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
+import { timelineItems } from "../../constants/Timeline/timelineData.jsx";
 import TimelineItem from "./TimelineItem.jsx";
-import { timelineItems } from "../../../constants/Timeline/timelineData.jsx";
-import { useTimelineAnimations } from "./hooks/useTimelineAnimations.js";
+import { useTimelineAnimations } from "../sections/Timeline/hooks/useTimelineAnimations.js";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Timeline = () => {
-  // Create refs array at top level - one time initialization
-  const refs = useRef(
-    timelineItems.map(() => ({
-      tickRef: { current: null },
-      textRef: { current: null },
-      hrRef: { current: null },
-    }))
-  ).current;
+  const refs = useMemo(
+    () =>
+      timelineItems.map(() => ({
+        tickRef: useRef(null),
+        textRef: useRef(null),
+        hrRef: useRef(null),
+      })),
+    []
+  );
 
   useTimelineAnimations(timelineItems, refs);
 

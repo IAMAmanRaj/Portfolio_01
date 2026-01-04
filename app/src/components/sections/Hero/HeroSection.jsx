@@ -37,109 +37,120 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
-    gsap.fromTo(
-      JourneyTextRef.current,
-      { x: 0 },
-      {
-        x: 390,
-        duration: 5, // Increase the duration
-        ease: "power1.out", // Add an easing function
-        scrollTrigger: {
-          trigger: JourneyTextRef.current,
-          start: "top 42%",
-          end: "top 42%",
-          scrub: 1,
-        },
-      }
-    );
+    // Add null checks before animating
+    if (JourneyTextRef.current) {
+      gsap.fromTo(
+        JourneyTextRef.current,
+        { x: 0 },
+        {
+          x: 390,
+          duration: 5,
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: JourneyTextRef.current,
+            start: "top 42%",
+            end: "top 42%",
+            scrub: 1,
+          },
+        }
+      );
+    }
 
-    gsap.fromTo(
-      textRef.current,
-      { y: 0 },
-      {
-        y: 70,
-        scrollTrigger: {
-          trigger: textRef.current,
-          start: "top 50%",
+    if (textRef.current) {
+      gsap.fromTo(
+        textRef.current,
+        { y: 0 },
+        {
+          y: 70,
+          scrollTrigger: {
+            trigger: textRef.current,
+            start: "top 50%",
+            end: "bottom 20%",
+            scrub: 5,
+          },
+        }
+      );
+    }
 
-          end: "bottom 20%",
-          scrub: 5, // Increase this value for a smoother effect
-        },
-      }
-    );
+    if (bgRef.current) {
+      gsap.fromTo(
+        bgRef.current,
+        { y: 0 },
+        {
+          y: -100,
+          scrollTrigger: {
+            trigger: bgRef.current,
+            start: "top 50%",
+            end: "bottom bottom",
+            scrub: 5,
+          },
+        }
+      );
+    }
 
-    gsap.fromTo(
-      bgRef.current,
-      { y: 0 },
-      {
-        y: -100,
-        scrollTrigger: {
-          trigger: bgRef.current,
-          start: "top 50%",
+    if (text2Ref.current) {
+      gsap.fromTo(
+        text2Ref.current,
+        { y: 0 },
+        {
+          y: 100,
+          scrollTrigger: {
+            trigger: text2Ref.current,
+            start: "top 50%",
+            end: "bottom 20%",
+            scrub: 5,
+          },
+        }
+      );
+    }
 
-          end: "bottom bottom",
-          scrub: 5, // Increase this value for a smoother effect
-        },
-      }
-    );
+    if (bg2Ref.current) {
+      gsap.fromTo(
+        bg2Ref.current,
+        { y: 0 },
+        {
+          y: -100,
+          scrollTrigger: {
+            trigger: bg2Ref.current,
+            start: "top 50%",
+            end: "bottom bottom",
+            scrub: 5,
+          },
+        }
+      );
+    }
 
-    gsap.fromTo(
-      text2Ref.current,
-      { y: 0 },
-      {
-        y: 100,
-        scrollTrigger: {
-          trigger: text2Ref.current,
-          start: "top 50%",
+    if (text3Ref.current) {
+      gsap.fromTo(
+        text3Ref.current,
+        { y: 0 },
+        {
+          y: -200,
+          scrollTrigger: {
+            trigger: text3Ref.current,
+            start: "bottom 2%",
+            end: "top 50%",
+            scrub: 5,
+          },
+        }
+      );
+    }
 
-          end: "bottom 20%",
-          scrub: 5,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      bg2Ref.current,
-      { y: 0 },
-      {
-        y: -100,
-        scrollTrigger: {
-          trigger: bg2Ref.current,
-          start: "top 50%",
-
-          end: "bottom bottom",
-          scrub: 5,
-        },
-      }
-    );
-    gsap.fromTo(
-      text3Ref.current,
-      { y: 0 },
-      {
-        y: -200,
-        scrollTrigger: {
-          trigger: text3Ref.current,
-          start: "bottom 2%",
-
-          end: "top 50%",
-          scrub: 5,
-        },
-      }
-    );
-    gsap.fromTo(
-      text4Ref.current,
-      { y: 0 },
-      {
-        y: -50,
-        scrollTrigger: {
-          trigger: text4Ref.current,
-          start: "top 50%",
-
-          end: "top 30%",
-          scrub: 5,
-        },
-      }
-    );
+    if (text4Ref.current) {
+      gsap.fromTo(
+        text4Ref.current,
+        { y: 0 },
+        {
+          y: -50,
+          scrollTrigger: {
+            trigger: text4Ref.current,
+            start: "top 50%",
+            end: "top 30%",
+            scrub: 5,
+          },
+        }
+      );
+    }
   }, []);
 
   useLayoutEffect(() => {
