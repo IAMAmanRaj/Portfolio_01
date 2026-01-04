@@ -115,7 +115,7 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
                 {/* Custom Amount Input */}
                 <div className="mb-8">
                   <label className="block text-white text-sm font-medium mb-2 text-center">
-                    Or enter a custom amount
+                    Or enter a custom amount ( INR )
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
@@ -129,7 +129,7 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
                                rounded-xl text-white placeholder-yellow-300/50 
                                focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500
                                transition-all duration-200"
-                      placeholder="Enter custom amount"
+                      placeholder="Enter amount"
                       required
                       min="1"
                     />
@@ -176,7 +176,7 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
                 </div>
 
                 {/* Info text */}
-                <p className="text-yellow-200/60 text-xs text-center mt-4">
+                <p className="text-yellow-200/60 text-sm md:text-lg text-center mt-4">
                   Every coffee helps me stay motivated! 💛
                 </p>
               </div>
