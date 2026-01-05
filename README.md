@@ -55,7 +55,7 @@ The project is set up with **Docker** and **Docker Compose**. This ensures envir
 
 ## 🐳 Docker Development
 
-**Prerequisites:** Docker Desktop installed and running.
+**Prerequisites:** Docker Desktop ( or Rancher Desktop/ any other Container for managing containers ) should be installed and running.
 
 **Quick Start:**  
 ```bash
