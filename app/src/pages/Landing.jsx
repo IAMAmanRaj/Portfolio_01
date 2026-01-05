@@ -1,7 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import HeroSection from "../components/sections/Hero/HeroSection";
-import BackgroundBeams from "../components/effects/BackgroundBeams";
 import SparklesCore from "../components/effects/ParticlesAnimation";
 import SkillsCarousel from "../components/sections/Skills/SkillsCarousel";
 import Timeline from "../components/sections/Timeline/Timeline";
@@ -49,10 +48,10 @@ const Landing = () => {
       <div className="relative bg-gray-950 overflow-x-hidden" ref={comp}>
         <div
           id="intro-slider"
-          className="h-screen  px-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around pt-24 py-8 sm:py-8  tracking-tight"
+          className="h-screen  px-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around pt-24 py-8 sm:py-8 lg:py-20  tracking-tight"
         >
           <h1
-            className="text-3xl text-white  md:text-5xl lg:text-9xl"
+            className="text-3xl text-white  md:text-5xl lg:text-8xl"
             id="title-1"
           >
             Hi there , I am Aman
@@ -73,18 +72,14 @@ const Landing = () => {
           <h1
             className="text-3xl text-white  md:text-5xl lg:text-6xl"
             id="title-4"
-          >
-            and a Frontend Engineer :)
+          > and a Frontend Engineer :)
           </h1>
         </div>
-        <div className="">
-          <BackgroundBeams className="fixed z-[20]" />
 
           <HeroSection />
-        </div>
       </div>
       <div className="h-screen relative bg-gray-950 pt-12 md:pt-64 flex flex-col justify-between">
-        <div className="flex h-48 items-center justify-center">
+        <div className="flex h-full z-20 items-center justify-center">
           <span className="font-semibold uppercase text-neutral-500">
             <div className="h-[40rem]  w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
               <h1
@@ -105,7 +100,7 @@ const Landing = () => {
                   background="transparent"
                   minSize={0.4}
                   maxSize={1}
-                  particleDensity={1200}
+                  particleDensity={12}
                   className="w-full h-full"
                   particleColor="#FFFFFF"
                 />

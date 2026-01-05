@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { FiMousePointer, FiArrowDown } from "react-icons/fi";
 
 gsap.registerPlugin(ScrollTrigger);
 const HeroSection = () => {
@@ -29,8 +31,8 @@ const HeroSection = () => {
       .to("#intro1", { opacity: 0, duration: 1 })
       .fromTo("#intro2", { opacity: 0 }, { opacity: 1, duration: 2 })
       .to("#intro2", { opacity: 0, duration: 1 })
-      .fromTo("#intro3", { opacity: 0 }, { opacity: 1, duration: 2 })
-      .to("#intro3", { opacity: 0, duration: 1 })
+      // .fromTo("#intro3", { opacity: 0 }, { opacity: 1, duration: 2 })
+      // .to("#intro3", { opacity: 0, duration: 1 })
       .fromTo("#intro4", { opacity: 0 }, { opacity: 0.8, duration: 8 });
 
     return () => t1.kill(); // Kill the timeline when the component unmounts
@@ -222,22 +224,76 @@ const HeroSection = () => {
             ref={introTextRef2}
             className="text-5xl opacity-0 absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 playfair-display transition duration-300"
           >
-            Till
+            Till Now
           </h1>
-          <h1
-            id="intro3"
-            ref={introTextRef3}
-            className="text-5xl opacity-0  absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 playfair-display transition duration-300"
-          >
-            Now
-          </h1>
-          <h1
+          <motion.div
             id="intro4"
             ref={introTextRef4}
-            className="text-5xl opacity-0  absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 playfair-display transition duration-300"
+            className="absolute flex flex-col items-center gap-4"
           >
-            Let's dive in
-          </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-100 playfair-display">
+              Let's dive in
+            </h1>
+            
+            {/* Animated Scroll Indicator */}
+            <motion.div
+              className="flex flex-col items-center gap-2"
+              animate={{
+                y: [0, 10, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut  ",
+              }}
+            >
+              {/* Mouse Scroll Icon */}
+              <div className="relative w-8 h-12 border-2 border-slate-300 rounded-full flex justify-center pt-2">
+                <motion.div
+                  className="w-1.5 h-2 bg-slate-300 rounded-full"
+                  animate={{
+                    y: [0, 12, 0],
+                    opacity: [1, 0.3, 1],
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+              </div>
+              
+              {/* Scroll Text */}
+              <motion.p
+                className="text-sm md:text-base text-slate-300 font-light tracking-widest"
+                animate={{
+                  opacity: [0.5, 1, 0.5],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                SCROLL TO EXPLORE
+              </motion.p>
+              
+              {/* Arrow Down */}
+              <motion.div
+                animate={{
+                  y: [0, 5, 0],
+                }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.2,
+                }}
+              >
+                <FiArrowDown className="text-2xl text-slate-300" />
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 

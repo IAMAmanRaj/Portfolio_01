@@ -52,7 +52,7 @@ const SparklesCore = (props) => {
               },
             },
             fullScreen: {
-              enable: false,
+              enable: true,
               zIndex: 1,
             },
 
@@ -90,7 +90,7 @@ const SparklesCore = (props) => {
               },
               collisions: {
                 absorb: {
-                  speed: 2,
+                  speed: 1,
                 },
                 bounce: {
                   horizontal: {
@@ -101,7 +101,7 @@ const SparklesCore = (props) => {
                   },
                 },
                 enable: false,
-                maxSpeed: 50,
+                maxSpeed: 10,
                 mode: "bounce",
                 overlap: {
                   enable: true,
@@ -109,7 +109,7 @@ const SparklesCore = (props) => {
                 },
               },
               color: {
-                value: particleColor || "#ffffff",
+                value: "#ffffff",
                 animation: {
                   h: {
                     count: 0,

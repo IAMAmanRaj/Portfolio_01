@@ -7,7 +7,7 @@ const TimelineItem = ({ item, tickRef, textRef, hrRef, isLast }) => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
-          className="h-5 w-5 text-current"
+          className="h-3 w-3 -mt-1 md:h-4 md:w-4 text-current"
         >
           <path
             fillRule="evenodd"
@@ -18,10 +18,10 @@ const TimelineItem = ({ item, tickRef, textRef, hrRef, isLast }) => {
       </div>
       <div
         ref={textRef}
-        className={`${
+         className={`pb-12 text-current pl-5 md:pl-0 ${
           isStart
-            ? "timeline-start md:text-end pb-12 text-current pl-8 md:pl-0 md:mr-3"
-            : "timeline-end pb-12 text-current pl-8 md:pl-0 mb-10 md:ml-3"
+            ? "timeline-start md:text-end md:mr-3"
+            : "timeline-end mb-10 md:ml-3"
         }`}
       >
         <time className={`font-mono italic ${item.id === 10 ? 'font-bold' : ''}`}>
