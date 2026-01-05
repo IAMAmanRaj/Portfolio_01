@@ -39,7 +39,7 @@ const SparklesCore = (props) => {
   };
 
   return (
-    <motion.div animate={controls} className={cn("opacity-0", className)}>
+    <motion.div animate={controls} className={cn(className)}>
       {init && (
         <Particles
           id={id || "tsparticles"}
@@ -52,7 +52,7 @@ const SparklesCore = (props) => {
               },
             },
             fullScreen: {
-              enable: true,
+              enable: true,  // Changed to false to respect container boundaries
               zIndex: 1,
             },
 
@@ -109,7 +109,7 @@ const SparklesCore = (props) => {
                 },
               },
               color: {
-                value: "#ffffff",
+                value: particleColor || "#ffffff",
                 animation: {
                   h: {
                     count: 0,
