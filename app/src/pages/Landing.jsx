@@ -49,7 +49,7 @@ const Landing = () => {
       <div className="relative bg-gray-950 overflow-x-hidden" ref={comp}>
         <div
           id="intro-slider"
-          className="h-screen  px-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around py-24 sm:py-8  tracking-tight"
+          className="h-screen  px-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around pt-24 py-8 sm:py-8  tracking-tight"
         >
           <h1
             className="text-3xl text-white  md:text-5xl lg:text-9xl"

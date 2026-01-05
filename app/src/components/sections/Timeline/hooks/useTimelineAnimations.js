@@ -1,14 +1,17 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const useTimelineAnimations = (items, refs) => {
   useEffect(() => {
+    const animations = [];
+
     items.forEach((item, index) => {
       const { tickRef, textRef, hrRef } = refs[index];
       const { scrollTrigger } = item;
 
       // Animate tick
-      gsap.fromTo(
+      const tickAnim = gsap.fromTo(
         tickRef.current,
         {
           scale: 1,
@@ -24,9 +27,10 @@ export const useTimelineAnimations = (items, refs) => {
           },
         }
       );
+      animations.push(tickAnim);
 
       // Animate text
-      gsap.fromTo(
+      const textAnim = gsap.fromTo(
         textRef.current,
         {
           color: "currentColor",
@@ -43,10 +47,11 @@ export const useTimelineAnimations = (items, refs) => {
           },
         }
       );
+      animations.push(textAnim);
 
       // Animate hr (if not last item)
       if (hrRef.current) {
-        gsap.fromTo(
+        const hrAnim = gsap.fromTo(
           hrRef.current,
           {
             opacity: 0,
@@ -62,7 +67,16 @@ export const useTimelineAnimations = (items, refs) => {
             },
           }
         );
+        animations.push(hrAnim);
       }
     });
-  }, [items, refs]);
+
+    // Cleanup function
+    return () => {
+      animations.forEach((anim) => {
+        anim.kill();
+      });
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []); // Empty array - only run once on mount
 };

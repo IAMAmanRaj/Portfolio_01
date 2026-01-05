@@ -38,7 +38,7 @@ const Tabs = () => {
   return (
     <div
       onMouseLeave={() => handleSetSelected(null)}
-      className="fixed top-[desired value] opacity-95 bg-zinc-950 rounded-full border-2 p-1 vxs:p-2 mt-4 flex h-fit gap-0 vxs:gap-2"
+      className="fixed top-[8px] opacity-95 bg-zinc-950 rounded-full border-2 p-1 vxs:p-2 mt-4 flex h-fit gap-0 vxs:gap-2"
     >
       {TABS.map((t) => {
         return (
@@ -74,7 +74,7 @@ const Tab = ({ children, tab, handleSetSelected, selected }) => {
     >
       <span>{children}</span>
       <FiChevronDown
-        className={`transition-transform ${
+        className={`transition-transform mt-1 ${
           selected === tab ? "rotate-180" : ""
         }`}
       />

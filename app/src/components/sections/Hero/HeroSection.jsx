@@ -213,38 +213,38 @@ const HeroSection = () => {
           <h1
             id="intro1"
             ref={introTextRef1}
-            className="text-3xl opacity-0  absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 font-spaceGrotesk transition duration-300"
+            className="text-6xl opacity-0  absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 playfair-display transition duration-300"
           >
             My journey
           </h1>
           <h1
             id="intro2"
             ref={introTextRef2}
-            className="text-3xl opacity-0 absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 font-spaceGrotesk transition duration-300"
+            className="text-5xl opacity-0 absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 playfair-display transition duration-300"
           >
             Till
           </h1>
           <h1
             id="intro3"
             ref={introTextRef3}
-            className="text-3xl opacity-0  absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 font-spaceGrotesk transition duration-300"
+            className="text-5xl opacity-0  absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 playfair-display transition duration-300"
           >
             Now
           </h1>
           <h1
             id="intro4"
             ref={introTextRef4}
-            className="text-3xl opacity-0  absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 font-spaceGrotesk transition duration-300"
+            className="text-5xl opacity-0  absolute  md:text-5xl lg:text-8xl font-bold text-slate-100 playfair-display transition duration-300"
           >
             Let's dive in
           </h1>
         </div>
       </div>
 
-      <div className="relative h-screen text-[22px]  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
+      <div className="relative playfair-display h-screen text-[22px]  xs:text-xl  md:text-3xl lg:text-5xl  font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
         <div id="about" className="relative z-10 w-full" ref={textRef}>
           <p className="flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[15%] lg:top-[20%]  ">
-            {"The world of frontend development has always fascinated me. It is not only about visual appeal. There is so much engineering behind web and how browsers work. I got hooked when I realized how powerful these technologies can be."
+            {`"Frontend development hit me like a bolt of lightning. One moment I was looking at a website, the next I was obsessed with understanding how it worked. The rabbit hole went deep, and I couldn't stop digging."`
               .split(" ")
               .map((word, index) => (
                 <span id="character" key={index} className="opacity-0">
@@ -258,7 +258,7 @@ const HeroSection = () => {
           </p>
 
           <p className="absolute top-[15%]   lg:top-[20%] flex flex-wrap gap-x-3 opacity-40 mx-auto px-4 xs:px-12  md:px-24 ">
-            {"The world of frontend development has always fascinated me. It is not only about visual appeal. There is so much engineering behind web and how browsers work. I got hooked when I realized how powerful these technologies can be."
+            {`"Frontend development hit me like a bolt of lightning. One moment I was looking at a website, the next I was obsessed with understanding how it worked. The rabbit hole went deep, and I couldn't stop digging."`
               .split(" ")
               .map((word, index) => (
                 <span key={index} className="">
@@ -272,10 +272,10 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-      <div className="relative h-screen  text-[22px]  md:text-3xl lg:text-5xl  font-bold text-white mt-22 flex justify-center text-center">
-        <div ref={text2Ref} className="relative z-10 w-full">
-          <p className="flex absolute flex-wrap gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[2%] ">
-            {"I like to understand scalable frontend systems and the architecture behind them."
+      <div className="relative  playfair-display h-screen  text-[22px]  md:text-3xl lg:text-5xl  font-bold text-white mt-22 flex justify-center text-center">
+        <div ref={text2Ref} className="relative  z-10 w-full">
+          <p className="flex absolute flex-wrap justify-center w-full gap-x-3 mx-auto  px-4 xs:px-12  md:px-24 top-[2%] ">
+            {"I live in the space between design and engineering."
               .split(" ")
               .map((word, index) => (
                 <span id="charactertwo" key={index} className="opacity-0">
@@ -288,8 +288,8 @@ const HeroSection = () => {
               ))}
           </p>
 
-          <p className="absolute  flex flex-wrap gap-x-3 top-[2%] opacity-40 mx-auto px-4 xs:px-12  md:px-24">
-            {"I like to understand scalable frontend systems and the architecture behind them."
+          <p className="absolute  flex flex-wrap justify-center w-full gap-x-3 top-[2%] opacity-40 mx-auto px-4 xs:px-12  md:px-24">
+            {"I live in the space between design and engineering."
               .split(" ")
               .map((word, index) => (
                 <span key={index} className="">
@@ -306,10 +306,10 @@ const HeroSection = () => {
 
       <div
         ref={text3Ref}
-        className="relative mx-auto text-[30px]  md:text-3xl lg:text-5xl  font-bold text-white -mt-60 md:mt-22 mb-12"
+        className="relative playfair-display mx-auto text-[30px]  md:text-3xl lg:text-5xl  font-bold text-white -mt-60 md:mt-22 mb-12"
       >
         <p className="flex text-center gap-x-3 px-4 ">
-          {"Slow and steady.".split(" ").map((word, index) => (
+          {"One line at a time.".split(" ").map((word, index) => (
             <span id="characterthree" key={index} className="opacity-0">
               {word.split("").map((character, index) => (
                 <span id="characterthree" key={index} className="opacity-0">
@@ -321,7 +321,7 @@ const HeroSection = () => {
         </p>
 
         <p className="absolute top-0 flex text-center gap-x-3 opacity-5 px-4">
-          {"Slow and steady.".split(" ").map((word, index) => (
+          {"One line at a time.".split(" ").map((word, index) => (
             <span key={index} className="">
               {word.split("").map((character, index) => (
                 <span key={index} className="">
@@ -333,7 +333,7 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div className="relative flex flex-col justify-center items-center overflow-hidden h-[400px] md:h-[500px]">
+      <div className="relative playfair-display hidden md:flex flex-col justify-center items-center overflow-hidden h-[400px] md:h-[500px]">
         {/* Electric Border Effect */}
         <svg className="svg-container">
           <defs>

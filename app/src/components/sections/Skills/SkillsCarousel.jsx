@@ -52,7 +52,7 @@ const Example = () => {
       id="skills"
       className="bg-transparent z-[20] relative flex flex-col justify-center"
     >
-      <span className=" bg-transparent absolute left-1/2 flex justify-center  px-2 vxs:px-0 transform -translate-x-1/2 text-[22px] sm:text-[30px] w-full md:text-4xl lg:text-5xl mt-24 xl:text-7xl font-bold  text-blue-200  ">
+      <span className="playfair-display bg-transparent absolute left-1/2 flex justify-center  px-2 vxs:px-0 transform -translate-x-1/2 text-[22px] sm:text-[30px] w-full md:text-4xl lg:text-5xl mt-24 xl:text-7xl font-bold  text-blue-200  ">
         Technologies I am familiar with
       </span>
 

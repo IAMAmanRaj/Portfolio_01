@@ -27,7 +27,7 @@ const TimelineItem = ({ item, tickRef, textRef, hrRef, isLast }) => {
         <time className={`font-mono italic ${item.id === 10 ? 'font-bold' : ''}`}>
           {item.time}
         </time>
-        <div className="text-lg font-black">{item.title}</div>
+        <div className="text-lg  font-black">{item.title}</div>
         {item.content}
       </div>
       {!isLast && <hr ref={hrRef} className="z-[-4]" />}

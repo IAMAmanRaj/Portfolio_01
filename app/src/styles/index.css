@@ -3,9 +3,25 @@
 @tailwind utilities;
 
 
+
+ 
 .bg-clip-text-webkit {
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.playfair-display-bold {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
 }
 
 /* Electric Border CSS Variables */
