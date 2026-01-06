@@ -29,6 +29,7 @@ const SparklesCore = (props) => {
 
   const particlesLoaded = async (container) => {
     if (container) {
+      console.log(container);
       controls.start({
         opacity: 1,
         transition: {
@@ -39,7 +40,7 @@ const SparklesCore = (props) => {
   };
 
   return (
-    <motion.div animate={controls} className={cn(className)}>
+    <motion.div animate={controls} className={cn("opacity-0", className)}>
       {init && (
         <Particles
           id={id || "tsparticles"}
@@ -52,7 +53,7 @@ const SparklesCore = (props) => {
               },
             },
             fullScreen: {
-              enable: true,  // Changed to false to respect container boundaries
+              enable: false,
               zIndex: 1,
             },
 
@@ -90,7 +91,7 @@ const SparklesCore = (props) => {
               },
               collisions: {
                 absorb: {
-                  speed: 1,
+                  speed: 2,
                 },
                 bounce: {
                   horizontal: {
@@ -101,7 +102,7 @@ const SparklesCore = (props) => {
                   },
                 },
                 enable: false,
-                maxSpeed: 10,
+                maxSpeed: 50,
                 mode: "bounce",
                 overlap: {
                   enable: true,

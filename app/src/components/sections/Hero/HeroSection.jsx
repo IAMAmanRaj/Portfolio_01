@@ -231,10 +231,6 @@ const HeroSection = () => {
             ref={introTextRef4}
             className="absolute flex flex-col items-center gap-4"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-100 playfair-display">
-              Let's dive in
-            </h1>
-            
             {/* Animated Scroll Indicator */}
             <motion.div
               className="flex flex-col items-center gap-2"
@@ -244,11 +240,11 @@ const HeroSection = () => {
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                ease: "easeInOut  ",
+                ease: "easeInOut",
               }}
             >
               {/* Mouse Scroll Icon */}
-              <div className="relative w-8 h-12 border-2 border-slate-300 rounded-full flex justify-center pt-2">
+              <div className="relative w-8 h-12 border-2 border-slate-300 rounded-full flex justify-center pt-2 shadow-[0_0_15px_rgba(203,213,225,0.3)] hover:shadow-[0_0_25px_rgba(203,213,225,0.5)] transition-shadow duration-500">
                 <motion.div
                   className="w-1.5 h-2 bg-slate-300 rounded-full"
                   animate={{
@@ -265,12 +261,12 @@ const HeroSection = () => {
               
               {/* Scroll Text */}
               <motion.p
-                className="text-sm md:text-base text-slate-300 font-light tracking-widest"
+                className="text-sm md:text-base text-slate-300 font-light drop-shadow-[0_0_8px_rgba(203,213,225,0.4)] tracking-widest"
                 animate={{
                   opacity: [0.5, 1, 0.5],
                 }}
                 transition={{
-                  duration: 2,
+                  duration: 5,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
@@ -280,6 +276,7 @@ const HeroSection = () => {
               
               {/* Arrow Down */}
               <motion.div
+                className="drop-shadow-[0_0_6px_rgba(203,213,225,0.5)]"
                 animate={{
                   y: [0, 5, 0],
                 }}
@@ -387,88 +384,6 @@ const HeroSection = () => {
             </span>
           ))}
         </p>
-      </div>
-
-      <div className="relative playfair-display hidden md:flex flex-col justify-center items-center overflow-hidden h-[400px] md:h-[500px]">
-        {/* Electric Border Effect */}
-        <svg className="svg-container">
-          <defs>
-            <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
-              <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
-              <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
-                <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
-              </feOffset>
-
-              <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="1" />
-              <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
-                <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
-              </feOffset>
-
-              <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="2" />
-              <feOffset in="noise1" dx="0" dy="0" result="offsetNoise3">
-                <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
-              </feOffset>
-
-              <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="2" />
-              <feOffset in="noise2" dx="0" dy="0" result="offsetNoise4">
-                <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
-              </feOffset>
-
-              <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
-              <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
-              <feBlend in="part1" in2="part2" mode="color-dodge" result="combinedNoise" />
-
-              <feDisplacementMap in="SourceGraphic" in2="combinedNoise" scale="30" xChannelSelector="R" yChannelSelector="B" />
-            </filter>
-          </defs>
-        </svg>
-
-        <div className="card-container">
-          <div className="inner-container">
-            <div className="border-outer">
-              <div className="main-card"></div>
-            </div>
-            <div className="glow-layer-1"></div>
-            <div className="glow-layer-2"></div>
-          </div>
-
-          <div className="overlay-1"></div>
-          <div className="overlay-2"></div>
-          <div className="background-glow"></div>
-
-          <div className="content-container">
-            <div className=" absolute ">
-              <div
-                ref={text4Ref}
-                className="relative mb-4 text-2xl  md:text-3xl lg:text-5xl flex justify-center text-center  font-bold text-slate-300 "
-              >
-                <p className="flex flex-wrap gap-x-3 px-6 w-full  ">
-                  {"Journey from 0 to 1.".split(" ").map((word, index) => (
-                    <span id="characterfour" key={index} className="opacity-0">
-                      {word.split("").map((character, index) => (
-                        <span id="characterfour" key={index} className="opacity-0">
-                          {character}
-                        </span>
-                      ))}
-                    </span>
-                  ))}
-                </p>
-
-                <p className="absolute top-0 flex flex-wrap gap-x-3 w-full  px-6 opacity-5">
-                  {"Journey from 0 to 1.".split(" ").map((word, index) => (
-                    <span key={index} className="">
-                      {word.split("").map((character, index) => (
-                        <span key={index} className="">
-                          {character}
-                        </span>
-                      ))}
-                    </span>
-                  ))}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

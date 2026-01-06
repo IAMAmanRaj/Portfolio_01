@@ -45,7 +45,7 @@ const Landing = () => {
 
   return (
     <>
-      <div className="relative bg-gray-950 overflow-x-hidden" ref={comp}>
+      <div className="relative bg-gray-950 overflow-hidden " ref={comp}>
         <div
           id="intro-slider"
           className="h-screen  px-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around pt-24 py-8 sm:py-8 lg:py-20  tracking-tight"
@@ -78,17 +78,17 @@ const Landing = () => {
 
           <HeroSection />
       </div>
-      <div className="h-screen relative bg-gray-950 pt-12 md:pt-64 flex flex-col justify-between">
-        <div className="flex h-full z-20 items-center justify-center">
+     <div className="h-screen relative bg-gray-950 pt-48 flex flex-col justify-between">
+        <div className="flex h-full items-center justify-center relative">
           <span className="font-semibold uppercase text-neutral-500">
-            <div className="h-[40rem]  w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
+            <div className="w-full h-full flex flex-col items-center justify-center overflow-hidden rounded-md">
               <h1
                 id="timeline"
-                className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white absolute opacity-40"
+                className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white absolute opacity-40 z-10"
               >
                 Timeline
               </h1>
-              <div className=" md:w-[40rem] rounded-full  h-40 relative">
+              <div className="md:w-[40rem] w-full rounded-full h-64 relative">
                 {/* Gradients */}
                 <div className="hidden md:block md:absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
                 <div className="hidden md:block md:absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
@@ -100,13 +100,12 @@ const Landing = () => {
                   background="transparent"
                   minSize={0.4}
                   maxSize={1}
-                  particleDensity={12}
+                  particleDensity={1200}
                   className="w-full h-full"
                   particleColor="#FFFFFF"
                 />
 
-                {/* Radial Gradient to prevent sharp edges */}
-                <div className="absolute inset-0 w-full h-full [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+
               </div>
             </div>
           </span>
