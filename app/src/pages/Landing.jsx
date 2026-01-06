@@ -28,16 +28,11 @@ const Landing = () => {
         })
         .to(["#title-1", "#title-2", "#title-3", "#title-4"], {
           opacity: 0,
-          x: "+=30",
-          delay: 0.4,
-          stagger: 0.8,
+          duration: 0.8,
           ease: "power2.inOut", // Add this line
         })
-        .to("#intro-slider", {
-          xPercent: "-100",
-          duration: 1.3,
-          ease: "power2.inOut", // Add this line
-        });
+       
+      
     }, comp);
 
     return () => ctx.revert();
@@ -45,10 +40,10 @@ const Landing = () => {
 
   return (
     <>
-      <div className="relative bg-gray-950 overflow-hidden " ref={comp}>
+      <div className="relative  overflow-hidden " ref={comp}>
         <div
           id="intro-slider"
-          className="h-screen  px-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around pt-24 py-8 sm:py-8 lg:py-20  tracking-tight"
+          className="h-screen bg-black px-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around pt-24 py-8 sm:py-8 lg:py-20  tracking-tight"
         >
           <h1
             className="text-3xl text-white  md:text-5xl lg:text-8xl"
