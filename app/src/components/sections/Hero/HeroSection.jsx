@@ -205,7 +205,7 @@ const HeroSection = () => {
         introTextRef4.current,
         { scale: 1 },
         { 
-          scale: 2.0,
+          scale: 1.6,
           scrollTrigger: {
             trigger: introTextRef4.current,
             start: "top 42%",
@@ -219,7 +219,7 @@ const HeroSection = () => {
         introTextRef4.current,
         { x: 0 },
         {
-          x: "12vw",
+          x: "10vw",
           duration: 4,
           ease: "power1.out",
           scrollTrigger: {
@@ -481,7 +481,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="relative playfair-display h-screen text-[22px] md:text-3xl lg:text-5xl font-bold text-white mt-22 flex justify-center text-center">
+      <div className="relative playfair-display h-screen text-[22px] md:text-3xl lg:text-5xl font-bold text-white mt-8 md:mt-22 flex justify-center text-center">
         <div ref={text2Ref} className="relative z-10 w-full">
           <p className="flex absolute flex-wrap justify-center w-full gap-x-3 mx-auto px-4 xs:px-12 md:px-24 top-[2%]">
             {"I live in the space between design and engineering."
@@ -515,7 +515,7 @@ const HeroSection = () => {
 
       <div
         ref={text3Ref}
-        className="relative playfair-display mx-auto text-[30px] md:text-3xl lg:text-5xl font-bold text-white -mt-60 md:mt-22 mb-12"
+        className="relative playfair-display mx-auto text-[30px] md:text-3xl lg:text-5xl font-bold text-white -mt-72 md:mt-22 mb-12"
       >
         <p className="flex text-center gap-x-3 px-4">
           {"One line at a time.".split(" ").map((word, index) => (
