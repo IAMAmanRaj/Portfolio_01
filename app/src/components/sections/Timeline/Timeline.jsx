@@ -20,7 +20,7 @@ const Timeline = () => {
 
   return (
     <div>
-      <ul className="timeline bg-gray-950 z-[3] py-12 px-3 lg:px-24 timeline-snap-icon max-md:timeline-compact timeline-vertical">
+      <ul className="timeline bg-zinc-950 z-[3] py-12 px-3 lg:px-24 timeline-snap-icon max-md:timeline-compact timeline-vertical">
         {timelineItems.map((item, index) => (
           <TimelineItem
             key={item.id}

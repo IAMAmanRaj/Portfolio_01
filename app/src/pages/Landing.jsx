@@ -13,26 +13,26 @@ const Landing = () => {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       const t1 = gsap.timeline();
-      t1.from("#intro-slider", {
-        xPercent: "-100",
-        duration: 1.3,
-        delay: 0.3,
-        ease: "power2.inOut", // Add this line
-      })
-        .from(["#title-1", "#title-2", "#title-3", "#title-4"], {
+    
+        t1.from(["#title-1", "#title-2", "#title-3", "#title-4"], {
           opacity: 0,
           y: "+=30",
           x: "-=30",
           stagger: 0.8,
           ease: "power2.inOut", // Add this line
+          delay: 1.2,
         })
-        .to(["#title-1", "#title-2", "#title-3", "#title-4"], {
+         .to("#intro-slider", {
           opacity: 0,
-          duration: 0.8,
-          ease: "power2.inOut", // Add this line
-        })
-       
-      
+           duration: 0.8,
+          onComplete: () => {
+            // Hide the intro-slider completely after animation
+            gsap.set("#intro-slider", { 
+              display: "none",
+              zIndex: -1 
+            });
+          }
+        });
     }, comp);
 
     return () => ctx.revert();
@@ -40,10 +40,10 @@ const Landing = () => {
 
   return (
     <>
-      <div className="relative  overflow-hidden " ref={comp}>
+      <div className="relative overflow-hidden " ref={comp}>
         <div
           id="intro-slider"
-          className="h-screen bg-black px-10 absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col justify-around pt-24 py-8 sm:py-8 lg:py-20  tracking-tight"
+          className="h-screen px-10 z-30 bg-zinc-950 absolute top-0 left-0 font-spaceGrotesk w-full flex flex-col justify-around pt-24 py-8 sm:py-8 lg:py-20  tracking-tight"
         >
           <h1
             className="text-3xl text-white  md:text-5xl lg:text-8xl"
@@ -73,7 +73,7 @@ const Landing = () => {
 
           <HeroSection />
       </div>
-     <div className="h-screen relative bg-gray-950 pt-48 flex flex-col justify-between">
+     <div className="h-screen relative bg-zinc-950 pt-48 flex flex-col justify-between">
         <div className="flex h-full items-center justify-center relative">
           <span className="font-semibold uppercase text-neutral-500">
             <div className="w-full h-full flex flex-col items-center justify-center overflow-hidden rounded-md">
@@ -83,7 +83,7 @@ const Landing = () => {
               >
                 Timeline
               </h1>
-              <div className="md:w-[40rem] w-full rounded-full h-64 relative">
+              <div className="md:w-[45rem] w-full rounded-full h-64 relative">
                 {/* Gradients */}
                 <div className="hidden md:block md:absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
                 <div className="hidden md:block md:absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
@@ -106,11 +106,11 @@ const Landing = () => {
           </span>
         </div>
         <Timeline />
-        <div className="bg-gray-950">
+        <div className="bg-zinc-950">
           <SkillsCarousel />
         </div>
 
-        <div className="flex bg-gray-950 h-48 items-center justify-center">
+        <div className="flex bg-zinc-950 h-48 items-center justify-center">
           <span className="font-semibold  text-neutral-500">
             <div className=" h-[40rem] flex flex-col items-center justify-center overflow-hidden ">
               <h1
@@ -134,13 +134,13 @@ const Landing = () => {
           </span>
         </div>
 
-        <div className="bg-gray-950">
+        <div className="bg-zinc-950">
           <div className="">
             <ProjectsSection style={{ zIndex: 10 }} />
           </div>
         </div>
 
-        <div className="bg-gray-950">
+        <div className="bg-zinc-950">
           <Footer /> {/* Add style here */}
         </div>
       </div>

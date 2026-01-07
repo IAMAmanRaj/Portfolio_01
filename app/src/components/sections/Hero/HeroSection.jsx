@@ -19,37 +19,54 @@ const HeroSection = () => {
   const JourneyTextRef = useRef(null);
 
   // Initial loader animation with horizontal split
-  useLayoutEffect(() => {
-    // Calculate delay: Landing timeline takes about 5.5s total
-    // (0.3s initial + 1.3s slider + 3.2s titles stagger + 0.8s fade = ~5.6s)
+ useLayoutEffect(() => {
     const landingTimelineDuration = 5.6;
-    
-    // HIDE LOADER INITIALLY to not block Landing intro
+
+    // HIDE LOADER AND blockDivsS INITIALLY so Landing intro is visible
     gsap.set(".loader", {
       opacity: 0,
       visibility: "hidden"
     });
-    
-    // SET INITIAL STATE for blocks (but hidden via loader)
-    gsap.set(".block-top", {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)",
-      
+
+    gsap.set([".blockDivs-top", ".blockDivs-bottom"], {
+      opacity: 0
     });
 
-    gsap.set(".block-bottom", {
-      clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)",
-     
+    // HIDE THE INTRO CONTENT INITIALLY (prevents red flash)
+    gsap.set("#intro", {
+      opacity: 0
     });
     
     const loaderTl = gsap.timeline({
       delay: landingTimelineDuration,
       defaults: { ease: "power2.inOut" }
     });
-    
-    // STEP 0: Show loader (was hidden to not block Landing intro)
+
+    // STEP 0: First set up blockDivss (still invisible)
+    loaderTl.set(".blockDivs-top", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)",
+      backgroundColor: "#09090b",
+    });
+
+    loaderTl.set(".blockDivs-bottom", {
+      clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)",
+      backgroundColor: "#09090b",
+    });
+
+    // STEP 0.5: Show intro content (will be covered by blockDivss)
+    loaderTl.set("#intro", {
+      opacity: 1
+    });
+
+    // STEP 0.6: Now show loader and blockDivss simultaneously
     loaderTl.set(".loader", {
       opacity: 1,
-      visibility: "visible"
+      visibility: "visible",
+      backgroundColor: "transparent"
+    });
+
+    loaderTl.set([".blockDivs-top", ".blockDivs-bottom"], {
+      opacity: 1
     });
     
     // STEP 1: Show the words sliding in
@@ -66,7 +83,7 @@ const HeroSection = () => {
 
     // STEP 3: Horizontal divider grows from center
     loaderTl.to(".divider", {
-      scaleX: 1, // Grow from 0 to full width
+      scaleX: 1,
       duration: 1.2,
       ease: "power2.inOut"
     });
@@ -76,39 +93,36 @@ const HeroSection = () => {
       duration: 0.5
     });
 
-    // STEP 5: Words fade out (no horizontal movement)
+    // STEP 5: Words fade out
     loaderTl.to(
       ".word h1",
       { opacity: 0, duration: 0.5 },
-      "<" // Start at same time as divider hold
+      "<"
     );
 
-  // STEP 6: Collapse blocks to their boundaries (staggered split reveal)
-  loaderTl.to(".block-top", {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", // Collapse to top edge
-    duration: 1.8,
-    ease: "power2.inOut"
-  });
-  
-  loaderTl.to(".block-bottom", {
-    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", // Collapse to bottom edge
-    duration: 1.8,
-    ease: "power2.inOut"
-  }, "<+=0.4"); // Increased stagger for more visible split effect
+    // STEP 6: Collapse blockDivss to reveal content (THE SPLIT REVEAL)
+    loaderTl.to(".blockDivs-top", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+      duration: 1.8,
+      ease: "power2.inOut"
+    });
+    
+    loaderTl.to(".blockDivs-bottom", {
+      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+      duration: 1.8,
+      ease: "power2.inOut"
+    }, "<+=0.4");
 
-  // STEP 7: Fade out divider during collapse
-  loaderTl.to(".divider", {
-    opacity: 0,
-    duration: 1.0
-  }, "<");
-
-    // STEP 8: Remove loader
-    loaderTl.to(".loader", {
+    // STEP 7: Fade out divider during collapse
+    loaderTl.to(".divider", {
       opacity: 0,
-      duration: 0.3,
-      onComplete: () => {
-        gsap.set(".loader", { display: "none" });
-      },
+      duration: 1.0
+    }, "<");
+
+    // STEP 8: Remove loader AFTER collapse is complete (no fade, just remove)
+    loaderTl.set(".loader", {
+      display: "none",
+      zIndex: -1
     });
 
     return () => loaderTl.kill();
@@ -286,14 +300,14 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col bg-gray-950">
+    <div className="flex flex-col bg-zinc-950">
       <div className="relative flex justify-center items-center h-screen">
         {/* LOADING SCREEN */}
-        <div className="loader bg-gray-950">
-          {/* Two blocks that act as overlay curtains (horizontal split) */}
+        <div className="loader z-40">
+          {/* Two blockDivss that act as overlay curtains (horizontal split) */}
           <div className="overlay">
-            <div className="block block-top"></div>  {/* Top block */}
-            <div className="block block-bottom"></div>  {/* Bottom block */}
+            <div className="blockDivs blockDivs-top"></div>  {/* Top blockDivs */}
+            <div className="blockDivs blockDivs-bottom"></div>  {/* Bottom blockDivs */}
           </div>
 
           {/* Words that split apart */}
@@ -314,7 +328,7 @@ const HeroSection = () => {
         <div
           id="intro"
           ref={JourneyTextRef}
-          className="w-full absolute flex justify-center items-center text-center self-center"
+          className="w-full h-screen bg-red-900 absolute flex justify-center items-center text-center self-center z-20"
         >
           <h1
             id="intro1"
