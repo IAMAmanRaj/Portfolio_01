@@ -187,6 +187,9 @@
   /* Initial clipPath will be set by GSAP */
 }
 
+  .blockDivs {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
 
 /* Intro logo (words) positioned in center */
 .intro-logo {
@@ -211,6 +214,11 @@
   font-weight: 700;
   margin: 0;
   white-space: nowrap;
+}
+
+#intro1 {
+  transform: scale(0.8);  /* Starts at 150% size (zoomed in) */
+  will-change: transform;
 }
 
 @media (max-width: 768px) {

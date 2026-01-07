@@ -3,8 +3,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 import { FiMousePointer, FiArrowDown } from "react-icons/fi";
+import CustomEase from "gsap/CustomEase";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,12 +16,18 @@ const HeroSection = () => {
   const text4Ref = useRef(null);
   const introTextRef1 = useRef(null);
   const introTextRef2 = useRef(null);
-    const introTextRef3 = useRef(null);
+  const introTextRef3 = useRef(null);
+    const introTextRef4 = useRef(null);
   const JourneyTextRef = useRef(null);
+
+    useEffect(() => {
+    gsap.registerPlugin(CustomEase);
+    CustomEase.create("hop", "0.9, 0, 0.1, 1");
+  }, []);
 
   // Initial loader animation with horizontal split
  useLayoutEffect(() => {
-    const landingTimelineDuration = 5.6;
+    const landingTimelineDuration = 4.6;
 
     // HIDE LOADER AND blockDivsS INITIALLY so Landing intro is visible
     gsap.set(".loader", {
@@ -39,30 +46,23 @@ const HeroSection = () => {
     
     const loaderTl = gsap.timeline({
       delay: landingTimelineDuration,
-      defaults: { ease: "power2.inOut" }
+      defaults: {
+    ease: "hop",       // Apply "hop" ease to all animations unless overridden
+  },
     });
 
-    // STEP 0: First set up blockDivss (still invisible)
-    loaderTl.set(".blockDivs-top", {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)",
-      backgroundColor: "#09090b",
-    });
-
-    loaderTl.set(".blockDivs-bottom", {
-      clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)",
-      backgroundColor: "#09090b",
-    });
+   
 
     // STEP 0.5: Show intro content (will be covered by blockDivss)
     loaderTl.set("#intro", {
       opacity: 1
     });
 
-    // STEP 0.6: Now show loader and blockDivss simultaneously
+    // STEP 0.6: Now show loader and blockDivs simultaneously
     loaderTl.set(".loader", {
       opacity: 1,
       visibility: "visible",
-      backgroundColor: "transparent"
+    
     });
 
     loaderTl.set([".blockDivs-top", ".blockDivs-bottom"], {
@@ -70,54 +70,69 @@ const HeroSection = () => {
     });
     
     // STEP 1: Show the words sliding in
-    loaderTl.fromTo(
+    loaderTl.to(
       ".word h1",
-      { y: "-100%" },
-      { y: "0%", duration: 1 }
+      {
+        y: "0%",
+        duration: 1,
+       },
+      "<"
     );
-
-    // STEP 2: Hold the words for a moment
-    loaderTl.to(".word h1", {
-      duration: 0.8
-    });
 
     // STEP 3: Horizontal divider grows from center
     loaderTl.to(".divider", {
       scaleX: 1,
-      duration: 1.2,
-      ease: "power2.inOut"
+      duration: 1,
+       onComplete: () => {  // Callback when animation finishes
+    gsap.to(".divider", { 
+      opacity: 0,      // Fade out divider
+      duration: 0.3, 
+      delay: 0.3       // Wait 0.3s before fading
+    });
+  },
     });
 
-    // STEP 4: Hold divider visible for a moment
-    loaderTl.to(".divider", {
-      duration: 0.5
-    });
+    
 
     // STEP 5: Words fade out
-    loaderTl.to(
-      ".word h1",
-      { opacity: 0, duration: 0.5 },
-      "<"
-    );
+    loaderTl.to("#word-1 h1", {
+  y: "100%",           // Move down by full height
+  duration: 1,
+  delay: 0.3,          // Wait 0.3s after divider completes
+    });
+   
+   loaderTl.to(
+  "#word-2 h1",
+  {
+    y: "-100%",        // Move up (was at 100%, now at 0%)
+    duration: 1,
+  },
+  "<"                  // Run simultaneously with #word-1
+);
 
-    // STEP 6: Collapse blockDivss to reveal content (THE SPLIT REVEAL)
+    // STEP 6: Collapse blockDivs to reveal content (THE SPLIT REVEAL)
     loaderTl.to(".blockDivs-top", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-      duration: 1.8,
-      ease: "power2.inOut"
+      duration: 1.0,
+      ease: "hop",
+      onStart: () => {
+        gsap.to("#intro1", {
+          scale: 2.5,
+          duration: 1.2,
+          delay: 0.4,
+          ease: "hope",
+        });
+      },
     });
     
     loaderTl.to(".blockDivs-bottom", {
       clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-      duration: 1.8,
-      ease: "power2.inOut"
-    }, "<+=0.4");
-
-    // STEP 7: Fade out divider during collapse
-    loaderTl.to(".divider", {
-      opacity: 0,
-      duration: 1.0
+      duration: 1.0,
+      ease: "hop"
     }, "<");
+
+  
+
 
     // STEP 8: Remove loader AFTER collapse is complete (no fade, just remove)
     loaderTl.set(".loader", {
@@ -131,38 +146,41 @@ const HeroSection = () => {
   // Existing intro text animation (starts after loader)
   useLayoutEffect(() => {
     // Loader takes: 5.6s (landing) + 1s (words in) + 0.8s (hold) + 1.2s (divider) + 0.3s (hold) + 0.5s (fade) + 1.15s (collapse) + 0.3s (remove) = ~10.85s
-    const t1 = gsap.timeline({ delay: 10.85 });
+    const t1 = gsap.timeline({ delay: 3.0 + 4.6 });
     
     t1.fromTo(
       "#intro1",
-      { opacity: 0, scale: 1.2 },
+      { opacity: 0 },
       { 
         opacity: 1, 
-        scale: 1.0,
-        duration: 1, 
-        ease: "power2.out"
+        duration: 1.5, 
+        ease: "hop"
       }
     ).to("#intro1", { 
       opacity: 0,
-      duration: 1,
-      delay: 0.5
-    }).fromTo("#intro2", { opacity: 0 }, { opacity: 1, duration: 2 })
-      .to("#intro2", { opacity: 0, duration: 1 })
-      .fromTo("#intro3", { opacity: 0 }, { opacity: 0.8, duration: 8 });
+    
+      duration: 0.1,
+      ease: "hop",  
+    }).fromTo("#intro2", { opacity: 0 }, { opacity: 1, duration: 1.0, delay: 0.1, ease: "hop" })
+      .to("#intro2", { opacity: 0, duration: 0.8})
+      .fromTo("#intro3", { opacity: 0 }, { opacity: 1.0, duration: 1.0, ease: "hop" })
+      .to("#intro3", { opacity: 0, duration: 0.8 })
+      .fromTo("#intro4", { opacity: 0 }, { opacity: 1.0, duration: 1.0, ease: "hop" })
+      
 
     return () => t1.kill();
   }, []);
 
   // Existing scroll animations
   useEffect(() => {
-    if (introTextRef3.current) {
+    if (introTextRef4.current) {
       gsap.fromTo(
-        introTextRef3.current,
+        introTextRef4.current,
         { scale: 1 },
         { 
           scale: 2.0,
           scrollTrigger: {
-            trigger: introTextRef3.current,
+            trigger: introTextRef4.current,
             start: "top 42%",
             end: "top 20%",
             scrub: 1,
@@ -171,14 +189,14 @@ const HeroSection = () => {
       );
       
       gsap.fromTo(
-        introTextRef3.current,
+        introTextRef4.current,
         { x: 0 },
         {
           x: "10vw",
           duration: 4,
           ease: "power1.out",
           scrollTrigger: {
-            trigger: introTextRef3.current,
+            trigger: introTextRef4.current,
             start: "top 45%",
             end: "top 20%",
             scrub: 1,
@@ -186,7 +204,6 @@ const HeroSection = () => {
         }
       );
     }
-
     if (textRef.current) {
       gsap.fromTo(
         textRef.current,
@@ -300,14 +317,14 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col bg-zinc-950">
+    <div className="flex flex-col bg-[#001219]">
       <div className="relative flex justify-center items-center h-screen">
         {/* LOADING SCREEN */}
-        <div className="loader z-40">
+        <div className="loader z-40 ">
           {/* Two blockDivss that act as overlay curtains (horizontal split) */}
           <div className="overlay">
-            <div className="blockDivs blockDivs-top"></div>  {/* Top blockDivs */}
-            <div className="blockDivs blockDivs-bottom"></div>  {/* Bottom blockDivs */}
+            <div className="blockDivs bg-[#001219] blockDivs-top"></div>  {/* Top blockDivs */}
+            <div className="blockDivs bg-[#001219] blockDivs-bottom"></div>  {/* Bottom blockDivs */}
           </div>
 
           {/* Words that split apart */}
@@ -328,7 +345,7 @@ const HeroSection = () => {
         <div
           id="intro"
           ref={JourneyTextRef}
-          className="w-full h-screen bg-red-900 absolute flex justify-center items-center text-center self-center z-20"
+          className="w-full h-screen bg-red-950 absolute flex justify-center items-center text-center self-center z-20"
         >
           <h1
             id="intro1"
@@ -342,11 +359,18 @@ const HeroSection = () => {
             ref={introTextRef2}
             className="text-5xl opacity-0 absolute md:text-5xl lg:text-8xl font-bold text-slate-100 playfair-display transition duration-300"
           >
-            Till Now
+            Till
+          </h1>
+          <h1
+            id="intro3"
+            ref={introTextRef3}
+            className="text-5xl opacity-0 absolute md:text-5xl lg:text-8xl font-bold text-slate-100 playfair-display transition duration-300"
+          >
+            Now :)
           </h1>
           <motion.div
-            id="intro3"
-                ref={introTextRef3}
+            id="intro4"
+                ref={introTextRef4}
             className="absolute flex flex-col items-center gap-4"
           >
             <motion.div
@@ -409,7 +433,7 @@ const HeroSection = () => {
       </div>
 
       {/* Rest of the content remains the same */}
-      <div className="relative playfair-display h-screen text-[22px] xs:text-xl md:text-3xl lg:text-5xl font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
+      <div className="relative z-50 bg-[#001219] playfair-display h-screen text-[22px] xs:text-xl md:text-3xl lg:text-5xl font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
         <div id="about" className="relative z-10 w-full" ref={textRef}>
           <p className="flex absolute flex-wrap gap-x-3 mx-auto px-4 xs:px-12 md:px-24 top-[15%] lg:top-[20%]">
             {`"Frontend development hit me like a bolt of lightning. One moment I was looking at a website, the next I was obsessed with understanding how it worked. The rabbit hole went deep, and I couldn't stop digging."`

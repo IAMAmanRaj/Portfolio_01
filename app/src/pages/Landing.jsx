@@ -43,7 +43,7 @@ const Landing = () => {
       <div className="relative overflow-hidden " ref={comp}>
         <div
           id="intro-slider"
-          className="h-screen px-10 z-30 bg-zinc-950 absolute top-0 left-0 font-spaceGrotesk w-full flex flex-col justify-around pt-24 py-8 sm:py-8 lg:py-20  tracking-tight"
+          className="h-screen px-10 z-30 bg-[#001219] absolute top-0 left-0 font-spaceGrotesk w-full flex flex-col justify-around pt-24 py-8 sm:py-8 lg:py-20  tracking-tight"
         >
           <h1
             className="text-3xl text-white  md:text-5xl lg:text-8xl"
@@ -67,13 +67,13 @@ const Landing = () => {
           <h1
             className="text-3xl text-white  md:text-5xl lg:text-6xl"
             id="title-4"
-          > and a Frontend Engineer :)
+          > and a Frontend Engineer.
           </h1>
         </div>
 
           <HeroSection />
       </div>
-     <div className="h-screen relative bg-zinc-950 pt-48 flex flex-col justify-between">
+     <div className="h-screen relative bg-[#001219] pt-48 flex flex-col justify-between">
         <div className="flex h-full items-center justify-center relative">
           <span className="font-semibold uppercase text-neutral-500">
             <div className="w-full h-full flex flex-col items-center justify-center overflow-hidden rounded-md">
@@ -106,11 +106,11 @@ const Landing = () => {
           </span>
         </div>
         <Timeline />
-        <div className="bg-zinc-950">
+        <div className="bg-[#001219]">
           <SkillsCarousel />
         </div>
 
-        <div className="flex bg-zinc-950 h-48 items-center justify-center">
+        <div className="flex bg-[#001219] h-48 items-center justify-center">
           <span className="font-semibold  text-neutral-500">
             <div className=" h-[40rem] flex flex-col items-center justify-center overflow-hidden ">
               <h1
@@ -134,13 +134,13 @@ const Landing = () => {
           </span>
         </div>
 
-        <div className="bg-zinc-950">
+        <div className="bg-[#001219]">
           <div className="">
             <ProjectsSection style={{ zIndex: 10 }} />
           </div>
         </div>
 
-        <div className="bg-zinc-950">
+        <div className="bg-[#001219]">
           <Footer /> {/* Add style here */}
         </div>
       </div>

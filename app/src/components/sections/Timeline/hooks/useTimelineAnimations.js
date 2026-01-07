@@ -33,7 +33,7 @@ export const useTimelineAnimations = (items, refs) => {
       const textAnim = gsap.fromTo(
         textRef.current,
         {
-          color: "currentColor",
+          color: "#A5D8FF",
           opacity: 0,
         },
         {

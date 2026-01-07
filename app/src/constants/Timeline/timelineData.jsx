@@ -28,7 +28,7 @@ export const timelineItems = [
     title: "Diving into Projects",
     content: (
       <>
-        started working on team projects and hackathons early in college — one of the best decisions I made. It opened my vision to the limitless scope of ideas and creativity. Made a team, and took part in <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">Webster</span>, an annual hackathon with <span className="hover:cursor-pointer text-blue-500 font-extrabold text-xl">100+ </span> teams from 1st and 2nd year. Failed badly. Couldn't even qualify for the final evaluation round. Realised, that I needed to improve a l...o...t.
+        started working on team projects and hackathons early in college — one of the best decisions I made. It opened my vision to the limitless scope of ideas and creativity. Made a team, and took part in <span className="hover:cursor-pointer text-gray-400 font-bold text-xl">Webster</span>, an annual hackathon with <span className="hover:cursor-pointer text-gray-400 font-extrabold text-xl">100+ </span> teams from 1st and 2nd year. Failed badly. Couldn't even qualify for the final evaluation round. Realised, that I needed to improve a l...o...t.
       </>
     ),
     position: "start",
@@ -69,7 +69,7 @@ export const timelineItems = [
     ),
     content: (
       <>
-        On <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">April 13th</span>, I received an off-campus Internship Offer from CREW™ https://crewtm.com. Explored animation libraries like Framer Motion and <span className="hover:cursor-pointer text-500 font-bold text-md text-[#0ebe4c]">GSAP</span> in the initial set of months. Started Networking more and more!
+        On <span className="hover:cursor-pointer text-gray-400 font-bold text-xl">April 13th</span>, I received an off-campus Internship Offer from CREW™ https://crewtm.com. Explored animation libraries like Framer Motion and <span className="hover:cursor-pointer text-500 font-bold text-md text-[#0ebe4c]">GSAP</span> in the initial set of months. Started Networking more and more!
       </>
     ),
     position: "end",
@@ -99,11 +99,11 @@ export const timelineItems = [
     title: "",
     content: (
       <>
-        In Sept, I lead the launch of <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">CREW™</span>, the first major build of<a href="https://www.crewtm.com" className="text-blue-500"> www.crewtm.com </a> 
-        and another one for its parent company <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">SKDIV®</span>, 
-        <a href="https://skdiv.com" className="text-blue-500 "> www.skdiv.com </a>. 
+        In Sept, I lead the launch of <span className="hover:cursor-pointer text-gray-400 font-bold text-xl">CREW™</span>, the first major build of<a href="https://www.crewtm.com" className="text-gray-400"> www.crewtm.com </a> 
+        and another one for its parent company <span className="hover:cursor-pointer text-gray-400 font-bold text-xl">SKDIV®</span>, 
+        <a href="https://skdiv.com" className="text-gray-400 "> www.skdiv.com </a>. 
         Additionally, we completed a client project for an Australian business, delivering the <span className="bg-gradient-to-r from-[#8f5b27] via-[100%] via-[#bc8b04] to-[#f4a507] bg-clip-text text-transparent font-bold text-xl">True Cut Barber Studio</span>  website 
-        <a href="https://truecutbarberstudio.com.au" className="text-blue-500 hover:cursor-pointerx"> truecutbarberstudio.com.au </a>. Got introduced to the laws of UI/UX, metrics affecting page loading time, core web vitals and SEO. Before this, I used to think that UI mostly has to be visually appealing, but I was mistaken. Complete mindset shift.
+        <a href="https://truecutbarberstudio.com.au" className="text-gray-400 hover:cursor-pointerx"> truecutbarberstudio.com.au </a>. Got introduced to the laws of UI/UX, metrics affecting page loading time, core web vitals and SEO. Before this, I used to think that UI mostly has to be visually appealing, but I was mistaken. Complete mindset shift.
       </>
     ),
     position: "end",
@@ -118,7 +118,7 @@ export const timelineItems = [
     title: "Web Lead, Culrav-Avishkar",
     content: (
       <>
-        October'24, I got the opportunity of leading the Web Team for Culrav-Avishkar, MNNIT's annual Techno-Cultural Fest. Guiding the juniors and collaborating with them taught me valuable lessons in leadership, teamwork, along with project delivery and management. Despite all the challenges you can think of, we successfully launched the website on time, achieving <span className="hover:cursor-pointer text-blue-500 font-bold text-xl">5.3K+</span> Google search appearances within the first week. Best time.
+        October'24, I got the opportunity of leading the Web Team for Culrav-Avishkar, MNNIT's annual Techno-Cultural Fest. Guiding the juniors and collaborating with them taught me valuable lessons in leadership, teamwork, along with project delivery and management. Despite all the challenges you can think of, we successfully launched the website on time, achieving <span className="hover:cursor-pointer text-gray-400 font-bold text-xl">5.3K+</span> Google search appearances within the first week. Best time.
       </>
     ),
     position: "start",

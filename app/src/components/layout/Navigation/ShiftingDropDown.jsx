@@ -38,7 +38,7 @@ const Tabs = () => {
   return (
     <div
       onMouseLeave={() => handleSetSelected(null)}
-      className="fixed top-[8px] opacity-95 bg-zinc-950 rounded-full border-2 p-1 vxs:p-2 mt-4 flex h-fit gap-0 vxs:gap-2"
+      className="fixed top-[8px] opacity-95 bg-[#001219] rounded-full border-2 p-1 vxs:p-2 mt-4 flex h-fit gap-0 vxs:gap-2"
     >
       {TABS.map((t) => {
         return (
