@@ -202,36 +202,66 @@
 }
 
 /* Words container */
-.word {
+#word-1 {
+  overflow: hidden;
+  height: auto;
+}
+
+#word-2 {
   overflow: hidden;
   height: auto;
 }
 
 /* Words start hidden (off-screen above) */
-.word h1 {
+/* .word h1 {
   transform: translateY(-100%);
   font-size: 4rem;
   font-weight: 700;
   margin: 0;
   white-space: nowrap;
+} */
+
+#word-1 h1{
+   transform: translateY(-100%);
+  margin: 0;
+   opacity: 0;
+  white-space: nowrap;
 }
 
+#word-2 h1 {
+   transform: translateY(100%);
+    opacity: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+
+
 #intro1 {
-  transform: scale(0.8);  /* Starts at 150% size (zoomed in) */
+  transform: scale(3);  /* Starts at 150% size (zoomed in) */
   will-change: transform;
 }
 
 @media (max-width: 768px) {
-  .word h1 {
-    font-size: 2.5rem;
-  }
+  #intro1 {
+  transform: scale(1.5);  /* Starts at 150% size (zoomed in) */
+  will-change: transform;
 }
+}
+
+@media (max-width: 400px) {
+  #intro1 {
+  transform: scale(1.3);  /* Starts at 150% size (zoomed in) */
+  will-change: transform;
+}
+}
+
 
 /* The horizontal divider line - VISIBLE AND PROMINENT */
 .divider {
   position: absolute;
   width: 100%; /* Full width when scaled */
-  height: 3px; /* Thicker for visibility */
+  height: 1px; /* Thicker for visibility */
   background: white;
   left: 50%;
   top: 50%;

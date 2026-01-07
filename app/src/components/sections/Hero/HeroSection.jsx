@@ -7,6 +7,7 @@ import { motion, stagger } from "framer-motion";
 import { FiMousePointer, FiArrowDown } from "react-icons/fi";
 import CustomEase from "gsap/CustomEase";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
@@ -27,7 +28,7 @@ const HeroSection = () => {
 
   // Initial loader animation with horizontal split
  useLayoutEffect(() => {
-    const landingTimelineDuration = 4.6;
+    const landingTimelineDuration = 4.5;
 
     // HIDE LOADER AND blockDivsS INITIALLY so Landing intro is visible
     gsap.set(".loader", {
@@ -51,6 +52,16 @@ const HeroSection = () => {
   },
     });
 
+   // STEP 0: First set up blockDivs (still invisible)
+    loaderTl.set(".blockDivs-top", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)",
+      // Remove backgroundColor - now in CSS
+    });
+
+    loaderTl.set(".blockDivs-bottom", {
+      clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)",
+      // Remove backgroundColor - now in CSS
+    });
    
 
     // STEP 0.5: Show intro content (will be covered by blockDivss)
@@ -70,12 +81,23 @@ const HeroSection = () => {
     });
     
     // STEP 1: Show the words sliding in
-    loaderTl.to(
-      ".word h1",
+   loaderTl.to(
+      "#word-1 h1",
       {
         y: "0%",
-        duration: 1,
-       },
+        opacity: 1,
+        duration: 1.5,
+      },
+      "<"
+    );
+   
+    loaderTl.to(
+      "#word-2 h1",
+      {
+        y: "0%",
+        opacity: 1,
+        duration: 1.5,
+      },
       "<"
     );
 
@@ -96,19 +118,25 @@ const HeroSection = () => {
 
     // STEP 5: Words fade out
     loaderTl.to("#word-1 h1", {
-  y: "100%",           // Move down by full height
+  y: "-120%",           // Move down by full height
   duration: 1,
   delay: 0.3,          // Wait 0.3s after divider completes
-    });
+    },"-=0.2");
    
    loaderTl.to(
   "#word-2 h1",
   {
-    y: "-100%",        // Move up (was at 100%, now at 0%)
+    y: "100%",        // Move up (was at 100%, now at 0%)
     duration: 1,
   },
   "<"                  // Run simultaneously with #word-1
-);
+   );
+   
+      const getScaleDuration = () => {
+      if (window.innerWidth < 400) return 1.2;
+      return 1.3;
+};
+    
 
     // STEP 6: Collapse blockDivs to reveal content (THE SPLIT REVEAL)
     loaderTl.to(".blockDivs-top", {
@@ -117,13 +145,12 @@ const HeroSection = () => {
       ease: "hop",
       onStart: () => {
         gsap.to("#intro1", {
-          scale: 2.5,
-          duration: 1.2,
-          delay: 0.4,
-          ease: "hope",
+          scale: 1,
+          duration: getScaleDuration(),
+          ease: "hop",
         });
       },
-    });
+    }, "-=0.8");
     
     loaderTl.to(".blockDivs-bottom", {
       clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -146,20 +173,20 @@ const HeroSection = () => {
   // Existing intro text animation (starts after loader)
   useLayoutEffect(() => {
     // Loader takes: 5.6s (landing) + 1s (words in) + 0.8s (hold) + 1.2s (divider) + 0.3s (hold) + 0.5s (fade) + 1.15s (collapse) + 0.3s (remove) = ~10.85s
-    const t1 = gsap.timeline({ delay: 3.0 + 4.6 });
+    const t1 = gsap.timeline({ delay: 2.0 + 4.6 });
     
     t1.fromTo(
       "#intro1",
       { opacity: 0 },
       { 
         opacity: 1, 
-        duration: 1.5, 
+        duration: 1.6, 
         ease: "hop"
       }
     ).to("#intro1", { 
       opacity: 0,
     
-      duration: 0.1,
+      duration: 0.3,
       ease: "hop",  
     }).fromTo("#intro2", { opacity: 0 }, { opacity: 1, duration: 1.0, delay: 0.1, ease: "hop" })
       .to("#intro2", { opacity: 0, duration: 0.8})
@@ -192,7 +219,7 @@ const HeroSection = () => {
         introTextRef4.current,
         { x: 0 },
         {
-          x: "10vw",
+          x: "12vw",
           duration: 4,
           ease: "power1.out",
           scrollTrigger: {
@@ -303,17 +330,6 @@ const HeroSection = () => {
         end: "top 20%",
       },
     });
-
-    gsap.to("#characterfour", {
-      opacity: 1,
-      stagger: 1,
-      scrollTrigger: {
-        trigger: "#characterfour",
-        scrub: true,
-        start: "top 90%",
-        end: "top 40%",
-      },
-    });
   }, []);
 
   return (
@@ -328,12 +344,12 @@ const HeroSection = () => {
           </div>
 
           {/* Words that split apart */}
-          <div className="intro-logo text-white">
-            <div className="word" id="word-1">
-              <h1><span>Let's dive</span></h1>
+          <div className="intro-logo text-3xl md:text-8xl playfair-display text-white">
+            <div className="word mt-6" id="word-1">
+              <h1><span>Taking you</span></h1>
             </div>
-            <div className="word" id="word-2">
-              <h1>Into</h1>
+            <div className="word mt-3" id="word-2">
+              <h1>Through</h1>
             </div>
           </div>
 
@@ -366,7 +382,7 @@ const HeroSection = () => {
             ref={introTextRef3}
             className="text-5xl opacity-0 absolute md:text-5xl lg:text-8xl font-bold text-slate-100 playfair-display transition duration-300"
           >
-            Now :)
+            Now
           </h1>
           <motion.div
             id="intro4"
