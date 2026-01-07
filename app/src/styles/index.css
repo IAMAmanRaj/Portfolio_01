@@ -244,14 +244,14 @@
 
 @media (max-width: 768px) {
   #intro1 {
-  transform: scale(1.5);  /* Starts at 150% size (zoomed in) */
+  transform: scale(1.4);  /* Starts at 150% size (zoomed in) */
   will-change: transform;
 }
 }
 
 @media (max-width: 400px) {
   #intro1 {
-  transform: scale(1.3);  /* Starts at 150% size (zoomed in) */
+  transform: scale(1.2);  /* Starts at 150% size (zoomed in) */
   will-change: transform;
 }
 }
