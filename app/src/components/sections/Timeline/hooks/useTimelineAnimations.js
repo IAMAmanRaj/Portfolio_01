@@ -14,6 +14,7 @@ export const useTimelineAnimations = (items, refs) => {
       const tickAnim = gsap.fromTo(
         tickRef.current,
         {
+           fill: "#001219",
           scale: 1,
         },
         {
