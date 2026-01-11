@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
- 
-.bg-clip-text-webkit {
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
 .playfair-display {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -20,133 +14,6 @@
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: italic;
-}
-
-/* Electric Border CSS Variables */
-:root {
-  --electric-border-color: #DBEAFE;
-  --electric-light-color: #F1F5F9;
-}
-
-/* SVG positioning */
-.svg-container {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-/* Card container */
-.card-container {
-  padding: 2px;
-  border-radius: 24px;
-  position: relative;
-  background: transparent;
-  overflow: hidden;
-}
-
-/* Inner container */
-.inner-container {
-  position: relative;
-}
-
-/* Border layers */
-.border-outer {
-  border: none;
-  border-radius: 24px;
-  padding-right: 4px;
-  padding-bottom: 4px;
-}
-
-
-
-.main-card {
-  width: 650px;
-  height: 200px;
-  border-radius: 24px;
-  border: 2px solid var(--electric-border-color);
-  margin-top: -4px;
-  margin-left: -4px;
-  filter: url(#turbulent-displace);
-  background: transparent;
-  box-shadow: inset 0 0 20px rgba(219, 234, 254, 0.3), 
-              inset 0 0 40px rgba(241, 245, 249, 0.2);
-}
-
-@media (max-width: 700px) {
-  .main-card {
-   width: 350px;
-    height: 150px;
-     border-radius: 24px;
-  border: 2px solid var(--electric-border-color);
-  margin-top: -4px;
-  margin-left: -4px;
-  filter: url(#turbulent-displace);
-  background: transparent;
-  box-shadow: inset 0 0 20px rgba(219, 234, 254, 0.3), 
-              inset 0 0 40px rgba(241, 245, 249, 0.2);
-  }
-}
-
-/* Glow effects */
-.glow-layer-1 {
-  border: 2px solid rgba(219, 234, 254, 0.8);
-  border-radius: 24px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  filter: blur(2px);
-  box-shadow: 0 0 15px rgba(219, 234, 254, 0.6),
-              0 0 30px rgba(255, 255, 255, 0.4);
-}
-
-.glow-layer-2 {
-  border: 2px solid var(--electric-light-color);
-  border-radius: 24px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  filter: blur(8px);
-  box-shadow: 0 0 25px rgba(219, 234, 254, 0.5),
-              0 0 50px rgba(241, 245, 249, 0.3);
-}
-
-/* Overlay effects */
-.overlay-1 {
-  display: none;
-}
-
-.overlay-2 {
-  display: none;
-}
-
-/* Background glow */
-.background-glow {
-  display: none;
-}
-
-/* Content container */
-.content-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
 }
 
 /* ============================================
@@ -235,27 +102,10 @@
   white-space: nowrap;
 }
 
-
-
 #intro1 {
   transform: scale(1) rotateZ(-10deg); 
   will-change: transform;
 }
-
-/* @media (max-width: 768px) {
-  #intro1 {
-  transform: scale(1);  
-  will-change: transform;
-}
-}
-
-@media (max-width: 400px) {
-  #intro1 {
-  transform: scale(1.2);  
-  will-change: transform;
-}
-} */
-
 
 /* The horizontal divider line - VISIBLE AND PROMINENT */
 .divider {
@@ -271,11 +121,6 @@
   opacity: 1; /* Fully visible initially */
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 
               0 0 40px rgba(255, 255, 255, 0.4); /* Glow effect for visibility */
-}
-
-/* Playfair Display font - Add this to your global CSS or import in your component */
-.playfair-display {
-  font-family: 'Playfair Display', serif;
 }
 
 /* Optional: Add smooth transitions for any remaining elements */

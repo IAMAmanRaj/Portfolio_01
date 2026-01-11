@@ -87,6 +87,7 @@ const HeroSection = () => {
         y: "0%",
         opacity: 1,
         duration: 1.5,
+        ease: "power2.inOut",
       },
       "<"
     );
@@ -97,6 +98,7 @@ const HeroSection = () => {
         y: "0%",
         opacity: 1,
         duration: 1.5,
+        ease: "power2.inOut",
       },
       "<"
     );
@@ -109,7 +111,8 @@ const HeroSection = () => {
     gsap.to(".divider", { 
       opacity: 0,      // Fade out divider
       duration: 0.3, 
-      delay: 0.3       // Wait 0.3s before fading
+      delay: 0.3,     // Wait 0.3s before fading
+      ease: "power2.inOut",
     });
   },
     });
@@ -120,14 +123,15 @@ const HeroSection = () => {
     loaderTl.to("#word-1 h1", {
   y: "-120%",           // Move down by full height
   duration: 1,
-  delay: 0.3,          // Wait 0.3s after divider completes
-    },"-=0.2");
+  ease: "power2.inOut",    // Wait 0.3s after divider completes
+    },"-=0.1");
    
    loaderTl.to(
   "#word-2 h1",
   {
     y: "100%",        // Move up (was at 100%, now at 0%)
     duration: 1,
+    ease: "power2.inOut",
   },
   "<"                  // Run simultaneously with #word-1
    );
@@ -142,16 +146,16 @@ const HeroSection = () => {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
       duration: 3,
       scale: 2.5,
-      ease: "hop",
+      ease: "power2.inOut",
       transformOrigin: "right bottom",
-      rotate: 40,
+      rotate: 28,
       y : "-50vh",
       onStart: () => {
         gsap.to("#intro1", {
-          scale: window.innerWidth > 1280 ? 2.5 : 1.8,
+          scale: window.innerWidth > 1280 ? 2.5 : 1.65,
           rotate : 12,
           duration: getAnimationDuration(),
-          ease: "hop",
+          ease: "power2.inOut",
         });
       },
     }, "-=0.6");
@@ -160,9 +164,9 @@ const HeroSection = () => {
       clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
       duration: 3.0,
        scale: 3,
-      ease: "hop",
+      ease: "power2.inOut",
       transformOrigin: "left top",     // pivot at left-top
-      rotate:40,
+      rotate:28,
       y:"100vh"
     }, "<");
 
@@ -177,7 +181,7 @@ const HeroSection = () => {
 
   // Existing intro text animation (starts after loader)
   useLayoutEffect(() => {
-    // Loader takes: 5.6s (landing) + 1s (words in) + 0.8s (hold) + 1.2s (divider) + 0.3s (hold) + 0.5s (fade) + 1.15s (collapse) + 0.3s (remove) = ~10.85s
+  
     const t1 = gsap.timeline({ delay: 2.6 + 4.7 });
     
     t1.fromTo(
