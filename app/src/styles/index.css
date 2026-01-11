@@ -123,8 +123,13 @@
               0 0 40px rgba(255, 255, 255, 0.4); /* Glow effect for visibility */
 }
 
-/* Optional: Add smooth transitions for any remaining elements */
+/* In index.css - Update loader styles */
 .loader * {
+  will-change: auto; /* Change from transform, opacity, clip-path */
+}
+
+/* Add this class for active animations only */
+.animating {
   will-change: transform, opacity, clip-path;
 }
 
@@ -178,3 +183,4 @@
     width: 1.25rem;
   }
 }
+

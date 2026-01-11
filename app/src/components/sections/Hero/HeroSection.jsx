@@ -173,7 +173,8 @@ const HeroSection = () => {
     // STEP 8: Remove loader AFTER collapse is complete (no fade, just remove)
     loaderTl.set(".loader", {
       display: "none",
-      zIndex: -1
+      zIndex: -1,
+      clearProps: "will-change"  // Add this
     });
 
     return () => loaderTl.kill();
@@ -303,6 +304,18 @@ const HeroSection = () => {
         }
       );
     }
+    return () => {
+      // Clean up all ScrollTriggers
+      ScrollTrigger.getAll().forEach(st => {
+        if (st.vars.trigger === textRef.current || 
+            st.vars.trigger === text2Ref.current ||
+            st.vars.trigger === text3Ref.current ||
+            st.vars.trigger === text4Ref.current ||
+            st.vars.trigger === introTextRef4.current) {
+          st.kill();
+        }
+      });
+    };
   }, []);
 
   // Existing character animations
