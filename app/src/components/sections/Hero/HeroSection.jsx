@@ -28,7 +28,7 @@ const HeroSection = () => {
 
   // Initial loader animation with horizontal split
  useLayoutEffect(() => {
-    const landingTimelineDuration = 4.5;
+    const landingTimelineDuration = 4.7;
 
     // HIDE LOADER AND blockDivsS INITIALLY so Landing intro is visible
     gsap.set(".loader", {
@@ -144,8 +144,8 @@ const HeroSection = () => {
       scale: 2.5,
       ease: "hop",
       transformOrigin: "right bottom",
-      rotate: 12,
-      y : "-20vh",
+      rotate: 40,
+      y : "-100vh",
       onStart: () => {
         gsap.to("#intro1", {
           scale: window.innerWidth > 400 ? 2.5 : 2,
@@ -162,8 +162,8 @@ const HeroSection = () => {
        scale: 3,
       ease: "hop",
       transformOrigin: "left top",     // pivot at left-top
-      rotate: 12,
-      y:"20vh"
+      rotate:40,
+      y:"100vh"
     }, "<");
 
     // STEP 8: Remove loader AFTER collapse is complete (no fade, just remove)
@@ -178,7 +178,7 @@ const HeroSection = () => {
   // Existing intro text animation (starts after loader)
   useLayoutEffect(() => {
     // Loader takes: 5.6s (landing) + 1s (words in) + 0.8s (hold) + 1.2s (divider) + 0.3s (hold) + 0.5s (fade) + 1.15s (collapse) + 0.3s (remove) = ~10.85s
-    const t1 = gsap.timeline({ delay: 2.6 + 4.6 });
+    const t1 = gsap.timeline({ delay: 2.6 + 4.7 });
     
     t1.fromTo(
       "#intro1",

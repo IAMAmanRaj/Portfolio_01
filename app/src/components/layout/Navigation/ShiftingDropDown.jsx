@@ -98,7 +98,7 @@ const Content = ({ selected, dir }) => {
         opacity: 0,
         y: 8,
       }}
-      className="absolute left-6  top-[calc(100%_+_24px)] w-56 xs:w-56 sm:w-80  lg:w-96 rounded-lg border border-neutral-600 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-800 p-4"
+      className="absolute left-6  top-[calc(100%_+_24px)] w-72 xs:w-56 sm:w-80  lg:w-96 rounded-lg border border-neutral-600 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-800 p-4 pb-2 xs:pb-4"
     >
       <Bridge />
       <Nub selected={selected} />
