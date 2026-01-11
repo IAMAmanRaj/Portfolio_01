@@ -208,6 +208,33 @@ const HeroSection = () => {
     return () => t1.kill();
   }, []);
 
+  useLayoutEffect(() => {
+    // Batch all character animations
+    const allCharacters = document.querySelectorAll('#character');
+    
+    gsap.to(allCharacters, {
+      opacity: 1,
+      duration: 0.1,  // Faster
+      stagger: {
+        amount: 2,  // Total duration
+        from: "start"
+      },
+      scrollTrigger: {
+        trigger: textRef.current,
+        scrub: 1,  // Smoother scrub
+        start: "top 88%",
+        end: "top 20%",
+        refreshPriority: -1,  // Lower priority
+      },
+    });
+    
+    return () => {
+      ScrollTrigger.getAll().forEach(st => {
+        if (st.vars.trigger === textRef.current) st.kill();
+      });
+    };
+  }, []);
+
   // Existing scroll animations
   useEffect(() => {
     if (introTextRef4.current) {
