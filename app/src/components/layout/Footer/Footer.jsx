@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SocialLinks } from './SocialLinks';
 import { PaymentModal } from '../../features/payment/components/PaymentModal';
 import { usePayment } from '../../features/payment/hooks/usePayment';
-import { FaCoffee } from 'react-icons/fa';
+import { SiBuymeacoffee } from "react-icons/si";
 
 const Footer = () => {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
@@ -31,7 +31,7 @@ const Footer = () => {
         >
           {isProcessing ? 'Caffeinating..' : <div className='flex flex-row gap-2 text-xl text-center items-center'>
                                   
-                                  Buy me a <FaCoffee className="w-6 h-6 md:w-8 md:h-8 hover:rotate-12 transition-all duration-300" />
+                                  Buy me a <SiBuymeacoffee className="w-6 h-6 md:w-8 md:h-8 hover:rotate-12 transition-all duration-300" />
                                 </div>}
         </a>
       </nav>
