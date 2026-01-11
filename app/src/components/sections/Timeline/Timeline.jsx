@@ -13,6 +13,7 @@ const Timeline = () => {
       tickRef: { current: null },
       textRef: { current: null },
       hrRef: { current: null },
+      checkpointRef: { current : null }
     }))
   ).current;
 
@@ -28,6 +29,7 @@ const Timeline = () => {
             tickRef={refs[index].tickRef}
             textRef={refs[index].textRef}
             hrRef={refs[index].hrRef}
+             checkpointRef={refs[index].checkpointRef}
             isLast={index === timelineItems.length - 1}
           />
         ))}

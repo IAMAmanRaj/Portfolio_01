@@ -2,24 +2,26 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const useTimelineAnimations = (items, refs) => {
   useEffect(() => {
     const animations = [];
 
     items.forEach((item, index) => {
-      const { tickRef, textRef, hrRef } = refs[index];
+      const { tickRef, textRef, hrRef, checkpointRef } = refs[index];
       const { scrollTrigger } = item;
 
-      // Animate tick
+      // Animate ripple checkpoint container
       const tickAnim = gsap.fromTo(
         tickRef.current,
         {
-           fill: "#001219",
           scale: 1,
+          opacity: 0.5,
         },
         {
-          fill: "#A5D8FF",
-          scale: 2,
+          scale: 1.4,
+          opacity: 1,
           scrollTrigger: {
             trigger: tickRef.current,
             start: scrollTrigger.start,
@@ -29,6 +31,26 @@ export const useTimelineAnimations = (items, refs) => {
         }
       );
       animations.push(tickAnim);
+
+      // Animate checkpoint (ripple) opacity in sync
+      if (checkpointRef.current) {
+        const checkpointAnim = gsap.fromTo(
+          checkpointRef.current,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+            scrollTrigger: {
+              trigger: checkpointRef.current,
+              start: scrollTrigger.start,
+              end: scrollTrigger.end,
+              scrub: 2,
+            },
+          }
+        );
+        animations.push(checkpointAnim);
+      }
 
       // Animate text
       const textAnim = gsap.fromTo(
