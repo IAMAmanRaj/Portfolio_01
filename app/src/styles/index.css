@@ -238,23 +238,23 @@
 
 
 #intro1 {
-  transform: scale(3);  /* Starts at 150% size (zoomed in) */
+  transform: scale(1) rotateZ(-10deg); 
   will-change: transform;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #intro1 {
-  transform: scale(1.4);  /* Starts at 150% size (zoomed in) */
+  transform: scale(1);  
   will-change: transform;
 }
 }
 
 @media (max-width: 400px) {
   #intro1 {
-  transform: scale(1.2);  /* Starts at 150% size (zoomed in) */
+  transform: scale(1.2);  
   will-change: transform;
 }
-}
+} */
 
 
 /* The horizontal divider line - VISIBLE AND PROMINENT */
