@@ -133,7 +133,7 @@ const HeroSection = () => {
    );
    
       const getAnimationDuration = () => {
-      return 1.60;
+      return 1.14;
 };
     
 
@@ -145,16 +145,16 @@ const HeroSection = () => {
       ease: "hop",
       transformOrigin: "right bottom",
       rotate: 40,
-      y : "-100vh",
+      y : "-50vh",
       onStart: () => {
         gsap.to("#intro1", {
-          scale: window.innerWidth > 640 ? 2.5 : 2,
+          scale: window.innerWidth > 768 ? 2.5 : 2,
           rotate : 12,
           duration: getAnimationDuration(),
           ease: "hop",
         });
       },
-    }, "-=0.8");
+    }, "-=0.6");
     
     loaderTl.to(".blockDivs-bottom", {
       clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
