@@ -20,23 +20,23 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-black/60 backdrop-blur-lg z-50 "
             onClick={onClose}
           />
 
           {/* Modal Content with bounce */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            initial={{ opacity: 0, scale: 0.75, y: 20 }}
+            animate={{ opacity: 1, scale: 0.90, y: 0 }}
+            exit={{ opacity: 0, scale: 0.75, y: 20 }}
             transition={{
               type: "spring",
               stiffness: 380,
-              damping: 20,
+              damping: 30,
               mass: 1,
               duration: 0.1
             }}
-            className="fixed inset-0 z-[60] flex items-center justify-center p-4 pointer-events-none"
+            className="fixed inset-0 z-[60] mt-12  flex items-center justify-center p-4 pointer-events-none"
           >
             <div 
               className="relative w-full max-w-md pointer-events-auto"
@@ -173,8 +173,7 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
                         </span>
                       ) : (
                         <>
-                          <FaCoffee className="w-4 h-4" />
-                          Buy Coffee
+                          Proceed
                         </>
                       )}
                     </button>

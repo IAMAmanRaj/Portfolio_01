@@ -3,6 +3,7 @@ import { SocialLinks } from './SocialLinks';
 import { PaymentModal } from '../../features/payment/components/PaymentModal';
 import { usePayment } from '../../features/payment/hooks/usePayment';
 import { SiBuymeacoffee } from "react-icons/si";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
@@ -25,15 +26,16 @@ const Footer = () => {
   return (
     <footer className="footer gap-6 pt-16 sm:pt-8 relative z-[20] border-white footer-center p-10 pb-8 text-base-content rounded">
       <nav className="grid grid-flow-col gap-4">
-        <a
+        <Link
+          to="#"
           onClick={() => setShowPaymentModal(true)}
-          className="link link-hover transition-all duration-300 font-bold text-blue-600 hover:text-amber-700 text-xl cursor-pointer"
+          className="transition-all duration-300 font-bold text-blue-600 hover:text-amber-700 text-xl cursor-pointer"
         >
           {isProcessing ? 'Caffeinating..' : <div className='flex flex-row gap-2 text-xl text-center items-center'>
                                   
                                   Buy me a <SiBuymeacoffee className="w-6 h-6 md:w-8 md:h-8 hover:rotate-12 transition-all duration-300" />
                                 </div>}
-        </a>
+        </Link>
       </nav>
 
       <SocialLinks />
