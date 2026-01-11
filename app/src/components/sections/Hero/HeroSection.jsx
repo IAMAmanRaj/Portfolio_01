@@ -148,7 +148,7 @@ const HeroSection = () => {
       y : "-100vh",
       onStart: () => {
         gsap.to("#intro1", {
-          scale: window.innerWidth > 400 ? 2.5 : 2,
+          scale: window.innerWidth > 640 ? 2.5 : 2,
           rotate : 12,
           duration: getAnimationDuration(),
           ease: "hop",
