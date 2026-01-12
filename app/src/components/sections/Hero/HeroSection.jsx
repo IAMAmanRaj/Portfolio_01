@@ -146,7 +146,7 @@ const HeroSection = () => {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
       duration: 3,
       scale: 2.5,
-      ease: "power2.inOut",
+      ease: "hop",
       transformOrigin: "right bottom",
       rotate: 28,
       y : "-50vh",
@@ -155,7 +155,7 @@ const HeroSection = () => {
           scale: window.innerWidth > 1280 ? 2.5 : 1.65,
           rotate : 12,
           duration: getAnimationDuration(),
-          ease: "power2.inOut",
+          ease: "hop",
         });
       },
     }, "-=0.6");
@@ -394,10 +394,10 @@ const HeroSection = () => {
 
           {/* Words that split apart */}
           <div className="intro-logo text-3xl md:text-4xl xl:text-5xl playfair-display text-white">
-            <div className="word mt-6" id="word-1">
+            <div className="word mt-7 md:mt-6" id="word-1">
               <h1><span>Taking you</span></h1>
             </div>
-            <div className="word mt-3" id="word-2">
+            <div className="word -mt-1 md:mt-3" id="word-2">
               <h1>Through</h1>
             </div>
           </div>
