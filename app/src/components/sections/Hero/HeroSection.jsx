@@ -148,8 +148,8 @@ const HeroSection = () => {
       scale: 2.5,
       ease: "power2.inOut",
       transformOrigin: "right bottom",
-      rotate: 28,
-      y : "-50vh",
+      rotate: 40,
+      y : "-100vh",
       onStart: () => {
         gsap.to("#intro1", {
           scale: window.innerWidth > 1280 ? 2.5 : 1.65,
@@ -166,7 +166,7 @@ const HeroSection = () => {
        scale: 3,
       ease: "power2.inOut",
       transformOrigin: "left top",     // pivot at left-top
-      rotate:28,
+      rotate:40,
       y:"100vh"
     }, "<");
 
