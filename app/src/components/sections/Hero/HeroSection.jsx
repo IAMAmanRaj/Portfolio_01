@@ -148,8 +148,8 @@ const HeroSection = () => {
       scale: 2.5,
       ease: "power2.inOut",
       transformOrigin: "right bottom",
-      rotate: 40,
-      y : "-100vh",
+      rotate: 28,
+      y : "-50vh",
       onStart: () => {
         gsap.to("#intro1", {
           scale: window.innerWidth > 1280 ? 2.5 : 1.65,
@@ -166,8 +166,8 @@ const HeroSection = () => {
        scale: 3,
       ease: "power2.inOut",
       transformOrigin: "left top",     // pivot at left-top
-      rotate:40,
-      y:"100vh"
+      rotate:28,
+      y:"50vh"
     }, "<");
 
     // STEP 8: Remove loader AFTER collapse is complete (no fade, just remove)
