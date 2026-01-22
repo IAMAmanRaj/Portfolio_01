@@ -137,7 +137,7 @@ const HeroSection = () => {
    );
    
       const getAnimationDuration = () => {
-      return 1.50;
+        return 1.50;
 };
     
 
@@ -152,8 +152,8 @@ const HeroSection = () => {
       y : "-50vh",
       onStart: () => {
         gsap.to("#intro1", {
-          scale: window.innerWidth > 1280 ? 2.5 : 1.65,
-          rotate : 12,
+          scale: window.innerWidth > 1280 ? 3 : 1.65,
+          rotate : window.innerWidth > 1280 ? 32 : 24,
           duration: getAnimationDuration(),
           ease: "hop",
         });
@@ -183,20 +183,20 @@ const HeroSection = () => {
   // Existing intro text animation (starts after loader)
   useLayoutEffect(() => {
   
-    const t1 = gsap.timeline({ delay: 2.6 + 4.7 });
+    const t1 = gsap.timeline({ delay: 2.5 + 4.7 });
     
     t1.fromTo(
       "#intro1",
       { opacity: 0 },
       { 
         opacity: 1, 
-        duration: 1.4, 
+        duration: 1, 
         ease: "hop"
       }
     ).to("#intro1", { 
       opacity: 0,
        filter: "blur(10px)",
-      duration: 0.05,
+      duration: 0.3,
       ease: "hop",  
     }).fromTo("#intro2", { opacity: 0 }, { opacity: 1, duration: 1.0, delay: 0.1, ease: "hop" })
       .to("#intro2", { opacity: 0, duration: 0.8})
