@@ -394,7 +394,7 @@ const HeroSection = () => {
 
           {/* Words that split apart */}
           <div className="intro-logo text-3xl md:text-4xl xl:text-5xl playfair-display text-white">
-            <div className="word mt-7 md:-mt-2" id="word-1">
+            <div className="word mt-0 md:-mt-2" id="word-1">
               <h1><span>Taking you</span></h1>
             </div>
             <div className="word -mt-1 md:mt-3" id="word-2">
