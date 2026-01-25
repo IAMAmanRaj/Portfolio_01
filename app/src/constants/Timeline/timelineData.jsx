@@ -52,7 +52,7 @@ export const timelineItems = [
     id: 5,
     time: "March, 2024",
     title: "All the way in !",
-    content: `In March, I worked on our college's Fest Website, which saw thousands of registrations. Later, my team won 2nd place at Innodev '24 for an event management app and was shortlisted among 200+ teams for Hack 36, a 36-hour hackathon. These experiences exposed me to more libraries and frameworks and I started enjoying it more than ever !`,
+    content: `In March, I worked on our college's Fest Website, which saw thousands of registrations. Later, my team won 2nd place at Innodev '24 for an event management app and was shortlisted among 200+ teams for Hack 36, a 36-hour hackathon. These experiences exposed me to more libraries and frameworks and I started enjoying it more than ever.`,
     position: "start",
     scrollTrigger: {
       start: "top 55%",
