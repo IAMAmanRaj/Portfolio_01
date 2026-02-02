@@ -41,7 +41,7 @@ export const timelineItems = [
     id: 4,
     time: "2024",
     title: "The Year of My Life",
-    content: `This year, I challenged myself to build full stack projects after getting familiar with basics of FE and a bit of BE. Picked up some good MERN projects through youtube. Along the way, I also explored UI component libraries like shadCN, Flowbite, Material UI and others. Learned to deploy apps on Netlify, Render and Vercel.`,
+    content: `This year, I challenged myself to build full stack projects after getting familiar with basics of FE and a bit of BE. Picked up some good MERN projects through youtube. Along the way, I also explored UI component libraries like shadCN, Flowbite, Material UI and others. Learned to deploy apps on Netlify, Firebase, Render and Vercel.`,
     position: "end",
     scrollTrigger: {
       start: "top 55%",
