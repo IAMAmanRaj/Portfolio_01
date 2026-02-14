@@ -172,7 +172,7 @@ const Landing = () => {
             <div className="h-[40rem] flex flex-col items-center justify-center overflow-hidden">
               <h1
                 id="projects"
-                className="text-5xl md:text-7xl z-[50] lg:text-9xl font-bold text-center text-blue-500 hover:cursor-pointer absolute opacity-30 hover:opacity-70 transition-all duration-500"
+                className="text-5xl md:text-7xl lg:text-9xl font-bold text-center text-blue-500 hover:cursor-pointer absolute z-10 opacity-30 hover:opacity-70 transition-all duration-500"
               >
                 Projects
               </h1>

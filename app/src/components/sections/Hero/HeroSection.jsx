@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { motion, stagger } from "framer-motion";
-import { FiMousePointer, FiArrowDown } from "react-icons/fi";
+import { FiArrowDown } from "react-icons/fi";
 import CustomEase from "gsap/CustomEase";
 
 
@@ -498,7 +498,7 @@ const HeroSection = () => {
       </div>
 
       {/* Rest of the content remains the same */}
-      <div className="relative z-50 bg-[#001219] playfair-display h-screen text-[22px] xs:text-xl md:text-3xl lg:text-5xl font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
+      <div className="relative z-10 bg-[#001219] playfair-display h-screen text-[22px] xs:text-xl md:text-3xl lg:text-5xl font-bold text-white mt-0 xs:mt-32 flex justify-center text-center">
         <div id="about" className="relative z-10 w-full" ref={textRef}>
           <p className="flex absolute flex-wrap gap-x-3 mx-auto px-4 xs:px-12 md:px-24 top-[15%] lg:top-[20%]">
             {`"Frontend development hit me like a bolt of lightning. One moment I was looking at a website, the next I was obsessed with understanding how it worked. The rabbit hole went deep, and I couldn't stop digging."`

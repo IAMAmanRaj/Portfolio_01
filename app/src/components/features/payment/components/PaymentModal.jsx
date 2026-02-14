@@ -19,7 +19,7 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.1 }}
             className="fixed inset-0 bg-black/60 backdrop-blur-lg z-50 "
             onClick={onClose}
           />
@@ -29,13 +29,6 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
             initial={{ opacity: 0, scale: 0.75, y: 20 }}
             animate={{ opacity: 1, scale: 0.90, y: 0 }}
             exit={{ opacity: 0, scale: 0.75, y: 20 }}
-            transition={{
-              type: "spring",
-              stiffness: 380,
-              damping: 30,
-              mass: 1,
-              duration: 0.1
-            }}
             className="fixed inset-0 z-[60] mt-12  flex items-center justify-center p-4 pointer-events-none"
           >
             <div 
@@ -83,16 +76,14 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-white text-center mb-2">
+                  <h3 className="text-3xl font-bold font-mono text-white text-center mb-2">
                     Buy Me a Coffee 🐻
                   </h3>
-                  <p className="text-yellow-200 text-center mb-8 text-sm">
-                    Support my work with a virtual coffee! Your support keeps me caffeinated and coding.
-                  </p>
+                 
 
                   {/* Quick Coffee Selection */}
                   <div className="mb-6">
-                    <p className="text-white/80 text-sm font-medium text-center mb-3">
+                    <p className="text-white/80 font-mono text-sm font-medium text-center mb-3">
                       Choose number of coffees:
                     </p>
                     <div className="grid grid-cols-3 gap-3">
@@ -119,7 +110,7 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
 
                   {/* Custom Amount Input */}
                   <div className="mb-8">
-                    <label className="block text-white text-sm font-medium mb-2 text-center">
+                    <label className="block text-white font-mono text-sm font-medium mb-2 text-center">
                       Or enter a custom amount ( INR )
                     </label>
                     <div className="relative">
@@ -146,7 +137,7 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
                     <button
                       onClick={onClose}
                       disabled={isProcessing}
-                      className="flex-1 px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold 
+                      className="flex-1 px-5 py-2 text-2xl font-mono bg-white/10 hover:bg-white/20 text-white font-semibold 
                                rounded-xl transition-all duration-200 backdrop-blur-sm
                                border-2 border-white/20 hover:border-white/30
                                disabled:opacity-50 disabled:cursor-not-allowed"
@@ -156,7 +147,7 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
                     <button
                       onClick={onProceed}
                       disabled={isProcessing || !amount || amount <= 0}
-                      className="flex-1 px-6 py-3 bg-gradient-to-r from-yellow-600 to-orange-600 
+                      className="flex-1 font-mono px-5 py-2 text-2xl bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-600 
                                hover:from-yellow-700 hover:to-orange-700 text-white font-semibold 
                                rounded-xl transition-all duration-200 shadow-lg shadow-yellow-600/30
                                hover:shadow-yellow-600/50 hover:scale-[1.02]
@@ -180,8 +171,8 @@ export const PaymentModal = ({ isOpen, onClose, amount, onAmountChange, onProcee
                   </div>
 
                   {/* Info text */}
-                  <p className="text-yellow-200/60 text-sm md:text-lg text-center mt-4">
-                    Every coffee helps me stay motivated! 💛
+                  <p className="text-yellow-200/100 font-mono text-sm md:text-xl text-center mt-4">
+                    Help me stay motivated 🔥
                   </p>
                 </div>
               </div>
