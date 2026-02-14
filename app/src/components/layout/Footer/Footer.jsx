@@ -24,12 +24,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer gap-6 pt-16 sm:pt-8 relative z-[20] border-white footer-center p-10 pb-8 text-base-content rounded">
+    <footer className="footer gap-6 sm:pt-8 relative z-[20] border-white footer-center p-10 pb-8 pt-2 md:pt-3 text-base-content rounded">
       <nav className="grid grid-flow-col gap-4">
         <Link
           to="#"
           onClick={() => setShowPaymentModal(true)}
-          className="transition-all duration-300 font-bold text-blue-600 hover:text-amber-700 text-xl cursor-pointer"
+          className="transition-all font-mono duration-300 font-bold text-blue-600 hover:text-amber-700 text-xl cursor-pointer"
         >
           {isProcessing ? 'Caffeinating..' : <div className='flex flex-row gap-2 text-xl text-center items-center'>
                                   
@@ -41,12 +41,11 @@ const Footer = () => {
       <SocialLinks />
 
       <div className="text-blue-100">
-        <p>Portfolio @ Aman Raj | Copyright © {new Date().getFullYear()} - All rights reserved</p>
+        <p className="font-bold font-mono">Portfolio @ Aman Raj </p>
         <div className="flex flex-row gap-1">
-          {`Made with`}
-          <p className="text-pink-700 font-extrabold">{`<3`}</p>
+          <p className="text-pink-700 font-extrabold font-mono text-3xl opacity-80 hover:cursor-pointer transition-all duration-300 hover:opacity-100">{`👀❤️`}</p>
         </div>
-        <p className="font-normal">{`Feel free to reach out :)  `}</p>
+        <p className="font-bold font-mono w-[120%]">Copyright © {new Date().getFullYear()} - Some rights reserved :)</p>
       </div>
 
       <PaymentModal
