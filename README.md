@@ -1,5 +1,6 @@
 
-# Hi, I'm Aman, and this is my Portfolio Website ! 👋
+# Hi, welcome to my portfolio v1.0 !
+### ❝ I built this portfolio couple of years ago. Back then, I only knew basics about frontend. Over these years, I've improved a lot as a software developer, and it has been a great journey so far. I'll keep quiet now..happy exploring !! ❞ 
 
 ## Deployments
 
