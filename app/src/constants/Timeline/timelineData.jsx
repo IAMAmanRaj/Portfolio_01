@@ -165,7 +165,7 @@ export const timelineItems = [
     title: "Whatever it takes..",
     content: (
       <>
-       I'm gonna be the best version of myself. This year, I'm chasing consistency and keeping myself away from unwanted bs. Giving me the time to learn new things, and learn. I'm not gonna settle for anything less. I'll do whatever it takes...
+       I'm gonna be the best version of myself. This year, I'm chasing consistency and keeping myself away from unwanted bs. I've been giving myself the time to learn new things and I'll keep doing it. I'm not gonna settle for anything less. I'll do whatever it takes...
       </>
     ),
     position: "end",
