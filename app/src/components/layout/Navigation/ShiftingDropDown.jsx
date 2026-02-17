@@ -247,35 +247,23 @@ const Projects = () => {
   return (
     <div>
       <div className="grid grid-cols-2 gap-2">
-        <a href="https://sewna-revamp.vercel.app/">
-          <img
-            className="mb-2 h-14 w-full rounded object-cover"
-            src="/images/sewna.png"
-            alt="sewna"
-          />
-          <h4 className="mb-0.5 flex flex-row items-center gap-1 text-sm font-medium">
-            Sewna <IoIosLink />
-          </h4>
-          <p className="text-xs text-neutral-400">
-            Revamp of the original version. Used GSAP to create animations. Designed and Developed by me :) 
-          </p>
-        </a>
         <a href="https://truecutbarberstudio.com.au/">
           <img
-            className="mb-2 h-14 w-full rounded object-cover"
+            className="mb-2 h-30 w-full rounded object-contain"
             src="/images/tcbs.png"
             alt="true cut barber studio website"
           />
           <h4 className="mb-0.5 flex flex-row items-center gap-1 text-sm font-medium">
-            True Cut Barber Studio <IoIosLink />
+            True Cut Barber Studio<IoIosLink />
           </h4>
           <p className="text-xs text-neutral-400">
-           My first foreign client interaction. Developed the UI, monitored SEO insights and core web vitals.
+           This website is for Sydney's Top Barber Studio Business, TCBS Australia. My first foreign client interaction. 
           </p>
         </a>
+        
         <a href="https://crewtm.com/">
           <img
-            className="mb-2 h-14 w-full rounded object-cover"
+            className="mb-2 h-30 w-full rounded object-contain"
             src="/images/crew.png"
             alt="crew website"
           />
@@ -283,7 +271,21 @@ const Projects = () => {
             CREW™ | SKDIV® <IoIosLink />
           </h4>
           <p className="text-xs text-neutral-400">
-            I worked as a Frontend Engineer and a Team Lead at SKDIV®. I personally enjoyed being part of this major project from the beginning.
+            I work here as a Lead Frontend Engineer. Have used Framer Motion/GSAP for animations. 
+          </p>
+        </a>
+
+        <a href="https://sewna-revamp.vercel.app/">
+          <img
+            className="mb-2 h-30 w-full rounded object-contain "
+            src="/images/sewna.png"
+            alt="sewna"
+          />
+          <h4 className="mb-0.5 flex flex-row items-center gap-1 text-[13px] font-medium">
+            Sewna | Revamp Competition <IoIosLink />
+          </h4>
+          <p className="text-xs text-neutral-400">
+            Designed and Developed by me. Took inspiration from Codegrid for implementing micro-interactions using GSAP. 
           </p>
         </a>
       </div>
