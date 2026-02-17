@@ -281,8 +281,8 @@ const Projects = () => {
             src="/images/sewna.png"
             alt="sewna"
           />
-          <h4 className="mb-0.5 flex flex-row items-center gap-1 text-[13px] font-medium">
-            Sewna | Revamp Competition <IoIosLink />
+          <h4 className="mb-0.5 flex flex-row items-center gap-1 text-sm font-medium">
+            Sewna | Revamp  <IoIosLink className="mt-1" />
           </h4>
           <p className="text-xs text-neutral-400">
             Designed and Developed by me. Took inspiration from Codegrid for implementing micro-interactions using GSAP. 
