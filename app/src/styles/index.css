@@ -1,6 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cascadia-mono {
+  font-family: "Cascadia Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
 
 .playfair-display {
   font-family: "Playfair Display", serif;
