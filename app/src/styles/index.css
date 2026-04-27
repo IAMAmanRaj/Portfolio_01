@@ -5,6 +5,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   HIDE SCROLLBAR - ALL PAGES
+   ============================================ */
+
+/* Hide scrollbar for all elements */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for specific elements if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .cascadia-mono {
   font-family: "Cascadia Mono", sans-serif;
   font-optical-sizing: auto;

@@ -153,7 +153,7 @@ export const timelineItems = [
     title: "",
     content: (
       <>
-       Started on a great note, with some exciting projects and opportunities. Still a long way to go....I'm mindfully learning things and building side projects to improve in the right direction. Learning skills that matters and add value. 
+       I explored freelancing via Upwork. Did it for two months. Frontend is competitive. Still a long way to go....I'm mindfully learning things and building side projects to improve in the right direction. Learning skills that matters and adds value for myself. 
       </>
     ),
     position: "start",
@@ -164,12 +164,12 @@ export const timelineItems = [
   },
   {
     id: 12,
-    time: "Feb is here..",
+    time: "Building products.",
     timeStyle: "font-bold",
-    title: "Whatever it takes..",
+    title: "and contributions..",
     content: (
       <>
-       I'm gonna be the best version of myself. This year, I'm chasing consistency and keeping myself away from unwanted bs. I've been giving myself the time to learn new things and I'll keep doing it. I'm not gonna settle for anything less. I'll do whatever it takes...
+       I've been continuously building and contributing to new projects. It helps me to be more creative. I get to understand and improve my design eye. I want to be the best frontend engineer, and nothing less than that. I'll do whatever it takes...
       </>
     ),
     position: "end",
